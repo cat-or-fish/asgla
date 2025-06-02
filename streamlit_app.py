@@ -1,6 +1,8 @@
 import streamlit as st
 import pandas as pd
 import tempfile
+import base64
+import os
 from reportlab.lib.pagesizes import A4
 from reportlab.pdfgen import canvas
 from reportlab.lib import colors
@@ -9,6 +11,7 @@ from reportlab.platypus import SimpleDocTemplate, Table, TableStyle, Paragraph, 
 from fpdf import FPDF
 from io import BytesIO
 from fpdf.enums import XPos, YPos
+
 
 
 # Düsseldorfer Tabelle als Dictionarys # Pflegebedarf
@@ -273,7 +276,8 @@ def berechne_ausgleichsanspruch(monat, jahr, einkommen_mutter, einkommen_vater, 
     # Berechnung der Differenz der Anteile als absolute Differenz
     global differenz_anteile, auszugleichender_betrag
     differenz_anteile = abs(anteil_mutter_gesamtbedarf - anteil_vater_gesamtbedarf)
-    auszugleichender_betrag = differenz_anteile / 2
+    auszugleichender_betrag = differenz_anteile / 2     ### auszugleichender Betrag ist eigentlich DER Ausgleichsanspruch, der wird
+                                                        ### aber noch durch die Verrechnungen korrigiert
 
     global anspruchsberechtigt, nicht_anspruchsberechtigt
     if anteil_vater_gesamtbedarf > anteil_mutter_gesamtbedarf:
@@ -283,6 +287,35 @@ def berechne_ausgleichsanspruch(monat, jahr, einkommen_mutter, einkommen_vater, 
         anspruchsberechtigt = "Vater"
         nicht_anspruchsberechtigt = "Mutter"
 
+     ### Verrechnung bereits getragener Zusatzbedarfe
+        # Zusatzbedarf soll geteilt werden
+    abzufuehrender_zusatz_an_vater = 0
+    abzufuehrender_zusatz_an_mutter = 0
+    if zusatz_allein_tragen == "Nein":
+        if zusatzbedarf_getragen_mutter > 0:
+            abzufuehrender_zusatz_an_mutter = 0.5 * zusatzbedarf_getragen_mutter
+        if zusatzbedarf_getragen_vater > 0:
+            abzufuehrender_zusatz_an_vater = 0.5 * zusatzbedarf_getragen_vater
+
+    # Zusatzbedarf soll vom Vater allein getragen werden
+    elif zusatz_allein_tragen == "Ja, vom Vater":
+        if zusatzbedarf_getragen_mutter > 0:
+            abzufuehrender_zusatz_an_mutter = zusatzbedarf_getragen_mutter  # voller Ausgleich
+        # Vater hat gezahlt → kein Ausgleich nötig
+
+    # Zusatzbedarf soll von der Mutter allein getragen werden
+    elif zusatz_allein_tragen == "Ja, von der Mutter":
+        if zusatzbedarf_getragen_vater > 0:
+            abzufuehrender_zusatz_an_vater = zusatzbedarf_getragen_vater  # voller Ausgleich
+        # Mutter hat gezahlt → kein Ausgleich nötig
+
+    if anspruchsberechtigt == "Mutter":
+        auszugleichender_betrag = (differenz_anteile / 2) - abzufuehrender_zusatz_an_vater + abzufuehrender_zusatz_an_mutter
+        st.session_state.auszugleichender_betrag_nach_zusatzverrechnung = auszugleichender_betrag
+    if anspruchsberechtigt == "Vater":
+        auszugleichender_betrag = (differenz_anteile / 2) + abzufuehrender_zusatz_an_vater - abzufuehrender_zusatz_an_mutter
+        st.session_state.auszugleichender_betrag_nach_zusatzverrechnung = auszugleichender_betrag
+                
     # Berechnung des abzuführenden Kindergeldes
     global abzufuehrendes_kindergeld
     if kindergeld_empfaenger == "Mutter":
@@ -291,7 +324,7 @@ def berechne_ausgleichsanspruch(monat, jahr, einkommen_mutter, einkommen_vater, 
         abzufuehrendes_kindergeld = betreuungsanteil_mutter + baranteil_mutter ##Also wenn der Vater das Kindergeld kriegt und er abführen muss
 
 # Berechnung des Ausgleichsanspruchs unter Berücksichtigung des abzuführenden Kindergeldes
-    global ausgleichsanspruch
+    
     if anspruchsberechtigt == "Mutter":
         # Wenn die Mutter anspruchsberechtigt ist, und das Kindergeld geht an den Vater:
         if kindergeld_empfaenger == "Vater":
@@ -393,7 +426,7 @@ def berechne_ausgleichsanspruch(monat, jahr, einkommen_mutter, einkommen_vater, 
         st.write("### Mutter")
         st.table(df_mutter.style.hide(axis="index"))
 
-    st.write("### Bedarf Kind")
+    st.write(f"### Bedarf Kind ({st.session_state.alter} Jahre alt)")
     st.table(df_kind.style.hide(axis="index"))
 
     st.write(f"### Ausgleichsanspruch: **{ausgleichsanspruch:.2f} EUR**")
@@ -439,6 +472,9 @@ def erstelle_pdf():
 
     pdf.set_font("DejaVu", size=12)
 
+    # Logo oben rechts einfügen
+    pdf.image("./logo.png", x=160, y=10, w=40)  # x=160 je nach Seitenbreite anpassen
+    pdf.ln(15) # Spacer
     pdf.chapter_title(f"Berechnung Ausgleichsanspruch im Wechselmodell\n{monat} {jahr}")
 
     # Tabelle Vater
@@ -482,25 +518,45 @@ def erstelle_pdf():
         daten_kind.append([f"davon Sonderbedarf ({st.session_state.sonderbez})", f"{st.session_state.sonderbedarf:.2f} €"])
     daten_kind.append(["= Gesamtbedarf", f"{st.session_state.gesamtbedarf:.2f} €"])
     daten_kind.append(["Kindergeld", f"{st.session_state.kindergeld:.2f} €"])
-    pdf.add_table("Angaben zum Kind", daten_kind, [90, 50])
+    
+    pdf.add_table(f"Angaben zum Kind ({st.session_state.alter} Jahre alt)", daten_kind, [90, 50])
 
     pdf.add_paragraph(f"Anteil Mutter am Gesamtbedarf: {st.session_state.anteil_mutter_gesamtbedarf:.2f} €")
     pdf.add_paragraph(f"Anteil Vater am Gesamtbedarf: {st.session_state.anteil_vater_gesamtbedarf:.2f} €")
     pdf.add_paragraph(f"Differenz: {st.session_state.differenz_anteile:.2f} €")
     pdf.add_paragraph(f"Auszugleichender Betrag (1/2) von {st.session_state.nicht_anspruchsberechtigt} zu leisten an {st.session_state.anspruchsberechtigt}: {st.session_state.auszugleichender_betrag:.2f} €")
 
+    if st.session_state.zusatzbedarf_getragen_vater > 0:
+        pdf.add_paragraph(f"Von KV bereits getragener Zusatzbedarf: {st.session_state.zusatzbedarf_getragen_vater} € ({st.session_state.zusatzbez_getragen_vater})")
+        if zusatz_allein_tragen == "Nein":
+            pdf.add_paragraph(f"Daher hälftig bei KV zu verrechnen")
+        if zusatz_allein_tragen == "Ja, vom Vater":
+            pdf.add_paragraph(f"Zusatzbedarf ist aufgrund der elterlichen Einkommensverhältnisse hier vom Kindsvater selbst zu tragen. Daher findet insoweit keine Verrechnung statt.")
+        if zusatz_allein_tragen == "Ja, von der Mutter":
+            pdf.add_paragraph(f"Die Kindsmutter hat aufgrund der elterlichen Einkommensverhältnisse Zusatzbedarfe allein zu tragen. Daher findet insoweit eine vollständige Erstattung statt.")
+    if st.session_state.zusatzbedarf_getragen_mutter > 0:
+        pdf.add_paragraph(f"Von KM bereits getragener Zusatzbedarf: {st.session_state.zusatzbedarf_getragen_mutter} € ({st.session_state.zusatzbez_getragen_mutter})")
+        if zusatz_allein_tragen == "Nein":
+            pdf.add_paragraph(f"Daher hälftig bei KM zu verrechnen")
+        if zusatz_allein_tragen == "Ja, von der Mutter":
+            pdf.add_paragraph(f"Zusatzbedarf ist aufgrund der elterlichen Einkommensverhältnisse hier von der Kindsmutter selbst zu tragen. Daher findet insoweit keine Verrechnung statt.")
+        if zusatz_allein_tragen == "Ja, vom Vater":
+            pdf.add_paragraph(f"Der Kindsvater hat aufgrund der elterlichen Einkommensverhältnisse Zusatzbedarfe allein zu tragen. Daher findet insoweit eine vollständige Erstattung statt.")
+    if st.session_state.zusatzbedarf_getragen_vater > 0 or st.session_state.zusatzbedarf_getragen_mutter > 0:
+        pdf.add_paragraph(f"Auszugleichender Betrag (1/2) nach Verrechnung des bereits getragenen Zusatzbedarfs: {st.session_state.auszugleichender_betrag_nach_zusatzverrechnung} €")
+    
     # Kindergeldverrechnung
     daten_kg = [
+        ["Kindergeldempfänger", kindergeld_empfaenger],
         ["Betreuungsanteil Mutter", f"{st.session_state.betreuungsanteil_mutter:.2f} €"],
         ["Baranteil Mutter", f"{st.session_state.baranteil_mutter:.2f} €"],
         ["Betreuungsanteil Vater", f"{st.session_state.betreuungsanteil_vater:.2f} €"],
-        ["Baranteil Vater", f"{st.session_state.baranteil_vater:.2f} €"],
-        ["Kindergeldempfänger", kindergeld_empfaenger]
+        ["Baranteil Vater", f"{st.session_state.baranteil_vater:.2f} €"]
     ]
     pdf.add_table("Kindergeldverrechnung", daten_kg, [90, 50])
 
     pdf.add_paragraph(f"  Ausgleichsanspruch von {st.session_state.anspruchsberechtigt} gegen {st.session_state.nicht_anspruchsberechtigt}: {st.session_state.ausgleichsanspruch:.2f} €")
-
+    pdf.add_paragraph("Diese Berechnung wurde mithilfe des ASGLA-Rechners vom LegalTech Lab JTC der Martin-Luther-Universität Halle-Wittenberg erstellt")
         # PDF in einen BytesIO-Buffer schreiben:
     pdf_buffer = BytesIO()
     pdf.output(pdf_buffer)
@@ -536,6 +592,7 @@ def berechne_und_zeige():
 
     # Bedarf Kind
     alter = alter_kind or 0  # Eingabe durch Nutzer
+    st.session_state.alter = alter
 
     st.session_state.mehrbedarf = 0
     st.session_state.mehrbez = ''
@@ -548,6 +605,9 @@ def berechne_und_zeige():
     if zeige_sonderbedarf:
         st.session_state.sonderbedarf = get_float_or_zero(sonderbetrag)
         st.session_state.sonderbez = sonderbez or 'Sonderbedarf'
+
+    st.session_state.zusatzbedarf_getragen_vater = get_float_or_zero(zusatzbedarf_getragen_vater)
+    st.session_state.zusatzbedarf_getragen_mutter = get_float_or_zero(zusatzbedarf_getragen_mutter)
 
     # Regelbedarf berechnen
     st.session_state.regelbedarf = berechne_regelbedarf(
@@ -597,6 +657,29 @@ def berechne_und_zeige():
 st.set_page_config(page_title="Ausgleichsanspruch Wechselmodell", layout="wide")
 
 st.title("Ausgleichsanspruch Wechselmodell")
+
+# Logo oben rechts einfügen
+logo_path = "./logo.png"
+
+def get_base64_image(image_path):
+    with open(image_path, "rb") as img_file:
+        return base64.b64encode(img_file.read()).decode()
+
+if os.path.exists(logo_path):
+    logo_base64 = get_base64_image(logo_path)
+
+    st.markdown(
+        f"""
+        <div style="position: absolute; top: 1rem; right: 1rem; z-index: 100;">
+            <img src="data:image/png;base64,{logo_base64}" style="max-width: 150px; height: auto;">
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
+else:
+    st.error(f"Logo-Datei nicht gefunden unter: {logo_path}")
+# Abstand nach oben für den restlichen Content
+st.markdown("<div style='height: 100px;'></div>", unsafe_allow_html=True)
 
 # Jahr/Monat Auswahl
 col_jahr, col_monat = st.columns(2)
@@ -755,6 +838,7 @@ with st.container():
         ### Zum Kind
         alter_kind = st.number_input("Alter des Kindes", value=10, step=1, min_value=0)
 
+        st.markdown("### Zusatzbedarfe")
         # Checkbox: Mehrbedarf
         zeige_mehrbedarf = st.checkbox("Mehrbedarf hinzufügen", value=True)
 
@@ -769,6 +853,21 @@ with st.container():
             sonderbez = st.text_input("Bezeichnung Sonderbedarf", value="Zahnspange")
             sonderbetrag = st.number_input("Betrag Sonderbedarf (EUR)", value=80)
 
+        zusatzbedarf_getragen_vater = 0
+        zusatzbedarf_getragen_mutter = 0
+        if zeige_mehrbedarf or zeige_sonderbedarf:
+            st.markdown("Wurde bereits ein Zusatzbedarf teilweise geleistet?")
+            chk_gezahlt_zusatz_v = st.checkbox("Ja, vom Kindsvater", value=False)
+            chk_gezahlt_zusatz_m = st.checkbox("Ja, von der Kindsmutter", value=False)
+            if chk_gezahlt_zusatz_v:
+                zusatzbez_getragen_vater = st.text_input("Bezeichnung von KM geleisteter Zusatzbedarf", value="")
+                zusatzbedarf_getragen_vater = st.number_input("Bereits bezahlter Zusatzbedarf (EUR)", value=0)
+            if chk_gezahlt_zusatz_m:
+                zusatzbez_getragen_mutter = st.text_input("Bezeichnung von KM geleisteter Zusatzbedarf", value="")
+                zusatzbedarf_getragen_mutter = st.number_input("Bereits bezahlter Zusatzbedarf (EUR)", value=0)
+            zusatz_allein_tragen = st.radio("Ist der Zusatzbedarf von einem der Elternteile allein zu tragen?", ("Nein", "Ja, vom Vater", "Ja, von der Mutter"))
+
+        st.markdown("### Kindergeld")
         global kindergeld_empfaenger
         kindergeld_empfaenger = st.radio("Kindergeldempfänger:", ("Mutter", "Vater"))
 
