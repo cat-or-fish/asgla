@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+import math
 import tempfile
 from reportlab.lib.pagesizes import A4
 from reportlab.pdfgen import canvas
@@ -444,25 +445,57 @@ def erstelle_pdf():
     # Tabelle Vater
     daten_vater = [
         ["Einkommen", f"{st.session_state.einkommen_vater:.2f} €"],
-        ["Abzugsposten 1", f"{st.session_state.abzugsposten1_vater:.2f} €"],
-        ["Abzugsposten 2", f"{st.session_state.abzugsposten2_vater:.2f} €"],
-        ["Abzug Gesamt", f"{st.session_state.abzug_vater:.2f} €"],
+    ]
+
+    for i, eintrag in enumerate(st.session_state.abzugsposten_vater):
+        if isinstance(eintrag, dict):
+            bezeichnung = eintrag.get("bezeichnung", f"Abzugsposten {i + 1}")
+            wert = eintrag.get("wert", "")
+        else:
+            bezeichnung = f"Abzugsposten {i + 1}"
+            wert = eintrag
+
+        try:
+            zahl = float(wert)
+            daten_vater.append([bezeichnung, f"{zahl:.2f} €"])
+        except ValueError:
+            daten_vater.append([bezeichnung, "ungültig"])
+
+    daten_vater.append(["Abzug Gesamt", f"{st.session_state.abzug_vater:.2f} €"])
+
+    daten_vater.extend([
         ["= bereinigtes Einkommen", f"{st.session_state.bereinigtes_einkommen_vater:.2f} €"],
         ["./. Selbstbehalt", f"{st.session_state.sockelbetrag_vater:.2f} €"],
-        ["= verteilbarer Betrag", f"{st.session_state.verteilbarer_betrag_vater:.2f} €"]
-    ]
+        ["= verteilbarer Betrag", f"{st.session_state.verteilbarer_betrag_vater:.2f} €"],
+    ])
     pdf.add_table("Vater", daten_vater, [90, 50])
 
     # Tabelle Mutter
     daten_mutter = [
         ["Einkommen", f"{st.session_state.einkommen_mutter:.2f} €"],
-        ["Abzugsposten 1", f"{st.session_state.abzugsposten1_mutter:.2f} €"],
-        ["Abzugsposten 2", f"{st.session_state.abzugsposten2_mutter:.2f} €"],
-        ["Abzug Gesamt", f"{st.session_state.abzug_mutter:.2f} €"],
+    ]
+
+    for i, eintrag in enumerate(st.session_state.abzugsposten_mutter):
+        if isinstance(eintrag, dict):
+            bezeichnung = eintrag.get("bezeichnung", f"Abzugsposten {i + 1}")
+            wert = eintrag.get("wert", "")
+        else:
+            bezeichnung = f"Abzugsposten {i + 1}"
+            wert = eintrag
+
+        try:
+            zahl = float(wert)
+            daten_mutter.append([bezeichnung, f"{zahl:.2f} €"])
+        except ValueError:
+            daten_mutter.append([bezeichnung, "ungültig"])
+
+    daten_mutter.append(["Abzug Gesamt", f"{st.session_state.abzug_mutter:.2f} €"])
+
+    daten_mutter.extend([
         ["= bereinigtes Einkommen", f"{st.session_state.bereinigtes_einkommen_mutter:.2f} €"],
         ["./. Selbstbehalt", f"{st.session_state.sockelbetrag_mutter:.2f} €"],
-        ["= verteilbarer Betrag", f"{st.session_state.verteilbarer_betrag_mutter:.2f} €"]
-    ]
+        ["= verteilbarer Betrag", f"{st.session_state.verteilbarer_betrag_mutter:.2f} €"],
+    ])
     pdf.add_table("Mutter", daten_mutter, [90, 50])
 
     pdf.add_paragraph(f"Für den Kindsvater wurde der {st.session_state.adjektiv_sockelbetrag_vater} Selbstbehalt berücksichtigt.")
@@ -517,9 +550,27 @@ def berechne_und_zeige():
     st.session_state.weitere_einkuenfte_mutter = get_float_or_zero(weitere_einkuenfte_mutter_input)
     st.session_state.einkommen_mutter = st.session_state.haupttaetigkeit_mutter + st.session_state.weitere_einkuenfte_mutter
 
-    st.session_state.abzugsposten1_mutter = get_float_or_zero(abzugsposten1_mutter_input)
-    st.session_state.abzugsposten2_mutter = get_float_or_zero(abzugsposten2_mutter_input)
-    st.session_state.abzug_mutter = st.session_state.abzugsposten1_mutter + st.session_state.abzugsposten2_mutter
+    abzug_mutter = 0.0
+    fehler_mutter = False
+
+    for i, eintrag in enumerate(st.session_state.abzugsposten_mutter):
+        wert = eintrag.get("wert", "")
+        try:
+            zahl = float(wert)
+            if zahl < 0:
+                st.error(f"Abzugsposten {i + 1} Mutter darf nicht negativ sein.")
+                fehler_mutter = True
+            else:
+                abzug_mutter += zahl
+        except ValueError:
+            st.error(f"Abzugsposten {i + 1} Mutter ist keine gültige Zahl.")
+            fehler_mutter = True
+
+    if not fehler_mutter:
+        st.session_state.abzug_mutter = abzug_mutter
+        st.session_state.bereinigtes_einkommen_mutter = (
+            st.session_state.einkommen_mutter - abzug_mutter
+        )
 
     st.session_state.bereinigtes_einkommen_mutter = st.session_state.einkommen_mutter - st.session_state.abzug_mutter
 
@@ -528,9 +579,27 @@ def berechne_und_zeige():
     st.session_state.weitere_einkuenfte_vater = get_float_or_zero(weitere_einkuenfte_vater_input)
     st.session_state.einkommen_vater = st.session_state.haupttaetigkeit_vater + st.session_state.weitere_einkuenfte_vater
 
-    st.session_state.abzugsposten1_vater = get_float_or_zero(abzugsposten1_vater_input)
-    st.session_state.abzugsposten2_vater = get_float_or_zero(abzugsposten2_vater_input)
-    st.session_state.abzug_vater = st.session_state.abzugsposten1_vater + st.session_state.abzugsposten2_vater
+    abzug_vater = 0.0
+    fehler_vater = False
+
+    for i, eintrag in enumerate(st.session_state.abzugsposten_vater):
+        wert = eintrag.get("wert", "")
+        try:
+            zahl = float(wert)
+            if zahl < 0:
+                st.error(f"Abzugsposten {i + 1} Vater darf nicht negativ sein.")
+                fehler_vater = True
+            else:
+                abzug_vater += zahl
+        except ValueError:
+            st.error(f"Abzugsposten {i + 1} Vater ist keine gültige Zahl.")
+            fehler_vater = True
+
+    if not fehler_vater:
+        st.session_state.abzug_vater = abzug_vater
+        st.session_state.bereinigtes_einkommen_vater = (
+            st.session_state.einkommen_vater - abzug_vater
+        )
 
     st.session_state.bereinigtes_einkommen_vater = st.session_state.einkommen_vater - st.session_state.abzug_vater
 
@@ -710,8 +779,41 @@ with st.container():
 
         with col_abzüge:
             st.markdown("### Abzüge")
-            abzugsposten1_vater_input = st.text_input("Abzugsposten 1 Vater:", value="100")
-            abzugsposten2_vater_input = st.text_input("Abzugsposten 2 Vater:", value="100")
+            # Initialisierung der Abzugsposten
+            if "abzugsposten_vater" not in st.session_state:
+                st.session_state.abzugsposten_vater = []
+
+            # Funktion zum Hinzufügen eines neuen Abzugspostens
+            def add_abzugsposten_vater():
+                if len(st.session_state.abzugsposten_vater) < 5:
+                    index = len(st.session_state.abzugsposten_vater) + 1
+                    st.session_state.abzugsposten_vater.append({"bezeichnung": f"Abzugsposten {index}", "wert": "100"})
+                else:
+                    st.warning("Es können maximal 5 Abzugsposten hinzugefügt werden!")
+
+            # Darstellung der Abzugsposten mit Eingabefeldern
+            for i, abzug in enumerate(st.session_state.abzugsposten_vater):
+                cols = st.columns([3, 2, 1])
+                
+                bezeichnung_key = f"bezeichnung_vater_{i}"
+                wert_key = f"wert_vater_{i}"
+
+                abzug["bezeichnung"] = cols[0].text_input(
+                    f"Bezeichnung {i + 1}:", value=abzug.get("bezeichnung", ""), key=bezeichnung_key
+                )
+                abzug["wert"] = cols[1].text_input(
+                    f"Wert {i + 1}:", value=abzug.get("wert", ""), key=wert_key
+                )
+
+                if cols[2].button("❌", key=f"remove_abzug_vater_{i}"):
+                    st.session_state.abzugsposten_vater.pop(i)
+                    st.rerun()
+                    break
+
+            # Button zum Hinzufügen
+            if st.button("Weitere Abzugsposten Vater hinzufügen"):
+                add_abzugsposten_vater()
+                st.rerun()
 
         # Aktueller Sockelbetrag
         st.info(f"Für den Kindsvater wird der **{st.session_state['sockel_lbl_vater']}** Selbstbehalt "
@@ -736,8 +838,44 @@ with st.container():
 
         with col_abzüge:
             st.markdown("### Abzüge")
-            abzugsposten1_mutter_input = st.text_input("Abzugsposten 1 Mutter:", value="100")
-            abzugsposten2_mutter_input = st.text_input("Abzugsposten 2 Mutter:", value="100")
+            # Initialisierung der dynamischen Abzugsposten für Mutter
+            if "abzugsposten_mutter" not in st.session_state:
+                st.session_state.abzugsposten_mutter = []
+
+            # Funktion zum Hinzufügen eines neuen Abzugspostens
+            def add_abzugsposten_mutter():
+                if len(st.session_state.abzugsposten_mutter) < 5:
+                    index = len(st.session_state.abzugsposten_mutter) + 1
+                    st.session_state.abzugsposten_mutter.append({
+                        "bezeichnung": f"Abzugsposten {index}",
+                        "wert": "100"
+                    })
+                else:
+                    st.warning("Es können maximal 5 Abzugsposten hinzugefügt werden!")
+
+            # Eingabefelder mit Entfernen-Button
+            for i, abzug in enumerate(st.session_state.abzugsposten_mutter):
+                cols = st.columns([4, 3, 1])
+                bezeichnung = cols[0].text_input(
+                    f"Bezeichnung {i + 1} Mutter:", value=abzug["bezeichnung"], key=f"abzug_mutter_bez_{i}"
+                )
+                wert = cols[1].text_input(
+                    f"Wert {i + 1} Mutter:", value=abzug["wert"], key=f"abzug_mutter_wert_{i}"
+                )
+
+                # Aktualisiere den Eintrag
+                st.session_state.abzugsposten_mutter[i] = {"bezeichnung": bezeichnung, "wert": wert}
+
+                # Entfernen-Button
+                if cols[2].button("❌", key=f"remove_abzug_mutter_{i}"):
+                    st.session_state.abzugsposten_mutter.pop(i)
+                    st.rerun()
+                    break
+
+            # Button zum Hinzufügen
+            if st.button("Weitere Abzugsposten Mutter hinzufügen"):
+                add_abzugsposten_mutter()
+                st.rerun()
 
         st.info(f"Für die Kindsmutter wird der **{st.session_state['sockel_lbl_mutter']}** Selbstbehalt "
                 f"von **{st.session_state['sockel_amt_mutter']:.2f} €** berücksichtigt. (Jahr: {jahr})")
