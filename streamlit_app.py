@@ -374,7 +374,7 @@ def berechne_ausgleichsanspruch(monat, jahr, einkommen_mutter, einkommen_vater, 
     # Dynamische Abzugsposten einfügen (falls vorhanden)
     for i, abzug in enumerate(st.session_state.abzugsposten_vater):
         bezeichnung = abzug.get("bezeichnung", f"Abzugsposten {i + 1}")
-        wert = abzug.get("wert", "0")
+        wert = float(abzug.get("wert", "0"))
         index_vater.append(f"  ./. Abzug: {bezeichnung}")
         werte_vater.append(f"{wert:.2f} €")
 
@@ -409,7 +409,7 @@ def berechne_ausgleichsanspruch(monat, jahr, einkommen_mutter, einkommen_vater, 
     # Dynamische Abzugsposten einfügen (falls vorhanden)
     for i, abzug in enumerate(st.session_state.abzugsposten_mutter):
         bezeichnung = abzug.get("bezeichnung", f"Abzugsposten {i + 1}")
-        wert = abzug.get("wert", "0")
+        wert = float(abzug.get("wert", "0"))
         index_mutter.append(f"  ./. Abzug: {bezeichnung}")
         werte_mutter.append(f"{wert:.2f} €")
 
