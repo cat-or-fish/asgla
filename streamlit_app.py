@@ -381,11 +381,11 @@ def berechne_ausgleichsanspruch(monat, jahr, einkommen_mutter, einkommen_vater, 
     # Restliche Werte zur Tabelle hinzufügen
     werte_vater.extend([
         f"{st.session_state.abzug_vater:.2f} €",
-        f"{bereinigtes_einkommen_vater:.2f} EUR",
-        f"{st.session_state.sockelbetrag_vater:.2f} EUR",
+        f"{bereinigtes_einkommen_vater:.2f} €",
+        f"{st.session_state.sockelbetrag_vater:.2f} €",
         f"{anteil_vater:.2%}",
-        f"{baranteil_vater:.2f} EUR",
-        f"{betreuungsanteil_vater:.2f} EUR"
+        f"{baranteil_vater:.2f} €",
+        f"{betreuungsanteil_vater:.2f} €"
     ])
 
     index_vater.extend([
@@ -416,11 +416,11 @@ def berechne_ausgleichsanspruch(monat, jahr, einkommen_mutter, einkommen_vater, 
     # Restliche Werte zur Tabelle hinzufügen
     werte_mutter.extend([
         f"{st.session_state.abzug_mutter:.2f} €",
-        f"{bereinigtes_einkommen_mutter:.2f} EUR",
-        f"{st.session_state.sockelbetrag_mutter:.2f} EUR",
+        f"{bereinigtes_einkommen_mutter:.2f} €",
+        f"{st.session_state.sockelbetrag_mutter:.2f} €",
         f"{anteil_mutter:.2%}",
-        f"{baranteil_mutter:.2f} EUR",
-        f"{betreuungsanteil_mutter:.2f} EUR"
+        f"{baranteil_mutter:.2f} €",
+        f"{betreuungsanteil_mutter:.2f} €"
     ])
 
     index_mutter.extend([
