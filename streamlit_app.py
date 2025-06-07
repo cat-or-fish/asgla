@@ -376,7 +376,7 @@ def berechne_ausgleichsanspruch(monat, jahr, einkommen_mutter, einkommen_vater, 
         bezeichnung = abzug.get("bezeichnung", f"Abzugsposten {i + 1}")
         wert = abzug.get("wert", "0")
         index_vater.append(f"  ./. Abzug: {bezeichnung}")
-        werte_vater.append(f"{wert} €")
+        werte_vater.append(f"{wert:.2f} €")
 
     # Restliche Werte zur Tabelle hinzufügen
     werte_vater.extend([
@@ -411,7 +411,7 @@ def berechne_ausgleichsanspruch(monat, jahr, einkommen_mutter, einkommen_vater, 
         bezeichnung = abzug.get("bezeichnung", f"Abzugsposten {i + 1}")
         wert = abzug.get("wert", "0")
         index_mutter.append(f"  ./. Abzug: {bezeichnung}")
-        werte_mutter.append(f"{wert} €")
+        werte_mutter.append(f"{wert:.2f} €")
 
     # Restliche Werte zur Tabelle hinzufügen
     werte_mutter.extend([
