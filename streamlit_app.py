@@ -277,7 +277,8 @@ def berechne_ausgleichsanspruch(monat, jahr, einkommen_mutter, einkommen_vater, 
     global differenz_anteile, auszugleichender_betrag
     differenz_anteile = abs(anteil_mutter_gesamtbedarf - anteil_vater_gesamtbedarf)
     auszugleichender_betrag = differenz_anteile / 2     ### auszugleichender Betrag ist eigentlich DER Ausgleichsanspruch, der wird
-                                                        ### aber noch durch die Verrechnungen korrigiert
+                                                        ### wird aber noch durch die Verrechnungen korrigiert
+    st.session_state.basis_ausgleich = auszugleichender_betrag
 
     global anspruchsberechtigt, nicht_anspruchsberechtigt
     if anteil_vater_gesamtbedarf > anteil_mutter_gesamtbedarf:
@@ -594,26 +595,26 @@ def erstelle_pdf():
     pdf.add_paragraph(f"Anteil Mutter am Gesamtbedarf: {st.session_state.anteil_mutter_gesamtbedarf:.2f} €")
     pdf.add_paragraph(f"Anteil Vater am Gesamtbedarf: {st.session_state.anteil_vater_gesamtbedarf:.2f} €")
     pdf.add_paragraph(f"Differenz: {st.session_state.differenz_anteile:.2f} €")
-    pdf.add_paragraph(f"Auszugleichender Betrag (1/2) von {st.session_state.nicht_anspruchsberechtigt} zu leisten an {st.session_state.anspruchsberechtigt}: {st.session_state.auszugleichender_betrag:.2f} €")
+    pdf.add_paragraph(f"Auszugleichender Betrag (1/2) von {st.session_state.nicht_anspruchsberechtigt} zu leisten an {st.session_state.anspruchsberechtigt}: {st.session_state.basis_ausgleich:.2f} €")
 
     if st.session_state.zusatzbedarf_getragen_vater > 0:
-        pdf.add_paragraph(f"Von KV bereits getragener Zusatzbedarf: {st.session_state.zusatzbedarf_getragen_vater} € ({st.session_state.zusatzbez_getragen_vater})")
+        pdf.add_paragraph(f"Von KV bereits getragener Zusatzbedarf: {st.session_state.zusatzbedarf_getragen_vater:.2f} € ({st.session_state.zusatzbez_getragen_vater})")
         if zusatz_allein_tragen == "Nein":
-            pdf.add_paragraph(f"Daher hälftig bei KV zu verrechnen")
+            pdf.add_paragraph(f"Daher hälftig ({st.session_state.zusatzbedarf_getragen_vater / 2:.2f} €) bei KM zu verrechnen.")
         if zusatz_allein_tragen == "Ja, vom Vater":
             pdf.add_paragraph(f"Zusatzbedarf ist aufgrund der elterlichen Einkommensverhältnisse hier vom Kindsvater selbst zu tragen. Daher findet insoweit keine Verrechnung statt.")
         if zusatz_allein_tragen == "Ja, von der Mutter":
             pdf.add_paragraph(f"Die Kindsmutter hat aufgrund der elterlichen Einkommensverhältnisse Zusatzbedarfe allein zu tragen. Daher findet insoweit eine vollständige Erstattung statt.")
     if st.session_state.zusatzbedarf_getragen_mutter > 0:
-        pdf.add_paragraph(f"Von KM bereits getragener Zusatzbedarf: {st.session_state.zusatzbedarf_getragen_mutter} € ({st.session_state.zusatzbez_getragen_mutter})")
+        pdf.add_paragraph(f"Von KM bereits getragener Zusatzbedarf: {st.session_state.zusatzbedarf_getragen_mutter:.2f} € ({st.session_state.zusatzbez_getragen_mutter})")
         if zusatz_allein_tragen == "Nein":
-            pdf.add_paragraph(f"Daher hälftig bei KM zu verrechnen")
+            pdf.add_paragraph(f"Daher hälftig ({st.session_state.zusatzbedarf_getragen_mutter / 2:.2f} €) bei KV zu verrechnen.")
         if zusatz_allein_tragen == "Ja, von der Mutter":
             pdf.add_paragraph(f"Zusatzbedarf ist aufgrund der elterlichen Einkommensverhältnisse hier von der Kindsmutter selbst zu tragen. Daher findet insoweit keine Verrechnung statt.")
         if zusatz_allein_tragen == "Ja, vom Vater":
             pdf.add_paragraph(f"Der Kindsvater hat aufgrund der elterlichen Einkommensverhältnisse Zusatzbedarfe allein zu tragen. Daher findet insoweit eine vollständige Erstattung statt.")
     if st.session_state.zusatzbedarf_getragen_vater > 0 or st.session_state.zusatzbedarf_getragen_mutter > 0:
-        pdf.add_paragraph(f"Auszugleichender Betrag (1/2) nach Verrechnung des bereits getragenen Zusatzbedarfs: {st.session_state.auszugleichender_betrag_nach_zusatzverrechnung} €")
+        pdf.add_paragraph(f"Auszugleichender Betrag (1/2) nach Verrechnung des bereits getragenen Zusatzbedarfs: {st.session_state.auszugleichender_betrag_nach_zusatzverrechnung:.2f} €")
     
     # Kindergeldverrechnung
     daten_kg = [
@@ -625,8 +626,13 @@ def erstelle_pdf():
     ]
     pdf.add_table("Kindergeldverrechnung", daten_kg, [90, 50])
 
+    if kindergeld_empfaenger == "Mutter":
+        pdf.add_paragraph(f"Daher von KM an KV abzuführendes Kindergeld: {st.session_state.abzufuehrendes_kindergeld:.2f}")
+    if kindergeld_empfaenger == "Vater":
+        pdf.add_paragraph(f"Daher von KV an KM abzuführendes Kindergeld: {st.session_state.abzufuehrendes_kindergeld:.2f}")
+
     pdf.add_paragraph(f"  Ausgleichsanspruch von {st.session_state.anspruchsberechtigt} gegen {st.session_state.nicht_anspruchsberechtigt}: {st.session_state.ausgleichsanspruch:.2f} €")
-    pdf.add_paragraph("Diese Berechnung wurde mithilfe des ASGLA-Rechners vom LegalTech Lab JTC der Martin-Luther-Universität Halle-Wittenberg erstellt")
+    pdf.add_paragraph("Diese Berechnung wurde mithilfe des ASGLA-Rechners (https://asgla-testversion.streamlit.app/) vom LegalTech Lab JTC der Martin-Luther-Universität Halle-Wittenberg erstellt.")
         # PDF in einen BytesIO-Buffer schreiben:
     pdf_buffer = BytesIO()
     pdf.output(pdf_buffer)
@@ -1035,16 +1041,17 @@ with st.container():
             chk_gezahlt_zusatz_v = st.checkbox("Ja, vom Kindsvater", value=False)
             chk_gezahlt_zusatz_m = st.checkbox("Ja, von der Kindsmutter", value=False)
             if chk_gezahlt_zusatz_v:
-                zusatzbez_getragen_vater = st.text_input("Bezeichnung von KM geleisteter Zusatzbedarf", value="")
+                zusatzbez_getragen_vater = st.text_input("Bezeichnung von KM geleisteter Zusatzbedarf", key="zusatzbez_getragen_vater", value="")
                 zusatzbedarf_getragen_vater = st.number_input("Bereits bezahlter Zusatzbedarf (EUR)", value=0)
             if chk_gezahlt_zusatz_m:
-                zusatzbez_getragen_mutter = st.text_input("Bezeichnung von KM geleisteter Zusatzbedarf", value="")
+                zusatzbez_getragen_mutter = st.text_input("Bezeichnung von KM geleisteter Zusatzbedarf", key="zusatzbez_getragen_mutter", value="")
                 zusatzbedarf_getragen_mutter = st.number_input("Bereits bezahlter Zusatzbedarf (EUR)", value=0)
-            zusatz_allein_tragen = st.radio("Ist der Zusatzbedarf von einem der Elternteile allein zu tragen?", ("Nein", "Ja, vom Vater", "Ja, von der Mutter"))
+            zusatz_allein_tragen = st.radio("Ist der Zusatzbedarf von einem der Elternteile allein zu tragen?", ("Nein", "Ja, vom Vater", "Ja, von der Mutter"), key="zusatz_allein_tragen")
+            # key trägt das sofort in sessionstate ein
 
         st.markdown("### Kindergeld")
         global kindergeld_empfaenger
-        kindergeld_empfaenger = st.radio("Kindergeldempfänger:", ("Mutter", "Vater"))
+        kindergeld_empfaenger = st.radio("Kindergeldempfänger:", ("Mutter", "Vater"), key="kindergeld_empfaenger")
 
 st.markdown("––––––––––––––––––––––––––")
 
