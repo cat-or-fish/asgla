@@ -273,11 +273,23 @@ def berechne_ausgleichsanspruch(monat, jahr, einkommen_mutter, einkommen_vater, 
     anteil_mutter_gesamtbedarf = anteil_mutter * gesamtbedarf
     anteil_vater_gesamtbedarf = anteil_vater * gesamtbedarf
 
+    if zusatz_allein_tragen == "Ja, vom Vater":
+        anteil_mutter_gesamtbedarf = anteil_mutter * regelbedarf
+        anteil_vater_gesamtbedarf = (anteil_vater * regelbedarf) + zusatzbedarf 
+    elif zusatz_allein_tragen == "Ja, von der Mutter":
+        anteil_mutter_gesamtbedarf = (anteil_mutter * regelbedarf) + zusatzbedarf
+        anteil_vater_gesamtbedarf = anteil_vater * regelbedarf
+
     # Berechnung der Differenz der Anteile als absolute Differenz
     global differenz_anteile, auszugleichender_betrag
     differenz_anteile = abs(anteil_mutter_gesamtbedarf - anteil_vater_gesamtbedarf)
+    if zusatz_allein_tragen == "Ja, vom Vater":
+        differenz_anteile = abs(anteil_mutter_gesamtbedarf - (anteil_vater * regelbedarf))
+    elif zusatz_allein_tragen == "Ja, von der Mutter":
+        differenz_anteile = abs((anteil_mutter * regelbedarf) - anteil_vater_gesamtbedarf)
+        
     auszugleichender_betrag = differenz_anteile / 2     ### auszugleichender Betrag ist eigentlich DER Ausgleichsanspruch, der wird
-                                                        ### wird aber noch durch die Verrechnungen korrigiert
+                                                        ### wird aber noch durch die Verrechnungen korrigiert        
     st.session_state.basis_ausgleich = auszugleichender_betrag
 
     global anspruchsberechtigt, nicht_anspruchsberechtigt
@@ -470,6 +482,10 @@ def berechne_ausgleichsanspruch(monat, jahr, einkommen_mutter, einkommen_vater, 
 
     st.write(f"### Ausgleichsanspruch: **{ausgleichsanspruch:.2f} EUR**")
 
+    if st.session_state.freitext_input.strip():
+    st.markdown("### Erläuterungen und Anmerkungen:")
+    st.markdown(st.session_state.freitext_input)    
+
 
     return ausgleichsanspruch
 
@@ -594,6 +610,12 @@ def erstelle_pdf():
 
     pdf.add_paragraph(f"Anteil Mutter am Gesamtbedarf: {st.session_state.anteil_mutter_gesamtbedarf:.2f} €")
     pdf.add_paragraph(f"Anteil Vater am Gesamtbedarf: {st.session_state.anteil_vater_gesamtbedarf:.2f} €")
+    if zusatz_allein_tragen == "Ja, vom Vater":
+        pdf.add_paragraph(f"Haftungsanteil der KM bezieht sich nur auf Regelbedarf, da der Zusatzbedarf hier von KV allein zu tragen ist.")
+        pdf.add_paragraph(f"Differenz für Ausgleich bezieht sich folglich nur auf den Regelbedarf.")
+    elif zusatz_allein_tragen == "Ja, von der Mutter":
+        pdf.add_paragraph(f"Haftungsanteil des KV bezieht sich nur auf Regelbedarf, da der Zusatzbedarf hier von KM allein zu tragen ist.")
+        pdf.add_paragraph(f"Differenz für Ausgleich bezieht sich folglich nur auf den Regelbedarf.")
     pdf.add_paragraph(f"Differenz: {st.session_state.differenz_anteile:.2f} €")
     pdf.add_paragraph(f"Auszugleichender Betrag (1/2) von {st.session_state.nicht_anspruchsberechtigt} zu leisten an {st.session_state.anspruchsberechtigt}: {st.session_state.basis_ausgleich:.2f} €")
 
@@ -632,6 +654,17 @@ def erstelle_pdf():
         pdf.add_paragraph(f"Daher von KV an KM abzuführendes Kindergeld: {st.session_state.abzufuehrendes_kindergeld:.2f}")
 
     pdf.add_paragraph(f"  Ausgleichsanspruch von {st.session_state.anspruchsberechtigt} gegen {st.session_state.nicht_anspruchsberechtigt}: {st.session_state.ausgleichsanspruch:.2f} €")
+
+    if st.session_state.get("freitext_input"):
+        c.setFont("Helvetica", 12)
+        c.drawString(x_start, y_start, "Erläuterungen und Anmerkungen:")
+    
+        text = c.beginText(x_start, y_start - 20)
+        text.setFont("Helvetica", 11)
+        for line in st.session_state["freitext_input"].split("\n"):
+            text.textLine(line)
+        c.drawText(text)
+
     pdf.add_paragraph("Diese Berechnung wurde mithilfe des ASGLA-Rechners (https://asgla-testversion.streamlit.app/) vom LegalTech Lab JTC der Martin-Luther-Universität Halle-Wittenberg erstellt.")
         # PDF in einen BytesIO-Buffer schreiben:
     pdf_buffer = BytesIO()
@@ -1054,6 +1087,9 @@ with st.container():
         kindergeld_empfaenger = st.radio("Kindergeldempfänger:", ("Mutter", "Vater"), key="kindergeld_empfaenger")
 
 st.markdown("––––––––––––––––––––––––––")
+
+st.markdown("### Freitext für Anmerkungen / Sonstiges")
+freitext_input = st.text_area("Zusätzliche Informationen oder Anmerkungen:", height=150, key="freitext_input")
 
 if "berechnet" not in st.session_state:
     st.session_state["berechnet"] = False
