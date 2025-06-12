@@ -1041,11 +1041,11 @@ with st.container():
             chk_gezahlt_zusatz_v = st.checkbox("Ja, vom Kindsvater", value=False)
             if chk_gezahlt_zusatz_v:
                 zusatzbez_getragen_vater = st.text_input("Bezeichnung von KV geleisteter Zusatzbedarf", key="zusatzbez_getragen_vater", value="")
-                zusatzbedarf_getragen_vater = st.number_input("Bereits bezahlter Zusatzbedarf (EUR)", value=0)
+                zusatzbedarf_getragen_vater = st.number_input("Bereits bezahlter Zusatzbedarf (EUR)", key="zusatzbedarf_getragen_vater", value=0)
             chk_gezahlt_zusatz_m = st.checkbox("Ja, von der Kindsmutter", value=False)
             if chk_gezahlt_zusatz_m:
                 zusatzbez_getragen_mutter = st.text_input("Bezeichnung von KM geleisteter Zusatzbedarf", key="zusatzbez_getragen_mutter", value="")
-                zusatzbedarf_getragen_mutter = st.number_input("Bereits bezahlter Zusatzbedarf (EUR)", value=0)
+                zusatzbedarf_getragen_mutter = st.number_input("Bereits bezahlter Zusatzbedarf (EUR)", key="zusatzbedarf_getragen_mutter", value=0)
             zusatz_allein_tragen = st.radio("Ist der Zusatzbedarf von einem der Elternteile allein zu tragen?", ("Nein", "Ja, vom Vater", "Ja, von der Mutter"), key="zusatz_allein_tragen")
             # key trägt das sofort in sessionstate ein
 
