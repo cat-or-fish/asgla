@@ -525,7 +525,7 @@ def erstelle_pdf():
     pdf.add_font('DejaVu', 'I', 'fonts/DejaVuSans-Oblique.ttf') # kursiv (italic)
     pdf.add_font('DejaVu', 'BI', 'fonts/DejaVuSans-BoldOblique.ttf') # fett+kursiv
 
-    pdf.set_font("DejaVu", size=12)
+    pdf.set_font("DejaVu", size=10)
 
     # Logo oben rechts einfügen
     pdf.image("./logo.png", x=160, y=10, w=40)  # x=160 je nach Seitenbreite anpassen
@@ -655,15 +655,11 @@ def erstelle_pdf():
 
     pdf.add_paragraph(f"  Ausgleichsanspruch von {st.session_state.anspruchsberechtigt} gegen {st.session_state.nicht_anspruchsberechtigt}: {st.session_state.ausgleichsanspruch:.2f} €")
 
-    if st.session_state.get("freitext_input"):
-        c.setFont("Helvetica", 12)
-        c.drawString(x_start, y_start, "Erläuterungen und Anmerkungen:")
-    
-        text = c.beginText(x_start, y_start - 20)
-        text.setFont("Helvetica", 11)
-        for line in st.session_state["freitext_input"].split("\n"):
-            text.textLine(line)
-        c.drawText(text)
+    freitext = st.session_state.get("freitext_input", "").strip()
+    if freitext:
+        pdf.ln(10)  # etwas Abstand
+        pdf.cell(0, 10, "Anmerkungen / Sonstiges", ln=True)
+        pdf.multi_cell(0, 10, freitext)
 
     pdf.add_paragraph("Diese Berechnung wurde mithilfe des ASGLA-Rechners (https://asgla-testversion.streamlit.app/) vom LegalTech Lab JTC der Martin-Luther-Universität Halle-Wittenberg erstellt.")
         # PDF in einen BytesIO-Buffer schreiben:
