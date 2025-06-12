@@ -656,7 +656,7 @@ def erstelle_pdf():
     pdf.add_paragraph(f"  Ausgleichsanspruch von {st.session_state.anspruchsberechtigt} gegen {st.session_state.nicht_anspruchsberechtigt}: {st.session_state.ausgleichsanspruch:.2f} €")
 
     pdf.add_paragraph("Erläuterungen und Anmerkungen:")
-    if freitext_input
+    if freitext_input:
         pdf.add_paragraph(f"{freitext_input}")
 
     pdf.add_paragraph("Diese Berechnung wurde mithilfe des ASGLA-Rechners (https://asgla-testversion.streamlit.app/) vom LegalTech Lab JTC der Martin-Luther-Universität Halle-Wittenberg erstellt.")
