@@ -483,8 +483,8 @@ def berechne_ausgleichsanspruch(monat, jahr, einkommen_mutter, einkommen_vater, 
     st.write(f"### Ausgleichsanspruch: **{ausgleichsanspruch:.2f} EUR**")
 
     if st.session_state.freitext_input.strip():
-    st.markdown("### Erläuterungen und Anmerkungen:")
-    st.markdown(st.session_state.freitext_input)    
+        st.markdown("### Erläuterungen und Anmerkungen:")
+        st.markdown(st.session_state.freitext_input)    
 
 
     return ausgleichsanspruch
