@@ -793,7 +793,7 @@ def berechne_und_zeige():
 
 # GUI ANFANG #
 # Titel und feste "Fenstergröße" (Streamlit ist responsiv, aber wir können die Breite anpassen)
-st.set_page_config(page_title="Ausgleichsanspruch Wechselmodell", layout="wide", name="ASGLA Rechner")
+st.set_page_config(page_title="Ausgleichsanspruch Wechselmodell", layout="wide")
 
 st.title("Ausgleichsanspruch Wechselmodell")
 
