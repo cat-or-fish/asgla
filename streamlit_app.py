@@ -781,28 +781,58 @@ def berechne_und_zeige():
 # Titel und feste "Fenstergröße" (Streamlit ist responsiv, aber wir können die Breite anpassen)
 st.set_page_config(page_title="Ausgleichsanspruch Wechselmodell", layout="wide")
 
-st.title("Ausgleichsanspruch Wechselmodell")
+# Background # CSS mit Hintergrund einfügen
 
-# Logo oben rechts einfügen
-logo_path = "./logo.png"
+def get_base64_of_image(file_path):
+    with open(file_path, "rb") as f:
+        data = f.read()
+    return base64.b64encode(data).decode()
+
+def set_background(image_path):
+    encoded = get_base64_of_image(image_path)
+    css = f"""
+    <style>
+    .stApp {{
+        background-image: url("data:image/png;base64,{encoded}");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }}
+    </style>
+    """
+    st.markdown(css, unsafe_allow_html=True)
+
+# Anwendung starten
+set_background("background.png")
+
+# CSS laden
+def load_css(path):
+    with open(path, "r") as f:
+        css = f.read()
+    st.markdown(f"<style>{css}</style>", unsafe_allow_html=True)
+
+# HTML laden mit Platzhalter für base64 Logo
+def load_html(path, logo_b64):
+    with open(path, "r") as f:
+        html = f.read()
+    html = html.replace("{logo_base64}", logo_b64)
+    st.markdown(html, unsafe_allow_html=True)
 
 def get_base64_image(image_path):
     with open(image_path, "rb") as img_file:
         return base64.b64encode(img_file.read()).decode()
 
-if os.path.exists(logo_path):
-    logo_base64 = get_base64_image(logo_path)
+logo_path = "./logo.png"
+css_path = "./design.css"
+html_path = "./design.html"
 
-    st.markdown(
-        f"""
-        <div style="position: absolute; top: 1rem; right: 1rem; z-index: 100;">
-            <img src="data:image/png;base64,{logo_base64}" style="max-width: 150px; height: auto;">
-        </div>
-        """,
-        unsafe_allow_html=True
-    )
-else:
-    st.error(f"Logo-Datei nicht gefunden unter: {logo_path}")
+logo_base64 = get_base64_image(logo_path)
+
+load_html(html_path, logo_base64)
+load_css(css_path)
+
+
 # Abstand nach oben für den restlichen Content
 st.markdown("<div style='height: 100px;'></div>", unsafe_allow_html=True)
 
