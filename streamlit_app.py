@@ -213,14 +213,11 @@ def berechne_ausgleichsanspruch(monat, jahr, einkommen_mutter, einkommen_vater, 
 
 
     # Bereinigung der Einkommen
-    global bereinigtes_einkommen_mutter
     bereinigtes_einkommen_mutter = einkommen_mutter - abzug_mutter
-    global bereinigtes_einkommen_vater
     bereinigtes_einkommen_vater = einkommen_vater - abzug_vater
 
     
     # Gesamteinkommen beider Eltern
-    global gesamtes_einkommen
     gesamtes_einkommen = bereinigtes_einkommen_mutter + bereinigtes_einkommen_vater
 
     st.session_state.sockelbetrag_mutter = st.session_state.get("sockel_amt_mutter", 0.0)
@@ -229,7 +226,6 @@ def berechne_ausgleichsanspruch(monat, jahr, einkommen_mutter, einkommen_vater, 
     st.session_state.adjektiv_sockelbetrag_vater = st.session_state.get("sockel_lbl_vater", "angemessene")
 
     
-    global verteilbarer_betrag_mutter, verteilbarer_betrag_vater
     verteilbarer_betrag_mutter = bereinigtes_einkommen_mutter - st.session_state.sockelbetrag_mutter
     verteilbarer_betrag_vater = bereinigtes_einkommen_vater - st.session_state.sockelbetrag_vater
     # Wenn der verteilbare Betrag negativ ist, setze ihn auf 0
@@ -239,9 +235,7 @@ def berechne_ausgleichsanspruch(monat, jahr, einkommen_mutter, einkommen_vater, 
         verteilbarer_betrag_vater = 0
     
     # Haftungsanteile in %
-    global verteilbarer_betrag_gesamt
     verteilbarer_betrag_gesamt = verteilbarer_betrag_mutter + verteilbarer_betrag_vater
-    global anteil_mutter, anteil_vater
     anteil_mutter = verteilbarer_betrag_mutter / verteilbarer_betrag_gesamt
     anteil_vater = verteilbarer_betrag_vater / verteilbarer_betrag_gesamt
     
@@ -250,26 +244,18 @@ def berechne_ausgleichsanspruch(monat, jahr, einkommen_mutter, einkommen_vater, 
     baranteil = kindergeld / 2          # Der Baranteil ist die andere Hälfte
     
     # Verteilung des Betreuungsanteils (gleichmäßig)
-    global betreuungsanteil_mutter
     betreuungsanteil_mutter = betreuungsanteil / 2
-    global betreuungsanteil_vater
     betreuungsanteil_vater = betreuungsanteil / 2
     
     # Verteilung des Baranteils (nach Haftungsanteil)
-    global baranteil_mutter
     baranteil_mutter = baranteil * anteil_mutter
-    global baranteil_vater
     baranteil_vater = baranteil * anteil_vater
     
     # Gesamtbedarf des Kindes
-    global zusatzbedarf
     zusatzbedarf = mehrbedarf + sonderbedarf
-    
-    global gesamtbedarf
     gesamtbedarf = regelbedarf + zusatzbedarf
 
     # Anteil der Eltern am Gesamtbedarf in Geldbetragshöhe
-    global anteil_mutter_gesamtbedarf, anteil_vater_gesamtbedarf
     anteil_mutter_gesamtbedarf = anteil_mutter * gesamtbedarf
     anteil_vater_gesamtbedarf = anteil_vater * gesamtbedarf
 
@@ -281,7 +267,6 @@ def berechne_ausgleichsanspruch(monat, jahr, einkommen_mutter, einkommen_vater, 
         anteil_vater_gesamtbedarf = anteil_vater * regelbedarf
 
     # Berechnung der Differenz der Anteile als absolute Differenz
-    global differenz_anteile, auszugleichender_betrag
     differenz_anteile = abs(anteil_mutter_gesamtbedarf - anteil_vater_gesamtbedarf)
     if zusatz_allein_tragen == "Ja, vom Vater":
         differenz_anteile = abs(anteil_mutter_gesamtbedarf - (anteil_vater * regelbedarf))
@@ -292,7 +277,6 @@ def berechne_ausgleichsanspruch(monat, jahr, einkommen_mutter, einkommen_vater, 
                                                         ### wird aber noch durch die Verrechnungen korrigiert        
     st.session_state.basis_ausgleich = auszugleichender_betrag
 
-    global anspruchsberechtigt, nicht_anspruchsberechtigt
     if anteil_vater_gesamtbedarf > anteil_mutter_gesamtbedarf:
         anspruchsberechtigt = "Mutter"
         nicht_anspruchsberechtigt = "Vater"
@@ -330,7 +314,6 @@ def berechne_ausgleichsanspruch(monat, jahr, einkommen_mutter, einkommen_vater, 
         st.session_state.auszugleichender_betrag_nach_zusatzverrechnung = auszugleichender_betrag
                 
     # Berechnung des abzuführenden Kindergeldes
-    global abzufuehrendes_kindergeld
     if kindergeld_empfaenger == "Mutter":
         abzufuehrendes_kindergeld = betreuungsanteil_vater + baranteil_vater
     else:
@@ -588,9 +571,12 @@ def erstelle_pdf():
     ])
     pdf.add_table("Mutter", daten_mutter, [90, 50])
 
+    pdf.ln(15) # Spacer
+    
     pdf.add_paragraph(f"Für den Kindsvater wurde der {st.session_state.adjektiv_sockelbetrag_vater} Selbstbehalt berücksichtigt.")
     pdf.add_paragraph(f"Für die Kindsmutter wurde der {st.session_state.adjektiv_sockelbetrag_mutter} Selbstbehalt berücksichtigt.")
-    pdf.add_paragraph(f"Relevantes Gesamteinkommen: {st.session_state.gesamtes_einkommen:.2f} €")
+    pdf.ln(15) # Spacer
+    pdf.add_paragraph(f"Relevantes Gesamteinkommen für den Regelbedarf: {st.session_state.gesamtes_einkommen:.2f} €")
     pdf.add_paragraph(f"Verteilbarer Betrag Gesamt: {st.session_state.verteilbarer_betrag_gesamt:.2f}")
     pdf.add_paragraph(f"Haftungsanteil Mutter: {st.session_state.anteil_mutter:.2%}")
     pdf.add_paragraph(f"Haftungsanteil Vater: {st.session_state.anteil_vater:.2%}")
@@ -1046,6 +1032,9 @@ with st.container():
         ### Zum Kind
         alter_kind = st.number_input("Alter des Kindes", value=10, step=1, min_value=0)
 
+        st.markdown("### Kindergeld")
+        kindergeld_empfaenger = st.radio("Kindergeldempfänger:", ("Mutter", "Vater"), key="kindergeld_empfaenger")
+
         st.markdown("### Zusatzbedarfe")
         # Checkbox: Mehrbedarf
         zeige_mehrbedarf = st.checkbox("Mehrbedarf hinzufügen", value=True)
@@ -1075,10 +1064,6 @@ with st.container():
                 zusatzbedarf_getragen_mutter = st.number_input("Bereits bezahlter Zusatzbedarf (EUR)", key="zusatzbedarf_getragen_mutter", value=0)
             zusatz_allein_tragen = st.radio("Ist der Zusatzbedarf von einem der Elternteile allein zu tragen?", ("Nein", "Ja, vom Vater", "Ja, von der Mutter"), key="zusatz_allein_tragen")
             # key trägt das sofort in sessionstate ein
-
-        st.markdown("### Kindergeld")
-        global kindergeld_empfaenger
-        kindergeld_empfaenger = st.radio("Kindergeldempfänger:", ("Mutter", "Vater"), key="kindergeld_empfaenger")
 
 st.markdown("––––––––––––––––––––––––––")
 
