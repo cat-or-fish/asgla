@@ -1,0 +1,290 @@
+/* design.css */
+
+/* Hide Streamlit branding */
+#MainMenu {visibility: hidden;}
+.stDeployButton {display:none;}
+footer {visibility: hidden;}
+.stApp > header {visibility: hidden;}
+
+/* Custom Header */
+.custom-header {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(15px);
+    border-radius: 25px;
+    padding: 35px;
+    margin-bottom: 30px;
+    box-shadow: 0 15px 35px rgba(107, 163, 176, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    position: relative;
+}
+
+.custom-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 6px;
+    background: linear-gradient(90deg, 
+        #6ba3b0 0%, 
+        #b19cd9 25%, 
+        #8fb8a3 50%, 
+        #e17b47 75%, 
+        #6ba3b0 100%);
+    border-radius: 25px 25px 0 0;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    background: linear-gradient(135deg, #6ba3b0, #b19cd9);
+    color: white;
+    padding: 15px 25px;
+    border-radius: 18px;
+    font-weight: bold;
+    font-size: 20px;
+    box-shadow: 0 8px 20px rgba(107, 163, 176, 0.3);
+}
+
+.title {
+    font-size: 2.8rem;
+    font-weight: 300;
+    background: linear-gradient(135deg, #6ba3b0, #b19cd9, #8fb8a3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 12px;
+    line-height: 1.2;
+}
+
+.subtitle {
+    color: #5a8a95;
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+/* Card Styles */
+.custom-card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(15px);
+    border-radius: 25px;
+    padding: 35px;
+    box-shadow: 0 15px 35px rgba(107, 163, 176, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.card-teal::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #6ba3b0, #8fb8a3);
+    border-radius: 25px 25px 0 0;
+}
+
+.card-purple::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #b19cd9, #6ba3b0);
+    border-radius: 25px 25px 0 0;
+}
+
+.card-green::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #8fb8a3, #b19cd9);
+    border-radius: 25px 25px 0 0;
+}
+
+/* Section Headers */
+.section-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid rgba(107, 163, 176, 0.1);
+}
+
+.section-icon {
+    width: 55px;
+    height: 55px;
+    border-radius: 18px;
+    margin-right: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 22px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.icon-teal {
+    background: linear-gradient(135deg, #6ba3b0, #8fb8a3);
+}
+
+.icon-purple {
+    background: linear-gradient(135deg, #b19cd9, #6ba3b0);
+}
+
+.icon-green {
+    background: linear-gradient(135deg, #8fb8a3, #b19cd9);
+}
+
+.section-title {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #5a8a95;
+}
+
+/* Tabs */
+.custom-tabs {
+    display: flex;
+    margin-bottom: 25px;
+    background: rgba(107, 163, 176, 0.08);
+    border-radius: 15px;
+    padding: 6px;
+}
+
+.tab-button {
+    flex: 1;
+    padding: 12px 18px;
+    border: none;
+    background: transparent;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    font-size: 14px;
+    color: #5a8a95;
+}
+
+.tab-active {
+    background: linear-gradient(135deg, #6ba3b0, #b19cd9);
+    color: white;
+    box-shadow: 0 4px 12px rgba(107, 163, 176, 0.3);
+}
+
+/* Custom buttons */
+.custom-button {
+    background: linear-gradient(135deg, #6ba3b0, #b19cd9);
+    color: white;
+    border: none;
+    padding: 15px 28px;
+    border-radius: 15px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    margin-top: 18px;
+    box-shadow: 0 6px 18px rgba(107, 163, 176, 0.3);
+}
+
+.custom-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(107, 163, 176, 0.4);
+}
+
+/* Form elements */
+.stSelectbox > div > div {
+    background: rgba(255, 255, 255, 0.9);
+    border: 2px solid rgba(107, 163, 176, 0.2);
+    border-radius: 12px;
+}
+
+.stNumberInput > div > div > input {
+    background: rgba(255, 255, 255, 0.9);
+    border: 2px solid rgba(107, 163, 176, 0.2);
+    border-radius: 12px;
+}
+
+/* Background shapes */
+.bg-shape {
+    position: fixed;
+    border-radius: 50%;
+    opacity: 0.1;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.shape-1 {
+    width: 300px;
+    height: 300px;
+    background: #6ba3b0;
+    top: 10%;
+    left: -100px;
+    border-radius: 60% 40% 70% 30%;
+}
+
+.shape-2 {
+    width: 200px;
+    height: 400px;
+    background: #b19cd9;
+    bottom: 20%;
+    right: -50px;
+    border-radius: 40% 60% 30% 70%;
+}
+
+.shape-3 {
+    width: 150px;
+    height: 150px;
+    background: #8fb8a3;
+    top: 30%;
+    right: 10%;
+}
+
+/* Form elements - Inputs and Selects */
+.stSelectbox > div > div,
+.stNumberInput > div > div > input,
+.stTextInput > div > div > input,
+.stTextArea > div > div > textarea {
+    background: rgba(255, 255, 255, 0.9);
+    border: 2px solid rgba(107, 163, 176, 0.2);
+    border-radius: 12px;
+    padding: 14px 18px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 8px rgba(107, 163, 176, 0.1);
+    outline: none;
+}
+
+/* Fokus-Effekt fÃ¼r Inputs und Selects */
+.stSelectbox > div > div:focus,
+.stNumberInput > div > div > input:focus,
+.stTextInput > div > div > input:focus,
+.stTextArea > div > div > textarea:focus {
+    border-color: #6ba3b0;
+    box-shadow: 0 0 8px 2px rgba(107, 163, 176, 0.3);
+    background: rgba(255, 255, 255, 1);
+}
+
+/* Placeholder Styling (optional) */
+.stNumberInput > div > div > input::placeholder,
+.stTextInput > div > div > input::placeholder,
+.stTextArea > div > div > textarea::placeholder {
+    color: #8ca6a9;
+    font-style: italic;
+}
