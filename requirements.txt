@@ -3,3 +3,4 @@ pyarrow
 pandas
 reportlab
 fpdf2
+weasyprint
