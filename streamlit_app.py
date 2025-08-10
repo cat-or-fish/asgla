@@ -8,9 +8,9 @@ from reportlab.pdfgen import canvas
 from reportlab.lib import colors
 from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
 from reportlab.platypus import SimpleDocTemplate, Table, TableStyle, Paragraph, Spacer
-from fpdf import FPDF
 from io import BytesIO
-from fpdf.enums import XPos, YPos
+from weasyprint import HTML
+from datetime import date
 
 
 
@@ -472,54 +472,150 @@ def berechne_ausgleichsanspruch(monat, jahr, einkommen_mutter, einkommen_vater, 
 
     return ausgleichsanspruch
 
-
-class PDF(FPDF):
-    def header(self):
-        pass  # kein automatischer Header
-
-    def chapter_title(self, title):
-        self.set_font('DejaVu', 'B', 14)
-        self.multi_cell(0, 10, title, new_x=XPos.LMARGIN, new_y=YPos.NEXT, align='C')
-        self.ln(5)
-
-    def add_table(self, title, data, col_widths):
-        self.set_fill_color(220, 220, 220)
-        self.set_font("DejaVu", 'B', 12)
-        self.cell(sum(col_widths), 10, title, 1, new_x=XPos.LMARGIN, new_y=YPos.NEXT, align='C', fill=True)
-        self.set_font("DejaVu", '', 11)
-        for row in data:
-            self.cell(col_widths[0], 8, row[0], border=1, align='L')
-            self.cell(col_widths[1], 8, row[1], border=1, align='R')
-            self.ln()
-
-    def add_paragraph(self, text):
-        self.set_font("DejaVu", '', 11)
-        self.multi_cell(0, 8, text)
-        self.ln(1)
-
+### PDF ANFANG ###
 def erstelle_pdf():
-    dateiname="Ausgleichsanspruch{monat}{jahr}.pdf"
+    dateiname = f"Ausgleichsanspruch{monat}{jahr}.pdf"
 
-    pdf = PDF()
-    pdf.add_page()
-    # 2) Unicode-fähige Schrift einbinden  ← HIER einfügen
-    pdf.add_font('DejaVu', '', 'fonts/DejaVuSans.ttf')        # normal
-    pdf.add_font('DejaVu', 'B', 'fonts/DejaVuSans-Bold.ttf')   # fett (bold)
-    pdf.add_font('DejaVu', 'I', 'fonts/DejaVuSans-Oblique.ttf') # kursiv (italic)
-    pdf.add_font('DejaVu', 'BI', 'fonts/DejaVuSans-BoldOblique.ttf') # fett+kursiv
+    html_content = f"""
+    <html>
+    <head>
+    <style>
+        @page {{
+            @bottom-center {{
+                content: "Seite " counter(page) " von " counter(pages);
+                font-size: 9pt;
+                border-top: 1px solid #000;
+                padding-top: 6px;
+            }}
+        }}
+        body {{
+            font-family: "Times New Roman", Times, serif;
+            font-size: 12pt;
+            margin: 40px;
+            color: #000;
+            background: #fff;
+        }}
+        h1 {{
+            font-weight: bold;
+            font-size: 14pt;
+            margin-top: 80px;
+            margin-bottom: 0.2em;
+            text-align: left;
+            font-family: Georgia, serif;
+        }}
+        hr {{
+            border: none;
+            border-top: 1px solid #000;
+            margin-bottom: 0.6em;
+        }}
+        .stand {{
+            font-size: 12pt;
+            margin-top: 0;
+            margin-bottom: 1.5em;
+        }}
+        table {{
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 0.8em;
+            margin-bottom: 1.5em;
+        }}
+        th, td {{
+            border: 1px solid #000;
+            padding: 6px 10px;
+        }}
+        th {{
+            font-weight: bold;
+            background: #fff;
+            text-align: left;
+        }}
+        td {{
+            text-align: right;
+        }}
+        td.left {{
+            text-align: left;
+        }}
+        p {{
+            font-style: normal;
+            font-size: 12pt;
+            margin-top: 0;
+            margin-bottom: 1em;
+            color: #000;
+        }}
+        .footnote {{
+            font-size: 9pt;
+            border-top: 1px solid #000;
+            padding-top: 6px;
+            margin-top: 3em;
+            text-align: center;
+        }}
+        .logo {{
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 100px;
+        }}
+    </style>
+    </head>
+    <body>
+        <img src="logo.png" class="logo" alt="Logo"/>
+        <h1>Berechnung Ausgleichsanspruch im Wechselmodell {monat} {jahr}</h1>
+        <hr/>
+        <p class="stand">Stand: {st.session_state.heute}</p>
 
-    pdf.set_font("DejaVu", size=10)
+        {erstelle_tabelle_html("Vater", erstelle_daten_vater())}
+        {erstelle_tabelle_html("Mutter", erstelle_daten_mutter())}
 
-    # Logo oben rechts einfügen
-    pdf.image("./logo.png", x=160, y=10, w=40)  # x=160 je nach Seitenbreite anpassen
-    pdf.ln(15) # Spacer
-    pdf.chapter_title(f"Berechnung Ausgleichsanspruch im Wechselmodell\n{monat} {jahr}")
+        <p>Für den Kindsvater wurde der {st.session_state.adjektiv_sockelbetrag_vater} Selbstbehalt berücksichtigt.</p>
+        <p>Für die Kindsmutter wurde der {st.session_state.adjektiv_sockelbetrag_mutter} Selbstbehalt berücksichtigt.</p>
 
-    # Tabelle Vater
-    daten_vater = [
+        <p>Relevantes Gesamteinkommen für den Regelbedarf: {st.session_state.gesamtes_einkommen:.2f} €</p>
+        <p>Verteilbarer Betrag Gesamt: {st.session_state.verteilbarer_betrag_gesamt:.2f} €</p>
+        <p>Haftungsanteil Mutter: {st.session_state.anteil_mutter:.2%}</p>
+        <p>Haftungsanteil Vater: {st.session_state.anteil_vater:.2%}</p>
+
+        {erstelle_tabelle_html(f"Angaben zum Kind ({st.session_state.alter} Jahre alt)", erstelle_daten_kind())}
+
+        <p>Anteil Mutter am Gesamtbedarf: {st.session_state.anteil_mutter_gesamtbedarf:.2f} €</p>
+        <p>Anteil Vater am Gesamtbedarf: {st.session_state.anteil_vater_gesamtbedarf:.2f} €</p>
+
+        {zusatzbedarf_text(zusatz_allein_tragen)}
+
+        <p>Differenz: {st.session_state.differenz_anteile:.2f} €</p>
+        <p>Auszugleichender Betrag (1/2) von {st.session_state.nicht_anspruchsberechtigt} zu leisten an {st.session_state.anspruchsberechtigt}: {st.session_state.basis_ausgleich:.2f} €</p>
+
+        {zusatzbedarf_getragen_text(zusatz_allein_tragen)}
+
+        {erstelle_tabelle_html("Kindergeldverrechnung", erstelle_daten_kindergeld())}
+
+        {kindergeld_empfaenger_text(kindergeld_empfaenger)}
+
+        <p>Ausgleichsanspruch von {st.session_state.anspruchsberechtigt} gegen {st.session_state.nicht_anspruchsberechtigt}: {st.session_state.ausgleichsanspruch:.2f} €</p>
+
+        <h2>Erläuterungen und Anmerkungen:</h2>
+        <p>{freitext_input}</p>
+
+        <p>Diese Berechnung wurde mithilfe des ASGLA-Rechners (https://asgla-testversion.streamlit.app/) vom LegalTech Lab JTC der Martin-Luther-Universität Halle-Wittenberg erstellt.</p>
+
+    </body>
+    </html>
+    """
+
+    pdf_bytes = HTML(string=html_content, base_url=".").write_pdf()
+    return BytesIO(pdf_bytes)
+
+
+def erstelle_tabelle_html(titel, daten):
+    table_html = f"<h2>{titel}</h2><table><thead><tr><th>Bezeichnung</th><th>Betrag</th></tr></thead><tbody>"
+    for row in daten:
+        table_html += f"<tr><td class='left'>{row[0]}</td><td>{row[1]}</td></tr>"
+    table_html += "</tbody></table>"
+    return table_html
+
+
+def erstelle_daten_vater():
+    daten = [
         ["Einkommen", f"{st.session_state.einkommen_vater:.2f} €"],
     ]
-
     for i, eintrag in enumerate(st.session_state.abzugsposten_vater):
         if isinstance(eintrag, dict):
             bezeichnung = eintrag.get("bezeichnung", f"Abzugsposten {i + 1}")
@@ -527,27 +623,24 @@ def erstelle_pdf():
         else:
             bezeichnung = f"Abzugsposten {i + 1}"
             wert = eintrag
-
         try:
             zahl = float(wert)
-            daten_vater.append([bezeichnung, f"{zahl:.2f} €"])
+            daten.append([bezeichnung, f"{zahl:.2f} €"])
         except ValueError:
-            daten_vater.append([bezeichnung, "ungültig"])
-
-    daten_vater.append(["Abzug Gesamt", f"{st.session_state.abzug_vater:.2f} €"])
-
-    daten_vater.extend([
+            daten.append([bezeichnung, "ungültig"])
+    daten.append(["Abzug Gesamt", f"{st.session_state.abzug_vater:.2f} €"])
+    daten.extend([
         ["= bereinigtes Einkommen", f"{st.session_state.bereinigtes_einkommen_vater:.2f} €"],
         ["./. Selbstbehalt", f"{st.session_state.sockelbetrag_vater:.2f} €"],
         ["= verteilbarer Betrag", f"{st.session_state.verteilbarer_betrag_vater:.2f} €"],
     ])
-    pdf.add_table("Vater", daten_vater, [90, 50])
+    return daten
 
-    # Tabelle Mutter
-    daten_mutter = [
+
+def erstelle_daten_mutter():
+    daten = [
         ["Einkommen", f"{st.session_state.einkommen_mutter:.2f} €"],
     ]
-
     for i, eintrag in enumerate(st.session_state.abzugsposten_mutter):
         if isinstance(eintrag, dict):
             bezeichnung = eintrag.get("bezeichnung", f"Abzugsposten {i + 1}")
@@ -555,102 +648,88 @@ def erstelle_pdf():
         else:
             bezeichnung = f"Abzugsposten {i + 1}"
             wert = eintrag
-
         try:
             zahl = float(wert)
-            daten_mutter.append([bezeichnung, f"{zahl:.2f} €"])
+            daten.append([bezeichnung, f"{zahl:.2f} €"])
         except ValueError:
-            daten_mutter.append([bezeichnung, "ungültig"])
-
-    daten_mutter.append(["Abzug Gesamt", f"{st.session_state.abzug_mutter:.2f} €"])
-
-    daten_mutter.extend([
+            daten.append([bezeichnung, "ungültig"])
+    daten.append(["Abzug Gesamt", f"{st.session_state.abzug_mutter:.2f} €"])
+    daten.extend([
         ["= bereinigtes Einkommen", f"{st.session_state.bereinigtes_einkommen_mutter:.2f} €"],
         ["./. Selbstbehalt", f"{st.session_state.sockelbetrag_mutter:.2f} €"],
         ["= verteilbarer Betrag", f"{st.session_state.verteilbarer_betrag_mutter:.2f} €"],
     ])
-    pdf.add_table("Mutter", daten_mutter, [90, 50])
+    return daten
 
-    pdf.ln(15) # Spacer
-    
-    pdf.add_paragraph(f"Für den Kindsvater wurde der {st.session_state.adjektiv_sockelbetrag_vater} Selbstbehalt berücksichtigt.")
-    pdf.add_paragraph(f"Für die Kindsmutter wurde der {st.session_state.adjektiv_sockelbetrag_mutter} Selbstbehalt berücksichtigt.")
-    pdf.ln(15) # Spacer
-    pdf.add_paragraph(f"Relevantes Gesamteinkommen für den Regelbedarf: {st.session_state.gesamtes_einkommen:.2f} €")
-    pdf.add_paragraph(f"Verteilbarer Betrag Gesamt: {st.session_state.verteilbarer_betrag_gesamt:.2f}")
-    pdf.add_paragraph(f"Haftungsanteil Mutter: {st.session_state.anteil_mutter:.2%}")
-    pdf.add_paragraph(f"Haftungsanteil Vater: {st.session_state.anteil_vater:.2%}")
 
-    # Tabelle Kind
-    daten_kind = [["Regelbedarf", f"{st.session_state.regelbedarf:.2f} €"]]
+def erstelle_daten_kind():
+    daten = [["Regelbedarf", f"{st.session_state.regelbedarf:.2f} €"]]
     if st.session_state.zusatzbedarf > 0:
-        daten_kind.append(["Zusatzbedarf", f"{st.session_state.zusatzbedarf:.2f} €"])
+        daten.append(["Zusatzbedarf", f"{st.session_state.zusatzbedarf:.2f} €"])
     if st.session_state.mehrbedarf > 0:
-        daten_kind.append([f"davon Mehrbedarf ({st.session_state.mehrbez})", f"{st.session_state.mehrbedarf:.2f} €"])
+        daten.append([f"davon Mehrbedarf ({st.session_state.mehrbez})", f"{st.session_state.mehrbedarf:.2f} €"])
     if st.session_state.sonderbedarf > 0:
-        daten_kind.append([f"davon Sonderbedarf ({st.session_state.sonderbez})", f"{st.session_state.sonderbedarf:.2f} €"])
-    daten_kind.append(["= Gesamtbedarf", f"{st.session_state.gesamtbedarf:.2f} €"])
-    daten_kind.append(["Kindergeld", f"{st.session_state.kindergeld:.2f} €"])
-    
-    pdf.add_table(f"Angaben zum Kind ({st.session_state.alter} Jahre alt)", daten_kind, [90, 50])
+        daten.append([f"davon Sonderbedarf ({st.session_state.sonderbez})", f"{st.session_state.sonderbedarf:.2f} €"])
+    daten.append(["= Gesamtbedarf", f"{st.session_state.gesamtbedarf:.2f} €"])
+    daten.append(["Kindergeld", f"{st.session_state.kindergeld:.2f} €"])
+    return daten
 
-    pdf.add_paragraph(f"Anteil Mutter am Gesamtbedarf: {st.session_state.anteil_mutter_gesamtbedarf:.2f} €")
-    pdf.add_paragraph(f"Anteil Vater am Gesamtbedarf: {st.session_state.anteil_vater_gesamtbedarf:.2f} €")
+
+def zusatzbedarf_text(zusatz_allein_tragen):
     if zusatz_allein_tragen == "Ja, vom Vater":
-        pdf.add_paragraph(f"Haftungsanteil der KM bezieht sich nur auf Regelbedarf, da der Zusatzbedarf hier von KV allein zu tragen ist.")
-        pdf.add_paragraph(f"Differenz für Ausgleich bezieht sich folglich nur auf den Regelbedarf.")
+        return """
+        <p>Haftungsanteil der KM bezieht sich nur auf Regelbedarf, da der Zusatzbedarf hier von KV allein zu tragen ist.</p>
+        <p>Differenz für Ausgleich bezieht sich folglich nur auf den Regelbedarf.</p>
+        """
     elif zusatz_allein_tragen == "Ja, von der Mutter":
-        pdf.add_paragraph(f"Haftungsanteil des KV bezieht sich nur auf Regelbedarf, da der Zusatzbedarf hier von KM allein zu tragen ist.")
-        pdf.add_paragraph(f"Differenz für Ausgleich bezieht sich folglich nur auf den Regelbedarf.")
-    pdf.add_paragraph(f"Differenz: {st.session_state.differenz_anteile:.2f} €")
-    pdf.add_paragraph(f"Auszugleichender Betrag (1/2) von {st.session_state.nicht_anspruchsberechtigt} zu leisten an {st.session_state.anspruchsberechtigt}: {st.session_state.basis_ausgleich:.2f} €")
+        return """
+        <p>Haftungsanteil des KV bezieht sich nur auf Regelbedarf, da der Zusatzbedarf hier von KM allein zu tragen ist.</p>
+        <p>Differenz für Ausgleich bezieht sich folglich nur auf den Regelbedarf.</p>
+        """
+    else:
+        return ""
 
+
+def zusatzbedarf_getragen_text(zusatz_allein_tragen):
+    texte = []
     if st.session_state.zusatzbedarf_getragen_vater > 0:
-        pdf.add_paragraph(f"Von KV bereits getragener Zusatzbedarf: {st.session_state.zusatzbedarf_getragen_vater:.2f} € ({st.session_state.zusatzbez_getragen_vater})")
+        texte.append(f"<p>Von KV bereits getragener Zusatzbedarf: {st.session_state.zusatzbedarf_getragen_vater:.2f} € ({st.session_state.zusatzbez_getragen_vater})</p>")
         if zusatz_allein_tragen == "Nein":
-            pdf.add_paragraph(f"Daher hälftig ({st.session_state.zusatzbedarf_getragen_vater / 2:.2f} €) bei KM zu verrechnen.")
+            texte.append(f"<p>Daher hälftig ({st.session_state.zusatzbedarf_getragen_vater / 2:.2f} €) bei KM zu verrechnen.</p>")
         if zusatz_allein_tragen == "Ja, vom Vater":
-            pdf.add_paragraph(f"Zusatzbedarf ist aufgrund der elterlichen Einkommensverhältnisse hier vom Kindsvater selbst zu tragen. Daher findet insoweit keine Verrechnung statt.")
+            texte.append("<p>Zusatzbedarf ist aufgrund der elterlichen Einkommensverhältnisse hier vom Kindsvater selbst zu tragen. Daher findet insoweit keine Verrechnung statt.</p>")
         if zusatz_allein_tragen == "Ja, von der Mutter":
-            pdf.add_paragraph(f"Die Kindsmutter hat aufgrund der elterlichen Einkommensverhältnisse Zusatzbedarfe allein zu tragen. Daher findet insoweit eine vollständige Erstattung statt.")
+            texte.append("<p>Die Kindsmutter hat aufgrund der elterlichen Einkommensverhältnisse Zusatzbedarfe allein zu tragen. Daher findet insoweit eine vollständige Erstattung statt.</p>")
     if st.session_state.zusatzbedarf_getragen_mutter > 0:
-        pdf.add_paragraph(f"Von KM bereits getragener Zusatzbedarf: {st.session_state.zusatzbedarf_getragen_mutter:.2f} € ({st.session_state.zusatzbez_getragen_mutter})")
+        texte.append(f"<p>Von KM bereits getragener Zusatzbedarf: {st.session_state.zusatzbedarf_getragen_mutter:.2f} € ({st.session_state.zusatzbez_getragen_mutter})</p>")
         if zusatz_allein_tragen == "Nein":
-            pdf.add_paragraph(f"Daher hälftig ({st.session_state.zusatzbedarf_getragen_mutter / 2:.2f} €) bei KV zu verrechnen.")
+            texte.append(f"<p>Daher hälftig ({st.session_state.zusatzbedarf_getragen_mutter / 2:.2f} €) bei KV zu verrechnen.</p>")
         if zusatz_allein_tragen == "Ja, von der Mutter":
-            pdf.add_paragraph(f"Zusatzbedarf ist aufgrund der elterlichen Einkommensverhältnisse hier von der Kindsmutter selbst zu tragen. Daher findet insoweit keine Verrechnung statt.")
+            texte.append("<p>Zusatzbedarf ist aufgrund der elterlichen Einkommensverhältnisse hier von der Kindsmutter selbst zu tragen. Daher findet insoweit keine Verrechnung statt.</p>")
         if zusatz_allein_tragen == "Ja, vom Vater":
-            pdf.add_paragraph(f"Der Kindsvater hat aufgrund der elterlichen Einkommensverhältnisse Zusatzbedarfe allein zu tragen. Daher findet insoweit eine vollständige Erstattung statt.")
-    if st.session_state.zusatzbedarf_getragen_vater > 0 or st.session_state.zusatzbedarf_getragen_mutter > 0:
-        pdf.add_paragraph(f"Auszugleichender Betrag (1/2) nach Verrechnung des bereits getragenen Zusatzbedarfs: {st.session_state.auszugleichender_betrag_nach_zusatzverrechnung:.2f} €")
-    
-    # Kindergeldverrechnung
-    daten_kg = [
-        ["Kindergeldempfänger", kindergeld_empfaenger],
+            texte.append("<p>Der Kindsvater hat aufgrund der elterlichen Einkommensverhältnisse Zusatzbedarfe allein zu tragen. Daher findet insoweit eine vollständige Erstattung statt.</p>")
+    if texte:
+        texte.append(f"<p>Auszugleichender Betrag (1/2) nach Verrechnung des bereits getragenen Zusatzbedarfs: {st.session_state.auszugleichender_betrag_nach_zusatzverrechnung:.2f} €</p>")
+    return "".join(texte)
+
+
+def erstelle_daten_kindergeld():
+    return [
+        ["Kindergeldempfänger", st.session_state.kindergeld_empfaenger],
         ["Betreuungsanteil Mutter", f"{st.session_state.betreuungsanteil_mutter:.2f} €"],
         ["Baranteil Mutter", f"{st.session_state.baranteil_mutter:.2f} €"],
         ["Betreuungsanteil Vater", f"{st.session_state.betreuungsanteil_vater:.2f} €"],
         ["Baranteil Vater", f"{st.session_state.baranteil_vater:.2f} €"]
     ]
-    pdf.add_table("Kindergeldverrechnung", daten_kg, [90, 50])
 
-    if kindergeld_empfaenger == "Mutter":
-        pdf.add_paragraph(f"Daher von KM an KV abzuführendes Kindergeld: {st.session_state.abzufuehrendes_kindergeld:.2f}")
-    if kindergeld_empfaenger == "Vater":
-        pdf.add_paragraph(f"Daher von KV an KM abzuführendes Kindergeld: {st.session_state.abzufuehrendes_kindergeld:.2f}")
 
-    pdf.add_paragraph(f"  Ausgleichsanspruch von {st.session_state.anspruchsberechtigt} gegen {st.session_state.nicht_anspruchsberechtigt}: {st.session_state.ausgleichsanspruch:.2f} €")
-
-    pdf.add_paragraph("Erläuterungen und Anmerkungen:")
-    if freitext_input:
-        pdf.add_paragraph(f"{freitext_input}")
-
-    pdf.add_paragraph("Diese Berechnung wurde mithilfe des ASGLA-Rechners (https://asgla-testversion.streamlit.app/) vom LegalTech Lab JTC der Martin-Luther-Universität Halle-Wittenberg erstellt.")
-        # PDF in einen BytesIO-Buffer schreiben:
-    pdf_buffer = BytesIO()
-    pdf.output(pdf_buffer)
-    pdf_buffer.seek(0)  # Zeiger an den Anfang setzen!
-    return pdf_buffer
+def kindergeld_empfaenger_text(empfaenger):
+    if empfaenger == "Mutter":
+        return f"<p>Daher von KM an KV abzuführendes Kindergeld: {st.session_state.abzufuehrendes_kindergeld:.2f} €</p>"
+    elif empfaenger == "Vater":
+        return f"<p>Daher von KV an KM abzuführendes Kindergeld: {st.session_state.abzufuehrendes_kindergeld:.2f} €</p>"
+    return ""
+### PDF ENDE ###
 
 def berechne_und_zeige():
 
@@ -780,6 +859,7 @@ def berechne_und_zeige():
 # GUI ANFANG #
 # Titel und feste "Fenstergröße" (Streamlit ist responsiv, aber wir können die Breite anpassen)
 st.set_page_config(page_title="Ausgleichsanspruch Wechselmodell", layout="wide")
+st.session_state.heute = date.today().strftime("%d.%m.%Y")
 
 # Background # CSS mit Hintergrund einfügen
 
