@@ -11,6 +11,8 @@ from reportlab.platypus import SimpleDocTemplate, Table, TableStyle, Paragraph, 
 from io import BytesIO
 from weasyprint import HTML
 from datetime import date
+from contextlib import contextmanager
+from streamlit_extras.stylable_container import stylable_container
 
 
 
@@ -914,16 +916,18 @@ load_css(css_path)
 
 
 # Abstand nach oben für den restlichen Content
-st.markdown("<div style='height: 100px;'></div>", unsafe_allow_html=True)
+st.markdown("<div style='height: 50px;'></div>", unsafe_allow_html=True)
+
 
 # Jahr/Monat Auswahl
 col_jahr, col_monat = st.columns(2)
-jahr = col_jahr.selectbox("📆 Jahr", list(SELBSTBEHALTE.keys()), index=0)
-monat = col_monat.selectbox("📅 Monat", [
-    "Januar", "Februar", "März", "April", "Mai", "Juni",
-    "Juli", "August", "September", "Oktober", "November", "Dezember"
-], index=0)
-
+with col_jahr:
+    jahr = st.selectbox("📆 Jahr", list(SELBSTBEHALTE.keys()), index=0)
+with col_monat:
+    monat = st.selectbox("📅 Monat", [
+        "Januar", "Februar", "März", "April", "Mai", "Juni",
+        "Juli", "August", "September", "Oktober", "November", "Dezember"
+    ], index=0)
 
 # Werte bei Nichteingabe auf 0 setzen
 def get_float_or_zero(val):
@@ -954,8 +958,6 @@ if st.session_state.get("jahr_prev") != jahr:
         st.session_state[f"sockel_amt_{p}"] = SELBSTBEHALTE[jahr]["angemessen"]
         st.session_state[f"sockel_lbl_{p}"] = "angemessene"
     st.session_state["jahr_prev"] = jahr
-
-st.markdown("––––––––––––––––––––––––––")
 
 # Helper-Funktion: Sockel-Auswahl-Expander
 
@@ -1174,8 +1176,6 @@ with st.container():
                 zusatzbedarf_getragen_mutter = st.number_input("Bereits bezahlter Zusatzbedarf (EUR)", key="zusatzbedarf_getragen_mutter", value=0)
             zusatz_allein_tragen = st.radio("Ist der Zusatzbedarf von einem der Elternteile allein zu tragen?", ("Nein", "Ja, vom Vater", "Ja, von der Mutter"), key="zusatz_allein_tragen")
             # key trägt das sofort in sessionstate ein
-
-st.markdown("––––––––––––––––––––––––––")
 
 st.markdown("### Freitext für Anmerkungen / Sonstiges")
 freitext_input = st.text_area("Zusätzliche Informationen oder Anmerkungen:", height=150, key="freitext_input")
