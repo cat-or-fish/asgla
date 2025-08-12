@@ -12,7 +12,6 @@ from io import BytesIO
 from weasyprint import HTML
 from datetime import date
 from contextlib import contextmanager
-from streamlit_extras.stylable_container import stylable_container
 
 
 
