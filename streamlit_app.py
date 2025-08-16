@@ -464,7 +464,7 @@ def berechne_ausgleichsanspruch(monat, jahr, einkommen_mutter, einkommen_vater, 
     st.write(f"### Bedarf Kind ({st.session_state.alter} Jahre alt)")
     st.table(df_kind.style.hide(axis="index"))
 
-    st.write(f"### Ausgleichsanspruch von {st.session_state.anspruchsberechtigt} gegen {st.session_state.nicht_anspruchsberechtigt}: {st.session_state.ausgleichsanspruch:.2f} EUR**")
+    st.write(f"### Ausgleichsanspruch von {st.session_state.anspruchsberechtigt} gegen {st.session_state.nicht_anspruchsberechtigt}:    {st.session_state.ausgleichsanspruch:.2f} EUR")
 
     if st.session_state.freitext_input.strip():
         st.markdown("### Erläuterungen und Anmerkungen:")
