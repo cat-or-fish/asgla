@@ -190,7 +190,7 @@ footer {visibility: hidden;}
 
 .tab-active {
     background: linear-gradient(135deg, #6ba3b0, #b19cd9);
-    color: white;
+    color: black;
     box-shadow: 0 4px 12px rgba(107, 163, 176, 0.3);
 }
 
