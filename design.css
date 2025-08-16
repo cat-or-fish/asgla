@@ -260,6 +260,7 @@ footer {visibility: hidden;}
     border-radius: 12px;
     padding: 14px 18px;
     font-size: 16px;
+    color: #333333
     transition: all 0.3s ease;
     box-shadow: 0 3px 8px rgba(107, 163, 176, 0.1);
     outline: none;
@@ -275,6 +276,12 @@ footer {visibility: hidden;}
     border-color: #6ba3b0;
     box-shadow: 0 0 8px 2px rgba(107, 163, 176, 0.3);
     background: rgba(255, 255, 255, 1);
+    color: #333333
+}
+
+/* Zusätzliche Sicherheit für Dropdown-Optionen */
+.stSelectbox > div > div > div {
+    color: #333333 !important;
 }
 
 /* Placeholder Styling (optional) */
