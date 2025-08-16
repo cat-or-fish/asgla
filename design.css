@@ -251,21 +251,6 @@ footer {visibility: hidden;}
 
 /* Form elements - Inputs and Selects */
 
-/* Für den Text in der BaseWeb Select-Komponente */
-div[data-testid="stSelectbox"] div[data-baseweb="select"] {
-    color: black !important;
-}
-
-/* Für alle Kinder des BaseWeb Select */
-div[data-testid="stSelectbox"] div[data-baseweb="select"] * {
-    color: black !important;
-}
-
-/* Spezifisch für die Text-Container */
-div[data-testid="stSelectbox"] div[class*="st-cl st-co st-cm"] {
-    color: black !important;
-}
-
 .stSelectbox > div > div,
 .stNumberInput > div > div > input,
 .stTextInput > div > div > input,
