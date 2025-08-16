@@ -365,8 +365,17 @@ def berechne_ausgleichsanspruch(monat, jahr, einkommen_mutter, einkommen_vater, 
     
     ###RECHENWEG WEBSITE ANFANG###
     # Liste für Tabelleninhalte initialisieren
-    werte_vater = [f"{st.session_state.einkommen_vater:.2f} €"]
-    index_vater = ["Einkommen"]
+    werte_vater = [f"{st.session_state.haupttaetigkeit_vater:.2f} €"]
+    index_vater = ["Einkünfte aus Haupttätigkeit"]
+
+    werte_vater.extend([
+        f"{st.session_state.weitere_einkuenfte_vater:.2f} €",
+        f"{st.session_state.einkommen_vater:.2f} €"
+    ])
+    index_vater.extend([
+        "Weitere Einkünfte",
+        "Einkommen"
+    ])
 
     # Dynamische Abzugsposten einfügen (falls vorhanden)
     for i, abzug in enumerate(st.session_state.abzugsposten_vater):
@@ -400,8 +409,18 @@ def berechne_ausgleichsanspruch(monat, jahr, einkommen_mutter, einkommen_vater, 
     }, index=index_vater)
 
     # Liste für Tabelleninhalte initialisieren
-    werte_mutter = [f"{st.session_state.einkommen_mutter:.2f} €"]
-    index_mutter = ["Einkommen"]
+    werte_mutter = [f"{st.session_state.haupttaetigkeit_mutter:.2f} €"]
+    index_mutter = ["Einkünfte aus Haupttätigkeit"]
+
+    werte_mutter.extend([
+        f"{st.session_state.weitere_einkuenfte_mutter:.2f} €",
+        f"{st.session_state.einkommen_mutter:.2f} €"
+    ])
+    index_mutter.extend([
+        "Weitere Einkünfte",
+        "Einkommen"
+    ])
+
 
     # Dynamische Abzugsposten einfügen (falls vorhanden)
     for i, abzug in enumerate(st.session_state.abzugsposten_mutter):
@@ -616,6 +635,8 @@ def erstelle_tabelle_html(titel, daten):
 
 def erstelle_daten_vater():
     daten = [
+        ["Einkünfte aus Haupttätigkeit", f"{st.session_state.haupttaetigkeit_vater:.2f} €"],
+        ["Weitere Einkünfte", f"{st.session_state.weitere_einkuenfte_vater:.2f} €"],
         ["Einkommen", f"{st.session_state.einkommen_vater:.2f} €"],
     ]
     for i, eintrag in enumerate(st.session_state.abzugsposten_vater):
@@ -641,6 +662,8 @@ def erstelle_daten_vater():
 
 def erstelle_daten_mutter():
     daten = [
+        ["Einkünfte aus Haupttätigkeit", f"{st.session_state.haupttaetigkeit_mutter:.2f} €"],
+        ["Weitere Einkünfte", f"{st.session_state.weitere_einkuenfte_mutter:.2f} €"],
         ["Einkommen", f"{st.session_state.einkommen_mutter:.2f} €"],
     ]
     for i, eintrag in enumerate(st.session_state.abzugsposten_mutter):
