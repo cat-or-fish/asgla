@@ -251,18 +251,7 @@ footer {visibility: hidden;}
 
 /* Form elements - Inputs and Selects */
 
-div[data-testid="stSelectbox"] * {
-    color: black !important;
-}
-
-/* Selectbox Value Text */
-div[data-testid="stSelectbox"] > div > div > div {
-    color: black !important;
-}
-
-div[data-testid="stSelectbox"] div,
-div[data-testid="stSelectbox"] span,
-div[data-testid="stSelectbox"] * {
+div[data-testid="stSelectbox"] div[data-baseweb="select"] {
     color: black !important;
 }
 
