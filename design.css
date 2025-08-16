@@ -251,18 +251,6 @@ footer {visibility: hidden;}
 
 /* Form elements - Inputs and Selects */
 
-/* ALLES in Selectboxes schwarz machen - mit maximaler Gewalt */
-div[data-testid="stSelectbox"],
-div[data-testid="stSelectbox"] *,
-[data-baseweb="select"],
-[data-baseweb="select"] *,
-.stSelectbox,
-.stSelectbox * {
-    color: black !important;
-    -webkit-text-fill-color: black !important;
-    text-fill-color: black !important;
-}
-
 .stSelectbox > div > div,
 .stNumberInput > div > div > input,
 .stTextInput > div > div > input,
