@@ -1,5 +1,10 @@
 /* design.css */
 
+[data-baseweb="menu"] .baseweb-menu-item:hover {
+    background-color: #e0f7fa;
+    color: #006064;
+}
+
 /* Hide Streamlit branding */
 #MainMenu {visibility: hidden;}
 .stDeployButton {display:none;}
