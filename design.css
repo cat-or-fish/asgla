@@ -297,6 +297,7 @@ div[data-testid="stHorizontalBlock"] {
     z-index: 0;
     margin-bottom: 20px;
     overflow: hidden;
+    color: black;
 }
 
 /* Farbstreifen oben */
