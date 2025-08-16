@@ -1,4 +1,4 @@
-import streamlit as st
+ import streamlit as st
 import pandas as pd
 import tempfile
 import base64
@@ -363,7 +363,7 @@ def berechne_ausgleichsanspruch(monat, jahr, einkommen_mutter, einkommen_vater, 
     st.session_state.abzufuehrendes_kindergeld = abzufuehrendes_kindergeld
     st.session_state.ausgleichsanspruch = ausgleichsanspruch
     
-    
+    ###RECHENWEG WEBSITE ANFANG###
     # Liste für Tabelleninhalte initialisieren
     werte_vater = [f"{st.session_state.einkommen_vater:.2f} €"]
     index_vater = ["Einkommen"]
@@ -464,11 +464,12 @@ def berechne_ausgleichsanspruch(monat, jahr, einkommen_mutter, einkommen_vater, 
     st.write(f"### Bedarf Kind ({st.session_state.alter} Jahre alt)")
     st.table(df_kind.style.hide(axis="index"))
 
-    st.write(f"### Ausgleichsanspruch: **{ausgleichsanspruch:.2f} EUR**")
+    st.write(f"### Ausgleichsanspruch von {st.session_state.anspruchsberechtigt} gegen {st.session_state.nicht_anspruchsberechtigt}: {st.session_state.ausgleichsanspruch:.2f} EUR**")
 
     if st.session_state.freitext_input.strip():
         st.markdown("### Erläuterungen und Anmerkungen:")
-        st.markdown(st.session_state.freitext_input)    
+        st.markdown(st.session_state.freitext_input)
+    ###RECHENWEG WEBSITE ENDE###
 
 
     return ausgleichsanspruch
@@ -726,9 +727,9 @@ def erstelle_daten_kindergeld():
 
 def kindergeld_empfaenger_text(empfaenger):
     if empfaenger == "Mutter":
-        return f"<p>Daher von KM an KV abzuführendes Kindergeld: {st.session_state.abzufuehrendes_kindergeld:.2f} €</p>"
+        return f"<p>Daher von der Kindsmutter an den Kindsvater abzuführendes Kindergeld: {st.session_state.abzufuehrendes_kindergeld:.2f} €</p>"
     elif empfaenger == "Vater":
-        return f"<p>Daher von KV an KM abzuführendes Kindergeld: {st.session_state.abzufuehrendes_kindergeld:.2f} €</p>"
+        return f"<p>Daher von dem Kindsvater an die Kindsmutter abzuführendes Kindergeld: {st.session_state.abzufuehrendes_kindergeld:.2f} €</p>"
     return ""
 ### PDF ENDE ###
 
