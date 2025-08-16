@@ -251,8 +251,8 @@ footer {visibility: hidden;}
 
 /* Form elements - Inputs and Selects */
 
-div[data-testid="stSelectbox"] {
-    color: black;
+div[data-testid="stSelectbox"] * {
+    color: black !important;
 }
 
 .stSelectbox > div > div,
