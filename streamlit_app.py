@@ -532,7 +532,7 @@ def erstelle_pdf():
             margin-bottom: 0.6em;
         }}
         .stand {{
-            font-size: 12pt;
+            font-size: 9pt;
             margin-top: 0;
             margin-bottom: 1.5em;
         }}
@@ -563,9 +563,9 @@ def erstelle_pdf():
         }}
         p {{
             font-style: normal;
-            font-size: 10pt;
+            font-size: 9pt;
             margin-top: 0;
-            margin-bottom: 1em;
+            margin-bottom: 0;
             color: #000;
         }}
         .footnote {{
@@ -580,6 +580,19 @@ def erstelle_pdf():
             top: 20px;
             right: 20px;
             width: 100px;
+        }}
+        .center-text {{
+            text-align: center;
+            margin: 0.3em 0;
+        }}
+        .indent-text {{
+            margin-left: 4cm;  /* Einzug nach links */
+            margin-bottom: 0.3em;  /* Abstand nach unten */
+        }}
+        .flex-row {{
+            display: flex;
+            justify-content: space-between; /* verteilt links/rechts */
+            margin: 0.3em 0;
         }}
         .eltern-container {{
             display: flex;
@@ -611,19 +624,28 @@ def erstelle_pdf():
         <div class="eltern-container">
             <div class="eltern-tabelle">
                 {erstelle_tabelle_html("Vater", erstelle_daten_vater())}
+                <p>Für den Kindsvater wurde der {st.session_state.adjektiv_sockelbetrag_vater} Selbstbehalt berücksichtigt.</p>
             </div>
             <div class="eltern-tabelle mutter">
                 {erstelle_tabelle_html("Mutter", erstelle_daten_mutter())}
+                <p>Für die Kindsmutter wurde der {st.session_state.adjektiv_sockelbetrag_mutter} Selbstbehalt berücksichtigt.</p>
             </div>
         </div>
 
-        <p>Für den Kindsvater wurde der {st.session_state.adjektiv_sockelbetrag_vater} Selbstbehalt berücksichtigt.</p>
-        <p>Für die Kindsmutter wurde der {st.session_state.adjektiv_sockelbetrag_mutter} Selbstbehalt berücksichtigt.</p>
+        <div style="height: 20px;"></div>
 
-        <p>Relevantes Gesamteinkommen für den Regelbedarf: {st.session_state.gesamtes_einkommen:.2f} €</p>
-        <p>Verteilbarer Betrag Gesamt: {st.session_state.verteilbarer_betrag_gesamt:.2f} €</p>
-        <p>Haftungsanteil Mutter: {st.session_state.anteil_mutter:.2%}</p>
-        <p>Haftungsanteil Vater: {st.session_state.anteil_vater:.2%}</p>
+        <p class="indent-text">
+            Relevantes Gesamteinkommen für den Regelbedarf: {st.session_state.gesamtes_einkommen:.2f} €
+        </p>
+        <p class="indent-text">
+            Verteilbarer Betrag Gesamt: {st.session_state.verteilbarer_betrag_gesamt:.2f} €
+        </p>
+        <div style="height: 20px;"></div>
+
+        <div class="flex-row">
+            <p>Haftungsanteil Vater: {st.session_state.anteil_vater:.2%}</p>
+            <p>Haftungsanteil Mutter: {st.session_state.anteil_mutter:.2%}</p>
+        </div>
 
         {erstelle_tabelle_html(f"Angaben zum Kind ({st.session_state.alter} Jahre alt)", erstelle_daten_kind())}
 
