@@ -172,17 +172,12 @@ def berechne_regelbedarf(bereinigtes_einkommen_vater, bereinigtes_einkommen_mutt
 
     
     tabelle = duesseldorfer_tabellen.get(jahr, {})
-    print(f"Jahr ist {jahr}")
-    print(f"Alter ist {alter}")
-    print(f"Einkommen ist {einkommen}")
-    print(f"Tabelle für Jahr {jahr}: {tabelle}")
     
     if altersgruppe_key not in tabelle:
         st.warning("Altersgruppe nicht gefunden")
         return 0  # Standardwert zurückgeben
     
     altersgruppe = tabelle[altersgruppe_key]
-    print(f"Altersgruppe Daten: {altersgruppe}")
     
     # Durchsuche die Einkommensbereiche in der Altersgruppe
     for einkommensbereich, regelbedarf in sorted(altersgruppe.items(), key=lambda x: int(x[0].split('_')[-1])):
@@ -334,8 +329,6 @@ def berechne_ausgleichsanspruch(monat, jahr, einkommen_mutter, einkommen_vater, 
             ausgleichsanspruch = auszugleichender_betrag + abzufuehrendes_kindergeld  # Kindergeld wird oben draufgerechnet
         else:
             ausgleichsanspruch = auszugleichender_betrag - abzufuehrendes_kindergeld  # Kindergeld wird abgezogen
-
-    print(f"Ausgleichsanspruch: {ausgleichsanspruch} EUR")
 
     # für weitere Vorgänge bei streamlit übertragen
     st.session_state.verteilbarer_betrag_mutter = verteilbarer_betrag_mutter
@@ -502,17 +495,19 @@ def erstelle_pdf():
     <head>
     <style>
         @page {{
+            size: A4;
+            margin: 1cm;
             @bottom-center {{
                 content: "Seite " counter(page) " von " counter(pages);
-                font-size: 9pt;
+                font-size: 8pt;
                 border-top: 1px solid #000;
-                padding-top: 6px;
+                padding-top: 3px;
             }}
         }}
         body {{
             font-family: "Times New Roman", Times, serif;
-            font-size: 12pt;
-            margin: 40px;
+            font-size: 9pt;
+            margin: 1cm;
             color: #000;
             background: #fff;
         }}
@@ -522,6 +517,13 @@ def erstelle_pdf():
             margin-top: 80px;
             margin-bottom: 0.2em;
             text-align: left;
+            font-family: Georgia, serif;
+        }}
+        h2 {{
+            font-weight: bold;
+            font-size: 11pt;   /* kleiner als h1, aber größer als Text */
+            margin-top: 1em;
+            margin-bottom: 0.3em;
             font-family: Georgia, serif;
         }}
         hr {{
@@ -542,12 +544,16 @@ def erstelle_pdf():
         }}
         th, td {{
             border: 1px solid #000;
-            padding: 6px 10px;
+            padding: 4px 6px;
+            font-size: 9pt;
         }}
+        /* th ist tabellen-head */
         th {{
             font-weight: bold;
             background: #fff;
             text-align: left;
+            font-size: 9.5pt;
+            background: #f9f9f9;
         }}
         td {{
             text-align: right;
@@ -557,13 +563,13 @@ def erstelle_pdf():
         }}
         p {{
             font-style: normal;
-            font-size: 12pt;
+            font-size: 10pt;
             margin-top: 0;
             margin-bottom: 1em;
             color: #000;
         }}
         .footnote {{
-            font-size: 9pt;
+            font-size: 8pt;
             border-top: 1px solid #000;
             padding-top: 6px;
             margin-top: 3em;
@@ -575,6 +581,25 @@ def erstelle_pdf():
             right: 20px;
             width: 100px;
         }}
+        .eltern-container {{
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }}
+        .eltern-tabelle {{
+            width: 48%; /* halb nebeneinander */
+        }}
+        .eltern-tabelle h2 {{
+            text-align: left; /* Standard: links */
+            font-weight: bold;
+            font-size: 11pt;
+            margin-top: 1em;
+            margin-bottom: 0.3em;
+            font-family: Georgia, serif;
+        }}
+        .eltern-tabelle.mutter h2 {{
+            text-align: right; /* Überschrift „Mutter“ rechts */
+        }}
     </style>
     </head>
     <body>
@@ -583,8 +608,14 @@ def erstelle_pdf():
         <hr/>
         <p class="stand">Stand: {st.session_state.heute}</p>
 
-        {erstelle_tabelle_html("Vater", erstelle_daten_vater())}
-        {erstelle_tabelle_html("Mutter", erstelle_daten_mutter())}
+        <div class="eltern-container">
+            <div class="eltern-tabelle">
+                {erstelle_tabelle_html("Vater", erstelle_daten_vater())}
+            </div>
+            <div class="eltern-tabelle mutter">
+                {erstelle_tabelle_html("Mutter", erstelle_daten_mutter())}
+            </div>
+        </div>
 
         <p>Für den Kindsvater wurde der {st.session_state.adjektiv_sockelbetrag_vater} Selbstbehalt berücksichtigt.</p>
         <p>Für die Kindsmutter wurde der {st.session_state.adjektiv_sockelbetrag_mutter} Selbstbehalt berücksichtigt.</p>
