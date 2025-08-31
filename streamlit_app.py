@@ -496,13 +496,16 @@ def erstelle_pdf():
     <style>
         @page {{
             size: A4;
-            margin: 1cm;
+            margin: 1cm 1cm 25mm 1cm;
             @bottom-center {{
-                content: "Seite " counter(page) " von " counter(pages);
+                content: "Diese Berechnung wurde mithilfe des ASGLA-Rechners (https://asgla-testversion.streamlit.app/)\A
+                        vom LegalTech Lab JTC der Martin-Luther-Universität Halle-Wittenberg erstellt.\A\ASeite " counter(page) " von " counter(pages);
                 font-size: 8pt;
                 border-top: 1px solid #000;
-                padding-top: 3px;
-            }}
+                padding-top: 0; 
+                text-align: center;
+                white-space: pre;
+                }}
         }}
         body {{
             font-family: "Times New Roman", Times, serif;
@@ -613,6 +616,29 @@ def erstelle_pdf():
         .eltern-tabelle.mutter h2 {{
             text-align: right; /* Überschrift „Mutter“ rechts */
         }}
+        .kind-container {{
+            display: flex;
+            justify-content: space-between;
+            gap: 20px; /* Abstand zwischen den beiden Spalten */
+            margin-top: 1em;
+        }}
+        .kind-box {{
+            width: 48%; /* jede Box bekommt halbe Breite */
+        }}
+        .kind-box h2 {{
+            margin-top: 0;
+        }}
+        .ergebnis-box {{
+            margin-top: 1.5em;
+            padding: 10px 15px;
+            border: 2px solid #000;
+            border-radius: 6px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 11pt;
+            background: #f9f9f9;
+        }}
+
     </style>
     </head>
     <body>
@@ -647,28 +673,37 @@ def erstelle_pdf():
             <p>Haftungsanteil Mutter: {st.session_state.anteil_mutter:.2%}</p>
         </div>
 
-        {erstelle_tabelle_html(f"Angaben zum Kind ({st.session_state.alter} Jahre alt)", erstelle_daten_kind())}
+        <div style="height: 20px;"></div>
 
-        <p>Anteil Mutter am Gesamtbedarf: {st.session_state.anteil_mutter_gesamtbedarf:.2f} €</p>
-        <p>Anteil Vater am Gesamtbedarf: {st.session_state.anteil_vater_gesamtbedarf:.2f} €</p>
+        <div class="kind-container">
+            <div class="kind-box">
+                {erstelle_tabelle_html(f"Angaben zum Kind ({st.session_state.alter} Jahre alt)", erstelle_daten_kind())}
+                <p>Anteil Mutter am Gesamtbedarf: {st.session_state.anteil_mutter_gesamtbedarf:.2f} €</p>
+                <p>Anteil Vater am Gesamtbedarf: {st.session_state.anteil_vater_gesamtbedarf:.2f} €</p>
+                {zusatzbedarf_text(zusatz_allein_tragen)}
+                <p>Differenz: {st.session_state.differenz_anteile:.2f} €</p>
+                <p>Auszugleichender Betrag (1/2) von {st.session_state.nicht_anspruchsberechtigt} 
+                   zu leisten an {st.session_state.anspruchsberechtigt}: 
+                   {st.session_state.basis_ausgleich:.2f} €</p>
+                {zusatzbedarf_getragen_text(zusatz_allein_tragen)}
+            </div>
 
-        {zusatzbedarf_text(zusatz_allein_tragen)}
+            <div class="kind-box">
+                {erstelle_tabelle_html("Kindergeldverrechnung", erstelle_daten_kindergeld())}
+                {kindergeld_empfaenger_text(kindergeld_empfaenger)}
+            </div>
+        </div>
 
-        <p>Differenz: {st.session_state.differenz_anteile:.2f} €</p>
-        <p>Auszugleichender Betrag (1/2) von {st.session_state.nicht_anspruchsberechtigt} zu leisten an {st.session_state.anspruchsberechtigt}: {st.session_state.basis_ausgleich:.2f} €</p>
+        <div class="ergebnis-box">
+            Ausgleichsanspruch von {st.session_state.anspruchsberechtigt} 
+            gegen {st.session_state.nicht_anspruchsberechtigt}: 
+            {st.session_state.ausgleichsanspruch:.2f} €
+        </div>
 
-        {zusatzbedarf_getragen_text(zusatz_allein_tragen)}
-
-        {erstelle_tabelle_html("Kindergeldverrechnung", erstelle_daten_kindergeld())}
-
-        {kindergeld_empfaenger_text(kindergeld_empfaenger)}
-
-        <p>Ausgleichsanspruch von {st.session_state.anspruchsberechtigt} gegen {st.session_state.nicht_anspruchsberechtigt}: {st.session_state.ausgleichsanspruch:.2f} €</p>
-
+        <div style="height: 40px;"></div>
+        
         <h2>Erläuterungen und Anmerkungen:</h2>
         <p>{freitext_input}</p>
-
-        <p>Diese Berechnung wurde mithilfe des ASGLA-Rechners (https://asgla-testversion.streamlit.app/) vom LegalTech Lab JTC der Martin-Luther-Universität Halle-Wittenberg erstellt.</p>
 
     </body>
     </html>
