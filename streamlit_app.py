@@ -617,7 +617,7 @@ def erstelle_pdf():
     </head>
     <body>
         <img src="logo.png" class="logo" alt="Logo"/>
-        <h1>Berechnung Ausgleichsanspruch im Wechselmodell {monat} {jahr}</h1>
+        <h1>Berechnung Ausgleichsanspruch im Wechselmodell<br/>{monat} {jahr}</h1>
         <hr/>
         <p class="stand">Stand: {st.session_state.heute}</p>
 
