@@ -749,7 +749,6 @@ def erstelle_daten_kind():
     if st.session_state.sonderbedarf > 0:
         daten.append([f"davon Sonderbedarf ({st.session_state.sonderbez})", f"{st.session_state.sonderbedarf:.2f} €"])
     daten.append(["= Gesamtbedarf", f"{st.session_state.gesamtbedarf:.2f} €"])
-    daten.append(["Kindergeld", f"{st.session_state.kindergeld:.2f} €"])
     return daten
 
 
@@ -793,6 +792,7 @@ def zusatzbedarf_getragen_text(zusatz_allein_tragen):
 
 def erstelle_daten_kindergeld():
     return [
+        ["Kindergeld", f"{st.session_state.kindergeld:.2f} €"],
         ["Kindergeldempfänger", st.session_state.kindergeld_empfaenger],
         ["Betreuungsanteil Mutter", f"{st.session_state.betreuungsanteil_mutter:.2f} €"],
         ["Baranteil Mutter", f"{st.session_state.baranteil_mutter:.2f} €"],
