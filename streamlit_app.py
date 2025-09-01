@@ -446,38 +446,109 @@ def berechne_ausgleichsanspruch(monat, jahr, einkommen_mutter, einkommen_vater, 
         "": werte_mutter
     }, index=index_mutter)
 
-    df_kind = pd.DataFrame({
-        "": [
-            f"{regelbedarf:.2f} EUR",
-            f"{mehrbedarf:.2f} EUR" if mehrbedarf > 0 else "-",
-            f"{sonderbedarf:.2f} EUR" if sonderbedarf > 0 else "-",
-            f"{gesamtbedarf:.2f} EUR",
-            f"{kindergeld:.2f} EUR",
-            kindergeld_empfaenger
-        ]
-    }, index=[
-        "Regelbedarf",
-        "Mehrbedarf",
-        "Sonderbedarf",
-        "Gesamtbedarf",
-        "Kindergeld",
-        "Kindergeldempfänger"
-    ])    
+    # Kind-Bedarf
+    kind_index = ["Regelbedarf"]
+    kind_werte = [f"{st.session_state.regelbedarf:.2f} €"]
 
+    if st.session_state.zusatzbedarf > 0:
+        kind_index.append("Zusatzbedarf")
+        kind_werte.append(f"{st.session_state.zusatzbedarf:.2f} €")
+
+    if st.session_state.mehrbedarf > 0:
+        kind_index.append(f"davon Mehrbedarf ({st.session_state.mehrbez})")
+        kind_werte.append(f"{st.session_state.mehrbedarf:.2f} €")
+
+    if st.session_state.sonderbedarf > 0:
+        kind_index.append(f"davon Sonderbedarf ({st.session_state.sonderbez})")
+        kind_werte.append(f"{st.session_state.sonderbedarf:.2f} €")
+
+    kind_index.append("= Gesamtbedarf")
+    kind_werte.append(f"{st.session_state.gesamtbedarf:.2f} €")
+
+    df_kind = pd.DataFrame({"Betrag": kind_werte}, index=kind_index)
+
+
+    # Kindergeld
+    kg_index = [
+        "Kindergeld",
+        "Kindergeldempfänger",
+        "Betreuungsanteil Mutter",
+        "Baranteil Mutter",
+        "Betreuungsanteil Vater",
+        "Baranteil Vater",
+    ]
+    kg_werte = [
+        f"{st.session_state.kindergeld:.2f} €",
+        st.session_state.kindergeld_empfaenger,
+        f"{st.session_state.betreuungsanteil_mutter:.2f} €",
+        f"{st.session_state.baranteil_mutter:.2f} €",
+        f"{st.session_state.betreuungsanteil_vater:.2f} €",
+        f"{st.session_state.baranteil_vater:.2f} €",
+    ]
+    df_kindergeld = pd.DataFrame({"Betrag": kg_werte}, index=kg_index)
+
+    # Darstellung auf Website
     col1, col2 = st.columns(2)
     with col1:
         st.write("### Vater")
         st.table(df_vater.style.hide(axis="index"))
+        st.write(f"Für den Kindsvater wurde der {st.session_state.adjektiv_sockelbetrag_vater} Selbstbehalt berücksichtigt.")
+
 
     with col2:
         st.write("### Mutter")
         st.table(df_mutter.style.hide(axis="index"))
+        st.write(f"Für die Kindsmutter wurde der {st.session_state.adjektiv_sockelbetrag_mutter} Selbstbehalt berücksichtigt.")
+
+    st.write(f"Relevantes Gesamteinkommen für den Regelbedarf: {st.session_state.gesamtes_einkommen:.2f} €")
+    st.write(f"Verteilbarer Betrag Gesamt: {st.session_state.verteilbarer_betrag_gesamt:.2f} €")
+
+    col1, col2 = st.columns(2)
+    with col1:
+        st.write(f"Haftungsanteil Vater: {st.session_state.anteil_vater:.2%}")
+    with col2:
+        st.write(f"Haftungsanteil Mutter: {st.session_state.anteil_mutter:.2%}")
+
 
     st.write(f"### Bedarf Kind ({st.session_state.alter} Jahre alt)")
     st.table(df_kind.style.hide(axis="index"))
+    st.write(f"Anteil Mutter am Gesamtbedarf: {st.session_state.anteil_mutter_gesamtbedarf:.2f} €")
+    st.write(f"Anteil Vater am Gesamtbedarf: {st.session_state.anteil_vater_gesamtbedarf:.2f} €")
+    # Zusatzbedarf-Texte
+    st.markdown(zusatzbedarf_text(st.session_state.zusatz_allein_tragen), unsafe_allow_html=True)
+    st.markdown(zusatzbedarf_getragen_text(st.session_state.zusatz_allein_tragen), unsafe_allow_html=True)
+    st.write(f"Differenz: {st.session_state.differenz_anteile:.2f} €")
+    st.write(
+        f"Auszugleichender Betrag (1/2) von {st.session_state.nicht_anspruchsberechtigt} "
+        f"zu leisten an {st.session_state.anspruchsberechtigt}: "
+        f"{st.session_state.basis_ausgleich:.2f} €"
+    )
 
-    st.write(f"### Ausgleichsanspruch von {st.session_state.anspruchsberechtigt} gegen {st.session_state.nicht_anspruchsberechtigt}:    {st.session_state.ausgleichsanspruch:.2f} EUR")
 
+    st.write("### Kindergeldverrechnung")
+    st.table(df_kindergeld)
+    kg_text = kindergeld_empfaenger_text(st.session_state.kindergeld_empfaenger)
+    if kg_text:
+        st.markdown(kg_text, unsafe_allow_html=True)
+    
+    #Ergebnisbox
+    st.markdown(
+        f"""
+        <div style="
+            border:2px solid black;
+            border-radius:8px;
+            padding:10px;
+            background:#f9f9f9;
+            font-weight:bold;
+            text-align:center;">
+            Ausgleichsanspruch von {st.session_state.anspruchsberechtigt} 
+            gegen {st.session_state.nicht_anspruchsberechtigt}: 
+            {st.session_state.ausgleichsanspruch:.2f} €
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
+    
     if st.session_state.freitext_input.strip():
         st.markdown("### Erläuterungen und Anmerkungen:")
         st.markdown(st.session_state.freitext_input)
