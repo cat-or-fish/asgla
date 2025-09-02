@@ -281,11 +281,6 @@ footer {visibility: hidden;}
     color: #333333
 }
 
-/* Zusätzliche Sicherheit für Dropdown-Optionen */
-.stSelectbox > div > div > div {
-    color: #333333 !important;
-}
-
 /* Placeholder Styling (optional) */
 .stNumberInput > div > div > input::placeholder,
 .stTextInput > div > div > input::placeholder,
@@ -294,31 +289,6 @@ footer {visibility: hidden;}
     font-style: italic;
 }
 
-/* DAS HIER STYLT DIE KÄSTEN zb bei Monat/Jahr */
-div[data-testid="stHorizontalBlock"] {
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(15px);
-    border-radius: 25px;
-    padding: 35px;
-    box-shadow: 0 15px 35px rgba(107, 163, 176, 0.12);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    position: relative;
-    z-index: 0;
-    margin-bottom: 20px;
-    overflow: hidden;
-}
-
-/* Farbstreifen oben */
-div[data-testid="stHorizontalBlock"]::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 4px; /* Höhe des Streifens */
-    background: linear-gradient(90deg, #6ba3b0, #8fb8a3);
-    border-radius: 25px 25px 0 0;
-}
 
 /* Aktenreiter Vater */
 button#tabs-bui2-tab-0 {
