@@ -67,12 +67,14 @@ footer {visibility: hidden;}
     background-clip: text;
     margin-bottom: 12px;
     line-height: 1.2;
+    text-align: right;
 }
 
 .subtitle {
     color: #5a8a95;
     font-size: 1.1rem;
     font-weight: 400;
+    text-align: right;
 }
 
 /* Card Styles */
