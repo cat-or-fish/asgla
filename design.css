@@ -228,6 +228,7 @@ div[data-testid="stMainBlockContainer"] {
     font-size: 15px;
     transition: all 0.3s ease;
     margin-top: 18px;
+    margin-left: 300px;
     box-shadow: 0 6px 18px rgba(107, 163, 176, 0.3);
 }
 
