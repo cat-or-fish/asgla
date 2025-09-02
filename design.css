@@ -296,7 +296,6 @@ div#tabs-bui2-tabpanel-0 {
         rgba(105, 166, 180, 0.15),  /* leicht transparentes Blaugrün */
         rgba(255, 255, 255, 0.95)
     );
-    backdrop-filter: blur(15px);
     border-radius: 0 25px 25px 25px;
     padding: 35px;
     box-shadow: 0 15px 35px rgba(107, 163, 176, 0.12);
@@ -324,7 +323,6 @@ div#tabs-bui2-tabpanel-1 {
         rgba(249, 163, 115, 0.15),  /* transparenter Orangeton oben links */
         rgba(255, 255, 255, 0.95)   /* sanft ins Weiß übergehend */
     );
-    backdrop-filter: blur(15px);
     border-radius: 0 25px 25px 25px; /* oben links offen für den Reiter */
     padding: 35px;
     box-shadow: 0 15px 35px rgba(107, 163, 176, 0.12);
@@ -352,7 +350,6 @@ div#tabs-bui2-tabpanel-2 {
         rgba(187, 221, 193, 0.15),  /* sanftes transparentes Grün */
         rgba(255, 255, 255, 0.95)
     );
-    backdrop-filter: blur(15px);
     border-radius: 0 25px 25px 25px;
     padding: 35px;
     box-shadow: 0 15px 35px rgba(107, 163, 176, 0.12);
