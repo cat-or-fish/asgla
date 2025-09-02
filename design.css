@@ -289,7 +289,7 @@ div[data-testid="stMainBlockContainer"] {
     z-index: 100;
 }
 
-.stButton > div > div {
+button[kind="primary"] {
     margin-left: 300px;
 }
 
