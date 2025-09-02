@@ -291,11 +291,7 @@ button#tabs-bui2-tab-0 {
 }
 /* Tabpanel Vater */
 div#tabs-bui2-tabpanel-0 {
-    background: linear-gradient(
-        to bottom right,
-        rgba(105, 166, 180, 0.15),  /* leicht transparentes Blaugrün */
-        rgba(255, 255, 255, 0.95)
-    );
+    background-color: rgba(105, 166, 180, 0.7);
     border-radius: 0 25px 25px 25px;
     padding: 35px;
     box-shadow: 0 15px 35px rgba(107, 163, 176, 0.12);
@@ -318,11 +314,7 @@ button#tabs-bui2-tab-1 {
 }
 /* Tabpanel Mutter */
 div#tabs-bui2-tabpanel-1 {
-    background: linear-gradient(
-        to bottom right,
-        rgba(249, 163, 115, 0.15),  /* transparenter Orangeton oben links */
-        rgba(255, 255, 255, 0.95)   /* sanft ins Weiß übergehend */
-    );
+    background-color: rgba(249, 163, 115, 0.7);
     border-radius: 0 25px 25px 25px; /* oben links offen für den Reiter */
     padding: 35px;
     box-shadow: 0 15px 35px rgba(107, 163, 176, 0.12);
@@ -345,11 +337,7 @@ button#tabs-bui2-tab-2 {
 }
 /* Tabpanel Kind */
 div#tabs-bui2-tabpanel-2 {
-    background: linear-gradient(
-        to bottom right,
-        rgba(187, 221, 193, 0.15),  /* sanftes transparentes Grün */
-        rgba(255, 255, 255, 0.95)
-    );
+    background-color: rgba(187, 221, 193, 0.7);
     border-radius: 0 25px 25px 25px;
     padding: 35px;
     box-shadow: 0 15px 35px rgba(107, 163, 176, 0.12);
