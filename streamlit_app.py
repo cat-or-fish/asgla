@@ -1077,10 +1077,11 @@ def load_css(path):
     st.markdown(f"<style>{css}</style>", unsafe_allow_html=True)
 
 # HTML laden mit Platzhalter für base64 Logo
-def load_html(path, logo_b64):
+def load_html(path, logo_b64, vignette_b64):
     with open(path, "r") as f:
         html = f.read()
     html = html.replace("{logo_base64}", logo_b64)
+    html = html.replace("{vignette_base64}", vignette_b64)
     st.markdown(html, unsafe_allow_html=True)
 
 def get_base64_image(image_path):
@@ -1088,12 +1089,14 @@ def get_base64_image(image_path):
         return base64.b64encode(img_file.read()).decode()
 
 logo_path = "./logo.png"
+vignette_path = "./vignette.png"
 css_path = "./design.css"
 html_path = "./design.html"
 
 logo_base64 = get_base64_image(logo_path)
+vignette_base64 = get_base64_image(vignette_path) 
 
-load_html(html_path, logo_base64)
+load_html(html_path, logo_base64, vignette_base64)
 load_css(css_path)
 
 
