@@ -1,10 +1,8 @@
 /* design.css */
 
-/* Hide Streamlit branding */
-#MainMenu {visibility: hidden;}
-.stDeployButton {display:none;}
-footer {visibility: hidden;}
-.stApp > header {visibility: hidden;}
+[data-testid|="stHeader"] {
+  display: none;
+}
 
 div[data-testid="stMainBlockContainer"] {
   background: rgba(255, 255, 255, 0.5); /* halbtransparent weiß */
