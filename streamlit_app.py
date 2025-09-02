@@ -1369,11 +1369,9 @@ if "berechnet" not in st.session_state:
     st.session_state["berechnet"] = False
 
 # Berechnen Button
-col1, col2, col3 = st.columns([1, 2, 1]) # damit Button mittig
-with col2:
-    if st.button("Berechnen"):
-        berechne_und_zeige()
-        st.session_state["berechnet"] = True  # Merken, dass gerechnet wurde
+if st.button("Berechnen"):
+    berechne_und_zeige()
+    st.session_state["berechnet"] = True  # Merken, dass gerechnet wurde
 
 # Ergebnis-Label
 label_ergebnis = st.empty()  # Platzhalter für das Ergebnis
