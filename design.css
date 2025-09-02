@@ -49,6 +49,19 @@ div[data-testid="stMainBlockContainer"] {
     margin-bottom: 25px;
 }
 
+.title-row {
+    display: flex;
+    align-items: center;   /* sorgt für gleiche Höhe */
+    gap: 20px;             /* Abstand zwischen Vignette und Text */
+    margin-top: 20px;      /* Abstand zum oberen Header-Block */
+}
+
+.vignette-logo {
+    height: 80px;   /* Größe der Vignette */
+    width: auto;
+}
+
+
 .logo-section {
     display: flex;
     align-items: center;
