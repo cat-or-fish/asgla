@@ -278,25 +278,6 @@ div[data-testid="stMainBlockContainer"] {
     z-index: 100;
 }
 
-/* Fokus-Effekt für Inputs und Selects */
-.stSelectbox > div > div:focus,
-.stNumberInput > div > div > input:focus,
-.stTextInput > div > div > input:focus,
-.stTextArea > div > div > textarea:focus {
-    border-color: #6ba3b0;
-    box-shadow: 0 0 8px 2px rgba(107, 163, 176, 0.3);
-    background: rgba(255, 255, 255, 1);
-    color: #333333
-}
-
-/* Placeholder Styling (optional) */
-.stNumberInput > div > div > input::placeholder,
-.stTextInput > div > div > input::placeholder,
-.stTextArea > div > div > textarea::placeholder {
-    color: #8ca6a9;
-    font-style: italic;
-}
-
 
 /* Aktenreiter Vater */
 button#tabs-bui2-tab-0 {
