@@ -1381,11 +1381,9 @@ label_ergebnis.text("")  # Anfangszustand leer
 
 # PDF speichern Button
 if st.session_state["berechnet"]:
-    col1, col2, col3 = st.columns([2, 1, 2])
-    with col2:
-        st.download_button(
-            label="PDF herunterladen",
-            data=erstelle_pdf(),
-            file_name=f"Ausgleichsanspruch_{st.session_state.monat}_{st.session_state.jahr}.pdf",
-            mime="application/pdf"
-        )
+    st.download_button(
+        label="PDF herunterladen",
+        data=erstelle_pdf(),
+        file_name=f"Ausgleichsanspruch_{st.session_state.monat}_{st.session_state.jahr}.pdf",
+        mime="application/pdf"
+     )
