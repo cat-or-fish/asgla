@@ -269,7 +269,6 @@ div[data-testid="stMainBlockContainer"] {
     background: rgba(255, 255, 255, 0.9);
     border: 2px solid rgba(107, 163, 176, 0.2);
     border-radius: 12px;
-    padding: 14px 18px;
     font-size: 16px;
     color: #333333
     transition: all 0.3s ease;
