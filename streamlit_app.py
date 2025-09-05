@@ -398,8 +398,9 @@ def berechne_ausgleichsanspruch(monat, jahr, einkommen_mutter, einkommen_vater, 
 
     # DataFrame erstellen
     df_vater = pd.DataFrame({
-        "": werte_vater
-    }, index=index_vater)
+        "Bezeichnung": index_vater,
+        "Betrag": werte_vater
+    })
 
     # Liste für Tabelleninhalte initialisieren
     werte_mutter = [f"{st.session_state.haupttaetigkeit_mutter:.2f} €"]
@@ -443,8 +444,10 @@ def berechne_ausgleichsanspruch(monat, jahr, einkommen_mutter, einkommen_vater, 
 
     # DataFrame erstellen
     df_mutter = pd.DataFrame({
-        "": werte_mutter
-    }, index=index_mutter)
+        "Bezeichnung": index_mutter,
+        "Betrag": werte_mutter
+    })
+
 
     # Kind-Bedarf
     kind_index = ["Regelbedarf"]
@@ -465,7 +468,7 @@ def berechne_ausgleichsanspruch(monat, jahr, einkommen_mutter, einkommen_vater, 
     kind_index.append("= Gesamtbedarf")
     kind_werte.append(f"{st.session_state.gesamtbedarf:.2f} €")
 
-    df_kind = pd.DataFrame({"Betrag": kind_werte}, index=kind_index)
+    df_kind = pd.DataFrame({"Bezeichnung": kind_index, "Betrag": kind_werte})
 
 
     # Kindergeld
@@ -485,19 +488,19 @@ def berechne_ausgleichsanspruch(monat, jahr, einkommen_mutter, einkommen_vater, 
         f"{st.session_state.betreuungsanteil_vater:.2f} €",
         f"{st.session_state.baranteil_vater:.2f} €",
     ]
-    df_kindergeld = pd.DataFrame({"Betrag": kg_werte}, index=kg_index)
+    df_kindergeld = pd.DataFrame({"Bezeichnung": kg_index, "Betrag": kg_werte})
 
     # Darstellung auf Website
     col1, col2 = st.columns(2)
     with col1:
         st.write("### Vater")
-        st.table(df_vater.style.hide(axis="index"))
+        st.write(df_vater.to_html(index=False), unsafe_allow_html=True)
         st.write(f"Für den Kindsvater wurde der {st.session_state.adjektiv_sockelbetrag_vater} Selbstbehalt berücksichtigt.")
 
 
     with col2:
         st.write("### Mutter")
-        st.table(df_mutter.style.hide(axis="index"))
+        st.write(df_mutter.to_html(index=False), unsafe_allow_html=True)
         st.write(f"Für die Kindsmutter wurde der {st.session_state.adjektiv_sockelbetrag_mutter} Selbstbehalt berücksichtigt.")
 
     st.write(f"Relevantes Gesamteinkommen für den Regelbedarf: {st.session_state.gesamtes_einkommen:.2f} €")
@@ -511,7 +514,7 @@ def berechne_ausgleichsanspruch(monat, jahr, einkommen_mutter, einkommen_vater, 
 
 
     st.write(f"### Bedarf Kind ({st.session_state.alter} Jahre alt)")
-    st.table(df_kind.style.hide(axis="index"))
+    st.write(df_kind.to_html(index=False), unsafe_allow_html=True)
     st.write(f"Anteil Mutter am Gesamtbedarf: {st.session_state.anteil_mutter_gesamtbedarf:.2f} €")
     st.write(f"Anteil Vater am Gesamtbedarf: {st.session_state.anteil_vater_gesamtbedarf:.2f} €")
     # Zusatzbedarf-Texte
@@ -526,7 +529,7 @@ def berechne_ausgleichsanspruch(monat, jahr, einkommen_mutter, einkommen_vater, 
 
 
     st.write("### Kindergeldverrechnung")
-    st.table(df_kindergeld)
+    st.write(df_kindergeld.to_html(index=False), unsafe_allow_html=True)
     kg_text = kindergeld_empfaenger_text(st.session_state.kindergeld_empfaenger)
     if kg_text:
         st.markdown(kg_text, unsafe_allow_html=True)
@@ -1384,4 +1387,4 @@ if st.session_state["berechnet"]:
         data=erstelle_pdf(),
         file_name=f"Ausgleichsanspruch_{st.session_state.monat}_{st.session_state.jahr}.pdf",
         mime="application/pdf"
-     )
+    )
