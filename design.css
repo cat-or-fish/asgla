@@ -296,6 +296,25 @@ div[data-testid="stMainBlockContainer"] {
     border-color: transparent; /* oder deine eigene Farbe */
 }
 
+.st-bd {
+    color: white;
+}
+.st-bn {
+    color: black;
+}
+.st-bn:hover {
+    color: white;
+}
+.st-c1 {
+  background-color: white;
+}
+.st-c2 {
+  background-color: white;
+}
+.st-c3 {
+  background-color: white;
+}
+
 
 /* Aktenreiter Vater */
 button#tabs-bui2-tab-0 {
@@ -365,8 +384,6 @@ div#tabs-bui2-tabpanel-2 {
     margin-top: -1px;
     overflow: hidden;
 }
-
-
 
 
 /* Basis-Card-Style für Streamlit-Container */
