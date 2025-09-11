@@ -305,6 +305,9 @@ div[data-testid="stMainBlockContainer"] {
 .st-bn:hover {
     color: white;
 }
+.st-bz:focus {
+    color: white;
+}
 .st-c1 {
   background-color: white;
 }
