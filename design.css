@@ -281,13 +281,21 @@ div[data-testid="stMainBlockContainer"] {
     border: 2px solid rgba(107, 163, 176, 0.2);
     border-radius: 12px;
     font-size: 16px;
-    color: #333333
+    color: #333333;
     transition: all 0.3s ease;
     box-shadow: 0 3px 8px rgba(107, 163, 176, 0.1);
     outline: none;
     position: relative;
     z-index: 100;
 }
+
+/* entfernt den roten Fokus-Rand von streamlit */
+.st-fl:focus-within {
+    outline: none;
+    box-shadow: none;
+    border-color: transparent; /* oder deine eigene Farbe */
+}
+
 
 /* Aktenreiter Vater */
 button#tabs-bui2-tab-0 {
