@@ -295,7 +295,18 @@ div[data-testid="stMainBlockContainer"] {
     box-shadow: none;
     border-color: transparent; /* oder deine eigene Farbe */
 }
-
+.st-fl {
+    border-bottom-color: white;
+}
+.st-fk {
+    border-top-color: white;
+}
+.st-fj {
+    border-right-color: white;
+}
+.st-fi {
+    border-left-color: white;
+}
 .st-bd {
     color: white;
 }
