@@ -493,46 +493,46 @@ def berechne_ausgleichsanspruch(monat, jahr, einkommen_mutter, einkommen_vater, 
     # Darstellung auf Website
     col1, col2 = st.columns(2)
     with col1:
-        st.write("### Vater")
+        st.write("### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Vater")
         st.write(df_vater.to_html(index=False), unsafe_allow_html=True)
-        st.write(f"Für den Kindsvater wurde der {st.session_state.adjektiv_sockelbetrag_vater} Selbstbehalt berücksichtigt.")
+        st.write(f"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Für den Kindsvater wurde der {st.session_state.adjektiv_sockelbetrag_vater} Selbstbehalt berücksichtigt.")
 
 
     with col2:
-        st.write("### Mutter")
+        st.write("### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mutter")
         st.write(df_mutter.to_html(index=False), unsafe_allow_html=True)
-        st.write(f"Für die Kindsmutter wurde der {st.session_state.adjektiv_sockelbetrag_mutter} Selbstbehalt berücksichtigt.")
+        st.write(f"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Für die Kindsmutter wurde der {st.session_state.adjektiv_sockelbetrag_mutter} Selbstbehalt berücksichtigt.")
 
-    st.write(f"Relevantes Gesamteinkommen für den Regelbedarf: {st.session_state.gesamtes_einkommen:.2f} €")
-    st.write(f"Verteilbarer Betrag Gesamt: {st.session_state.verteilbarer_betrag_gesamt:.2f} €")
+    st.write(f"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Relevantes Gesamteinkommen für den Regelbedarf: {st.session_state.gesamtes_einkommen:.2f} €")
+    st.write(f"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Verteilbarer Betrag Gesamt: {st.session_state.verteilbarer_betrag_gesamt:.2f} €")
 
     col1, col2 = st.columns(2)
     with col1:
-        st.write(f"Haftungsanteil Vater: {st.session_state.anteil_vater:.2%}")
+        st.write(f"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Haftungsanteil Vater: {st.session_state.anteil_vater:.2%}")
     with col2:
-        st.write(f"Haftungsanteil Mutter: {st.session_state.anteil_mutter:.2%}")
+        st.write(f"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Haftungsanteil Mutter: {st.session_state.anteil_mutter:.2%}")
 
 
-    st.write(f"### Bedarf Kind ({st.session_state.alter} Jahre alt)")
+    st.write(f"### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bedarf Kind ({st.session_state.alter} Jahre alt)")
     st.write(df_kind.to_html(index=False), unsafe_allow_html=True)
-    st.write(f"Anteil Mutter am Gesamtbedarf: {st.session_state.anteil_mutter_gesamtbedarf:.2f} €")
-    st.write(f"Anteil Vater am Gesamtbedarf: {st.session_state.anteil_vater_gesamtbedarf:.2f} €")
+    st.write(f"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Anteil Mutter am Gesamtbedarf: {st.session_state.anteil_mutter_gesamtbedarf:.2f} €")
+    st.write(f"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Anteil Vater am Gesamtbedarf: {st.session_state.anteil_vater_gesamtbedarf:.2f} €")
     # Zusatzbedarf-Texte
     st.markdown(zusatzbedarf_text(st.session_state.zusatz_allein_tragen), unsafe_allow_html=True)
     st.markdown(zusatzbedarf_getragen_text(st.session_state.zusatz_allein_tragen), unsafe_allow_html=True)
-    st.write(f"Differenz: {st.session_state.differenz_anteile:.2f} €")
+    st.write(f"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Differenz: {st.session_state.differenz_anteile:.2f} €")
     st.write(
-        f"Auszugleichender Betrag (1/2) von {st.session_state.nicht_anspruchsberechtigt} "
+        f"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Auszugleichender Betrag (1/2) von {st.session_state.nicht_anspruchsberechtigt} "
         f"zu leisten an {st.session_state.anspruchsberechtigt}: "
         f"{st.session_state.basis_ausgleich:.2f} €"
     )
 
 
-    st.write("### Kindergeldverrechnung")
+    st.write("### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Kindergeldverrechnung")
     st.write(df_kindergeld.to_html(index=False), unsafe_allow_html=True)
     kg_text = kindergeld_empfaenger_text(st.session_state.kindergeld_empfaenger)
     if kg_text:
-        st.markdown(kg_text, unsafe_allow_html=True)
+        st.markdown(f"{kg_text}", unsafe_allow_html=True)
     
     #Ergebnisbox
     st.markdown(
@@ -553,7 +553,7 @@ def berechne_ausgleichsanspruch(monat, jahr, einkommen_mutter, einkommen_vater, 
     )
     
     if st.session_state.freitext_input.strip():
-        st.markdown("### Erläuterungen und Anmerkungen:")
+        st.markdown("### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Erläuterungen und Anmerkungen:")
         st.markdown(st.session_state.freitext_input)
     ###RECHENWEG WEBSITE ENDE###
 
