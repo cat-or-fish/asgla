@@ -305,6 +305,19 @@ table.dataframe {
     width: 90%;
 }
 
+th:first-child {
+    text-align: left !important;
+}
+th:last-child {
+    text-align: right !important;
+}
+td:first-child {
+    text-align: left;
+}
+td:last-child {
+    text-align: right;
+}
+
 
 /* entfernt den roten Fokus-Rand von streamlit */
 .st-fl:focus-within {
