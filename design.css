@@ -328,6 +328,18 @@ div[data-testid="stMainBlockContainer"] {
 .st-c3 {
   background-color: white;
 }
+.st-fm {
+  border-bottom-color: black;
+}
+.st-fl {
+  border-top-color: black;
+}
+.st-fk {
+  border-right-color: black;
+}
+.st-fj {
+  border-left-color: black;
+}
 
 
 /* Aktenreiter Vater */
