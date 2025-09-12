@@ -289,6 +289,23 @@ div[data-testid="stMainBlockContainer"] {
     z-index: 100;
 }
 
+[data-testid|="stBaseButton-secondary"] {
+    margin-top: 27px;
+}
+
+/* Tabelle allgemein */
+table.dataframe {
+    margin: 10px auto !important;        /* engerer Abstand */
+    border-collapse: collapse !important;
+    background: rgba(255, 255, 255, 0.80) !important; /* weißer Hintergrund */
+    border-radius: 12px !important;
+    overflow: hidden !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    font-size: 1.05rem !important;
+    width: 90%;
+}
+
+
 /* entfernt den roten Fokus-Rand von streamlit */
 .st-fl:focus-within {
     outline: none;
@@ -320,7 +337,7 @@ div[data-testid="stMainBlockContainer"] {
     color: white;
 }
 .st-c1 {
-  background-color: white;
+  background-color: transparent;
 }
 .st-c2 {
   background-color: white;
