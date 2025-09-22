@@ -247,8 +247,8 @@ def berechne_ausgleichsanspruch(monat, jahr, einkommen_mutter, einkommen_vater, 
     
     # Haftungsanteile in %
     verteilbarer_betrag_gesamt = verteilbarer_betrag_mutter + verteilbarer_betrag_vater
-    anteil_mutter = verteilbarer_betrag_mutter / verteilbarer_betrag_gesamt
-    anteil_vater = verteilbarer_betrag_vater / verteilbarer_betrag_gesamt
+    anteil_mutter = verteilbarer_betrag_mutter / verteilbarer_betrag_gesamt if verteilbarer_betrag_gesamt != 0 else 0 ## Anteil wird auf null gesetzt, wenn verteilbarer gesamtbetrag 0 ist, damit kein ZeroDivision-Fehler
+    anteil_vater = verteilbarer_betrag_vater / verteilbarer_betrag_gesamt if verteilbarer_betrag_gesamt != 0 else 0
     
    # Kindergeldverrechnung (hälftig)
     betreuungsanteil = kindergeld / 2  # Der Betreuungsanteil ist die Hälfte des Kindergeldes
