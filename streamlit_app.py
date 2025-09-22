@@ -215,6 +215,21 @@ def berechne_ausgleichsanspruch(monat, jahr, einkommen_mutter, einkommen_vater, 
     
     # Gesamteinkommen beider Eltern
     gesamtes_einkommen = bereinigtes_einkommen_mutter + bereinigtes_einkommen_vater
+    st.session_state["abbruch"] = False
+    if gesamtes_einkommen > 11000 and jahr == "2023":
+        st.error("Der ASGLA-Rechner berechnet den Regelbedarf des Kindes anhand der Düsseldorfer Tabelle.\n"
+                 f"Das bereinigte Gesamteinkommen der Elternteile liegt hier mit {gesamtes_einkommen:.2f} € über 11.000,00 €.\n"
+                 "Daher richtet sich der Bedarf des Kindes nach den Umständen des Einzelfalls.\n"
+                 "Bitte suchen Sie für die Berechnung des Anspruchs eine qualifizierte rechtliche Beratung auf.\n")
+        st.session_state["abbruch"] = True  # Berechnung abgebrochen
+        return  # Berechnung abbrechen wenn Gesamteinkommen höher als Düsseldorfer Tabelle 2023
+    if gesamtes_einkommen > 11200 and jahr in ("2024", "2025"):
+        st.error("Der ASGLA-Rechner berechnet den Regelbedarf des Kindes anhand der Düsseldorfer Tabelle.\n"
+                 f"Das bereinigte Gesamteinkommen der Elternteile liegt hier mit {gesamtes_einkommen:.2f} € über 11.200,00 €.\n"
+                 "Daher richtet sich der Bedarf des Kindes nach den Umständen des Einzelfalls.\n"
+                 "Bitte suchen Sie für die Berechnung des Anspruchs eine qualifizierte rechtliche Beratung auf.\n")
+        st.session_state["abbruch"] = True  # Berechnung abgebrochen
+        return  # Berechnung abbrechen wenn Gesamteinkommen höher als Düsseldorfer Tabelle
 
     st.session_state.sockelbetrag_mutter = st.session_state.get("sockel_amt_mutter", 0.0)
     st.session_state.adjektiv_sockelbetrag_mutter = st.session_state.get("sockel_lbl_mutter", "angemessene")
@@ -357,6 +372,7 @@ def berechne_ausgleichsanspruch(monat, jahr, einkommen_mutter, einkommen_vater, 
     st.session_state.ausgleichsanspruch = ausgleichsanspruch
     
     ###RECHENWEG WEBSITE ANFANG###
+    
     # Liste für Tabelleninhalte initialisieren
     werte_vater = [f"{st.session_state.haupttaetigkeit_vater:.2f} €"]
     index_vater = ["Einkünfte aus Haupttätigkeit"]
@@ -383,8 +399,6 @@ def berechne_ausgleichsanspruch(monat, jahr, einkommen_mutter, einkommen_vater, 
         f"{bereinigtes_einkommen_vater:.2f} €",
         f"{st.session_state.sockelbetrag_vater:.2f} €",
         f"{anteil_vater:.2%}",
-        f"{baranteil_vater:.2f} €",
-        f"{betreuungsanteil_vater:.2f} €"
     ])
 
     index_vater.extend([
@@ -392,8 +406,6 @@ def berechne_ausgleichsanspruch(monat, jahr, einkommen_mutter, einkommen_vater, 
         "Bereinigtes Einkommen",
         f"{st.session_state.adjektiv_sockelbetrag_vater}r Selbstbehalt",
         "Haftungsanteil",
-        "Baranteil",
-        "Betreuungsanteil"
     ])
 
     # DataFrame erstellen
@@ -428,18 +440,14 @@ def berechne_ausgleichsanspruch(monat, jahr, einkommen_mutter, einkommen_vater, 
         f"{st.session_state.abzug_mutter:.2f} €",
         f"{bereinigtes_einkommen_mutter:.2f} €",
         f"{st.session_state.sockelbetrag_mutter:.2f} €",
-        f"{anteil_mutter:.2%}",
-        f"{baranteil_mutter:.2f} €",
-        f"{betreuungsanteil_mutter:.2f} €"
+        f"{anteil_mutter:.2%}"
     ])
 
     index_mutter.extend([
         "Abzug Gesamt",
         "Bereinigtes Einkommen",
         f"{st.session_state.adjektiv_sockelbetrag_mutter}r Selbstbehalt",
-        "Haftungsanteil",
-        "Baranteil",
-        "Betreuungsanteil"
+        "Haftungsanteil"
     ])
 
     # DataFrame erstellen
@@ -556,7 +564,6 @@ def berechne_ausgleichsanspruch(monat, jahr, einkommen_mutter, einkommen_vater, 
         st.markdown("### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Erläuterungen und Anmerkungen:")
         st.markdown(st.session_state.freitext_input)
     ###RECHENWEG WEBSITE ENDE###
-
 
     return ausgleichsanspruch
 
@@ -1381,7 +1388,7 @@ label_ergebnis = st.empty()  # Platzhalter für das Ergebnis
 label_ergebnis.text("")  # Anfangszustand leer
 
 # PDF speichern Button
-if st.session_state["berechnet"]:
+if st.session_state["berechnet"] and not st.session_state.get("abbruch", True):
     st.download_button(
         label="PDF herunterladen",
         data=erstelle_pdf(),
