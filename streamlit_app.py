@@ -237,7 +237,7 @@ def berechne_ausgleichsanspruch(monat, jahr, einkommen_mutter, einkommen_vater, 
     st.session_state.adjektiv_sockelbetrag_vater = st.session_state.get("sockel_lbl_vater", "angemessene")
 
     
-    verteilbarer_betrag_mutter = bereinigtes_einkommen_mutter - st.session_state.sockelbetrag_mutter
+    verteilbarer_betrag_mutter = bereinigtes_einkommen_mutter - st.session_state.sockelbetrag_mutter 
     verteilbarer_betrag_vater = bereinigtes_einkommen_vater - st.session_state.sockelbetrag_vater
     # Wenn der verteilbare Betrag negativ ist, setze ihn auf 0
     if verteilbarer_betrag_mutter < 0:
@@ -1110,9 +1110,39 @@ load_html(html_path, logo_base64, vignette_base64)
 load_css(css_path)
 
 
+
+
+with st.expander("Über uns"):
+    st.markdown("""
+    ### Über das Projekt
+Jeden Tag werden in Deutschland hunderte Unterhaltsberechnungen für das Wechselmodell erstellt – und fast jede davon ist eine Herausforderung. Warum?
+Weil die Berechnung nach aktuellen Gerichtsleitlinien so komplex ist, dass selbst erfahrene Juristen regelmäßig zum Taschenrechner greifen müssen.\n
+Unser digitaler Rechner löst dieses Problem für alle Beteiligten:\n
+In wenigen Klicks erhalten Eltern eine verlässliche erste Einschätzung ihrer finanziellen Situation, während Richter und Jugendämter ihre Berechnungen standardisiert
+und effizient durchführen können. Ein Tool, zwei Perspektiven, eine gemeinsame Basis für faire Entscheidungen.\n
+\n
+Das Projekt wurde von Steuerrechtlerin **Viselle Wöhlert** initiiert, die im Januar 2025 aus eigenem Antrieb heraus einen ersten Python-Prototyp entwickelte.\n
+Seit März 2025 koordiniert das JTC LegalTech Lab Halle die professionelle Weiterentwicklung: **Luis Bartsch**, Jurastudent an der Uni Halle und Mitarbeiter des Labs,
+gewährleistet die rechtliche Korrektheit und Aktualität der Berechnungen. **Adelia Arvinta**, Informatikstudentin, übernimmt im Rahmen ihrer Bachelorarbeit die moderne Webentwicklung in Elm und implementiert nutzerfreundliche Funktionen. Diese interdisziplinäre Zusammenarbeit zwischen Recht, Technik und Praxis stellt sicher, dass das Tool sowohl juristisch fundiert als auch intuitiv bedienbar ist.
+Seit April 2025 wird der Rechner von Fachanwält:innen für Familienrecht getestet und optimiert.\n
+Als Open-Source-Projekt ist der gesamte Code transparent einsehbar.
+
+#### Ihre Daten bleiben dabei vollständig geschützt:
+Das integrierte QR-Code-System ermöglicht die sichere lokale Speicherung direkt auf Ihrem Gerät – ohne zentrale Server, ohne Datenweitergabe.\n
+Der Rechner steht allen Interessierten kostenlos zur Verfügung. Wir freuen uns über Ihr Feedback und laden Sie ein, das Tool zu testen und bei der Weiterentwicklung mitzuwirken.\n
+
+#### Team:
+Viselle Wöhlert\n
+Adelia Arvinta\n
+Luis Bartsch\n
+in Zusammenarbeit mit dem JTC Halle\n
+\n
+**Hinweis: Der Rechner ersetzt keine rechtliche Beratung und erhebt keinen Anspruch auf Vollständigkeit oder Richtigkeit im Einzelfall.**
+
+    """)
+
 # Abstand nach oben für den restlichen Content
 st.markdown("<div style='height: 50px;'></div>", unsafe_allow_html=True)
-
 
 # Jahr/Monat Auswahl
 col_jahr, col_monat = st.columns(2)
