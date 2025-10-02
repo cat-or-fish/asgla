@@ -398,14 +398,14 @@ def berechne_ausgleichsanspruch(monat, jahr, einkommen_mutter, einkommen_vater, 
         f"{st.session_state.abzug_vater:.2f} €",
         f"{bereinigtes_einkommen_vater:.2f} €",
         f"{st.session_state.sockelbetrag_vater:.2f} €",
-        f"{anteil_vater:.2%}",
+        f"{st.session_state.verteilbarer_betrag_vater:.2f} €"
     ])
 
     index_vater.extend([
         "Abzug Gesamt",
         "Bereinigtes Einkommen",
-        f"{st.session_state.adjektiv_sockelbetrag_vater}r Selbstbehalt",
-        "Haftungsanteil",
+        "Selbstbehalt",
+        "verteilbarer Betrag",
     ])
 
     # DataFrame erstellen
@@ -440,14 +440,14 @@ def berechne_ausgleichsanspruch(monat, jahr, einkommen_mutter, einkommen_vater, 
         f"{st.session_state.abzug_mutter:.2f} €",
         f"{bereinigtes_einkommen_mutter:.2f} €",
         f"{st.session_state.sockelbetrag_mutter:.2f} €",
-        f"{anteil_mutter:.2%}"
+        f"{st.session_state.verteilbarer_betrag_mutter:.2f} €"
     ])
 
     index_mutter.extend([
         "Abzug Gesamt",
         "Bereinigtes Einkommen",
-        f"{st.session_state.adjektiv_sockelbetrag_mutter}r Selbstbehalt",
-        "Haftungsanteil"
+        "Selbstbehalt",
+        "verteilbarer Betrag"
     ])
 
     # DataFrame erstellen
