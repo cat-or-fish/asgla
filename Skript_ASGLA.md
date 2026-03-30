@@ -1,4 +1,3 @@
-Halllllo Viselle!!!
 ---
 
 # Skript ASGLA
