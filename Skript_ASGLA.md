@@ -20,6 +20,8 @@ Dieses Skript erklärt die Berechnung des Ausgleichsanspruchs im symmetrischen W
 - [Kindergeldverrechnung](#kindergeldverrechnung)
 - [Endberechnung ASGLA] (#endberechnung_asgla)
 
+- [FAQ] (#faq)
+
 <div id="einleitung"></div>
 
 ## Einleitung
@@ -33,33 +35,7 @@ Wir orientieren uns für den Aufbau der App zur Berechnung des Ausgleichsanspruc
 <a name="einkommen"></a>
 ## Einkommen 
 
-Zunächst ist das relevante Einkommen der Eltern zu ermitteln. Dazu wird zunächst das Netto-Einkommen herangezogen. Dann werden Abzugsposten angesetzt. Das Ergebnis davon ist das sogenannte bereinigte Einkommen.
-
-**Haupttätigkeit**: Auszugehen ist vom Netto-Einkommen.
-
-**Weitere Einkünfte**: Die weiteren Einkünfte werden zur Haupttätigkeit des jeweiligen Elternteils addiert. Der Nutzer trägt den Betrag im jeweiligen Feld ein und wählt über das DropDown-Menü den zugehörigen Posten aus. Über das Textfeld "Zusätzliche Informationen" (am Ende der Page) können die einzelnen Punkte erläutert werden. Alle getätigten Eintragungen finden sich nach der Berechnung auch in der PDF-Datei wieder. 
-Der Rechner differenziert zwischen:
-- Nebentätigkeiten: Netto-Betrag
-- Überstundenvergütungen: Netto-Betrag wird voll zugerechnet, soweit sie berufstypisch sind und das in diesem Beruf übliche Maß nicht überschreiten
-- Sozialleistungen: Die Summe der 
-  - Arbeitslosengeld (§ 136 SGB III) und sonstige Lohnersatzleistungen nach dem SGB III (Übergangs-, Ausbildungs-, Kurzarbeitergeld- und Insolvenzgeld) sowie Krankengeld sind Einkommen.
-  - Elterngeld ist Einkommen, soweit es über den Sockelbetrag nach § 11 Sätze 1 – 3 BEEG hinausgeht. Der Sockelbetrag ist nur dann Einkommen, wenn ein Ausnahmefall nach § 11 BEEG vorliegt.
-  - Wohngeld ist Einkommen, soweit es nicht erhöhte Wohnkosten abdeckt.
-  - BAföG ist Einkommen (ausgenommen davon sind Vorausleistungen nach den §§ 36, 37 BAföG).
-  - Unfall- und Versorgungsrenten sowie Übergangsgelder aus der Unfall- und Rentenversicherung sind Einkommen (§§ 1610 a, 1578 a BGB sind zu beachten).
-  - Leistungen aus der Pflegeversicherung, Blindengeld, Schwerbeschädigten- und Pflegezulagen, jeweils nach Abzug des Betrages für tatsächliche Mehraufwendungen, sind Einkommen (§§ 1610 a, 1578 a BGB sind zu beachten).
-  - Der Anteil des Pflegegeldes bei der Pflegeperson, durch den ihre Bemühungen abgegolten werden, stellt im Allgemeinen Einkommen dar (Ausnahme: Bei Pflegegeld aus der Sozialen Pflegeversicherung (§ 1 Abs. 1 SGB XI) gilt dies nur nach Maßgabe von § 13 Abs. 6 SGB XI).
-- Selbstständige Tätigkeit:
-  - Bei Ermittlung des zukünftigen Einkommens eines selbstständigen ist der durchschnittliche Gewinn der letzten drei Jahre hinzuziehen
-- Sonstige Einkommen, insbesondere:
-  - Steuererstattungen
-  - Spesen und Auflösungen
- 
-Nicht zum Einkommen zählen:
-- Leistungen nach dem Unterhaltsvorschussgesetz
-- vom Unterhaltsberechtigten bezogene Sozialhilfe
-
-**Abzugsposten**:
+Zunächst ist das relevante Einkommen der Eltern zu ermitteln. Dazu wird zunächst das Netto-einkommen herangezogen. Dann werden Abzugsposten angesetzt. Das Ergebnis davon ist das sog. bereinigtes Einkommen.
 
 **Steuererstattungen**: Steuererstattungen werden über das Jahr hinweg aufgeteilt und damit nur monatlich mit 1/12 angesetzt.
   
@@ -82,7 +58,7 @@ Das Einkommen der Eltern ist miteinander in Verhältnis zu setzen.
   
 Siehe zur Bestimmung des Sockelbetrags (also welcher Selbstbehalt anzusetzen ist BGH v. 12.1.2011 – XII ZR 83/08 Rz. 34 ff.
 
-Bei der Quotierung ist zu beachten, dass der Selbstbehalt abzuziehen ist. Hierbei ist zu beachten, dass nach der Rspr. nicht der sog. notwendige Selbstbehalt (§ 1603 II BGB) beim Wechselmodell abzuziehen ist, sondern der sog. angemessene Selbstbehalt nach § 1603 I BGB! (siehe BFH v. 11.01.2017 – XII ZB 565/15 Rz. 42 f.)
+Bei der Quotierung ist zu beachten, dass der Selbstbehalt abzuziehen ist. Hierbei ist zu beachten, dass nach der Rspr. nicht der sog. notwendige Selbstbehalt (§ 1603 II BGB) beim Wechselmodell abzuziehen ist, sondern der sog. angemessene Selbstbehalt nach § 1603 I BGB! (siehe BGH v. 11.01.2017 – XII ZB 565/15 Rz. 42 f.)
 
 Wenn Einer ein Einkommen hat, dass 3x so hoch ist wie das des anderen, muss der selbst alles zahlen.[^1] 
 
@@ -94,6 +70,10 @@ Zu beachten ist, dass dieser Sockelbetrag nur bei den Grundbedarfen eine Rolle s
 
 <a name="gesamtbedarf_des_kindes"></a>
 ## Gesamtbedarf des Kindes
+
+Das Maß des Unterhalts richtet sich nach **§ 1610 BGB**:  
+(1) Das Maß des zu gewährenden Unterhalts bestimmt sich nach der Lebensstellung des Bedürftigen (angemessener Unterhalt).  
+(2) Der Unterhalt umfasst den gesamten Lebensbedarf einschließlich der Kosten einer angemessenen Vorbildung zu einem Beruf, bei einer der Erziehung bedürftigen Person auch die Kosten der Erziehung.
 
 <a name="regelbedarf"></a>
 ### Regelbedarf (/Grundbedarf)
@@ -146,17 +126,31 @@ Bei Sonderbedarfen kommt es insb. darauf an, ob die "angespart" werden konnten. 
 Ein sogenannter Mehrbedarf liegt vor bei regelmäßig anfallenden Kosten, die die üblichen Kosten zum Lebensbedarf übersteigen und deshalb nicht von den Regelsätzen der Düsseldorfer Tabelle erfasst sind. Es handelt sich demnach um **andauernde** Mehrausgaben, die zum Lebensbedarf des Kindes gehören.  
 Wohnmehrkosten, Fahrtkosten, doppelter Erwerb persönlicher Gegenstände
 
-Kinderbetreuungskosten sind im symmetrischen Wechselmodell grundsätzlich nicht abzugsfähig. Eine Aufteilung der durch Kindergarten, Hort, o.ä. verursachten Kosten kommt im Wechselmodell nur ganz ausnahmsweise in Betracht. (Grüneberg/*von Pückler*, 82A2023, § 1610 BGB Rz. 11)
-
 <a name="sonderbedarf"></a>
 #### Sonderbedarf
 
 Ein Sonderbedarf hingegen ist ein **unregelmäßiger**, außerordentlich hoher Bedarf, der überraschend und der Höhe nach nicht vorhersehbar war. Ein Sonderbedarf tritt daher plötzlich auf, sodass er nicht aus laufenden Unterhaltsleistungen bezahlt und auch nicht angespart werden kann.  
-Klassenfahrten, nich übernommene Arztkosten. Auch diese sind im Hinblick auf die Haftungsanteile zu verrechnen. Da einer der Elternteile die Zahlung übernimmt, ist der verbleibende Haftungsanteil ähnlich dem Kindergeld zu verrechnen.
+Klassenfahrten, nicht übernommene Arztkosten. Auch diese sind im Hinblick auf die Haftungsanteile zu verrechnen. Da einer der Elternteile die Zahlung übernimmt, ist der verbleibende Haftungsanteil ähnlich dem Kindergeld zu verrechnen.
 
 Sonderbedarf des Kindes ist wohl nur vom *angemessenen Selbstbehalt* zu tragen. Wenn ein Elternteil insoweit nicht leistungsfähig ist, muss der andere Elternteil den Mehrbedarf/Sonderbedarf alleine tragen.[^5]
 
 [^5]: RA Jakob Berechnung v. 13.12.2023
+
+#### Kindergarten- und Hortkosten
+
+Kinderbetreuungskosten sind im symmetrischen Wechselmodell grundsätzlich nicht abzugsfähig. Eine Aufteilung der durch Kindergarten, Hort, o.ä. verursachten Kosten kommt im Wechselmodell nur ganz ausnahmsweise in Betracht. (Grüneberg/*von Pückler*, 82A2023, § 1610 BGB Rz. 11)
+
+Der Unterhaltsbedarf enthält gem. § 1610 Abs. 2 BGB auch die Kosten der Erziehung.  
+Dementsprechend erhöhen Aufwendungen, die in erster Linie erzieherischen Zwecken dienten, den Bedarf des Kindes.  
+Hingegen gehören zum Kindesbedarf keine Aufwendungen, die dem betreuenden Elternteil dienen, indem dessen Betreuung ersetzt wird, um z.B. der Berufstätigkeit nachzugehen.
+Ein Mehrbedarf liegt nur vor, wenn aus pädagogischen Gründen über den Umfang der von dem betreuenden Elternteil ohnehin geschuldeten Betreuung hinausgegangen wird.
+
+Kindergartenbeiträge stellen daher Mehrbedarf des Kindes dar, die in den Tabellenbeträgen nicht enthalten sind.
+Die in einer Kindereinrichtung anfallenden **Verpflegungskosten** sind hingegen mit dem Tabellenunterhalt abgegolten und müssen herausgerechnet werden.
+
+(BGH v. 26.11.2008 - XII ZR 65/07 Rz. 14) 
+
+Selbiges gilt für **Horteinrichtungen**, soweit die Betreuung nach einem pädagogischen Konzept erfolgt, welches erzieherische Zwecke verfolgt und erreicht. Das pädagogisch-erzieherische Angebot muss dabei vergleichbare Ziele verfolgen, die den Bedürfnissen älterer Kinder angepasst sind.
 
 <a name="kindergeldverrechnung"></a>
 ## Kindergeldverrechnung
@@ -167,7 +161,21 @@ Der jeweilige Baranteil richtet sich nach der [Haftungsquote](#haftungsanteile).
 ## Endberechnung ASGLA
 Der Unterhaltsbetrag ist stets auf volle Euro aufzurunden (OLG Naumburg Leitlinien, Rz. 24)
 
+<a name="faq"></a>
 # FAQ
 ### Trifft der Rechner auf unser Umgangsmodell zu?
-Der Ausgleichsanspruch im Wechselmodell trifft nur auf symmetrische Wechselmodelle zu. Die Betreuungszeitanteile der Eltern betragen dabei jeweils 50 %. Dabei gewähren die Oberlandesgerichte einen leichten Spielraum, im Regelfall wird aber spätestens ab einem Betreungsverhältnis von 55% zu 45% nicht mehr von einem echten Wechselmodell ausgegangen, sondern von sog. erweitertem Umgang.
+Der Ausgleichsanspruch im Wechselmodell trifft nur auf symmetrische Wechselmodelle zu. Die Betreuungszeitanteile der Eltern betragen dabei jeweils 50 %. Dabei gewähren die Oberlandesgerichte einen leichten Spielraum, im Regelfall wird aber spätestens ab einem Betreungsverhältnis von 55% zu 45% nicht mehr von einem echten Wechselmodell ausgegangen, sondern von sog. erweitertem Umgang. (vgl. [https://www.kanzlei-mueller-guestrow.de/aktuelle-rechtsprechung/](https://www.kanzlei-mueller-guestrow.de/aktuelle-rechtsprechung/)
 
+### Das Gesamteinkommen der Eltern liegt außerhalb der Einkommensstufen der Düsseldorfer Tabelle!
+In diesen Fällen kommt es zu einer Fortschreibung des Tabellenunterhalts.  
+Kinder sollen in einer ihrem Alter entsprechenden Weise an einer Lebensführung teilhaben, die der besonders günstigen wirtschaftlichen Situation ihrer Eltern entspricht. Dabei kommt es jedoch weiterhin auf die Bedarfsdeckung an und zielt weder auf eine Teilhabe am Luxus noch auf eine Möglichkeit zur Vermögensbildung des unterhaltsberechtigten Kindes ab (BGH, Urteil v. 16.09.2020, Az.: XII ZB 499/19 Rz. 19 ff.).  
+Für diese Fälle haben wir unter dem REITER "BEDARF KIND" eine CHECKBOX eingefügt. Wenn Sie diese CHECKBOX aktivieren können Sie einen individuellen Regelbedarf für das Kind eintragen.
+### Was ist mit dem Monat, in dem das Kind Geburtstag hat?
+Das ergibt sich aus **§ 1612a Abs. 3 BGB**: "Der Unterhalt einer höheren Altersstufe ist ab dem Beginn des Monats maßgebend, in dem das Kind das betreffende Lebensjahr vollendet."
+Bei Wechsel der Altersstufe gilt also das Alter vom Ende des Monats für den gesamten Monat.
+
+### Aber ich möchte mehrere Monate berechnen und nicht nur einen!
+Kein Problem, dafür finden Sie unten beim "Berechnen"-Button auf der rechten Seite einen zusätzlichen Button mit "Weiteren Monat hinzufügen".
+
+### Es gibt im betroffenen Wechselmodell aber noch weitere Kinder!
+Für diesen Fall nehmen Sie die Berechnungen bitte jeweils einzeln vor. Die Mangelfall-Prüfung kann durch den Rechner aktuell noch nicht durchgeführt werden, sondern muss im Anschluss durch Sie händisch erfolgen.
