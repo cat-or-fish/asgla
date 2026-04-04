@@ -61,7 +61,21 @@ Nicht zum Einkommen zählen:
 - Leistungen nach dem Unterhaltsvorschussgesetz
 - vom Unterhaltsberechtigten bezogene Sozialhilfe
 
-**Abzugsposten**:
+**Abzugsposten**: Der Nutzer hat die Möglichkeit (bis zu fünf) Abzugsposten hinzuzufügen. Diese werden vom Nettoeinkommen subtrahiert. Das Ergebnis ist das sogenannte bereinigte Einkommen. Im Falle von mehr als fünf Abzugsposten, sind diese zusammenzufassen. Der Nutzer trägt den jeweiligen Betrag in das Feld ein und kann eine zugehörige Bezeichnung vergeben.
+Zu den Abzugsposten zählen insbesondere:
+- Berufsbedingte Aufwendungen: Berufsbedingte Aufwendungen, die sich von den privaten Lebenshaltungskosten
+nach objektiven Merkmalen eindeutig abgrenzen lassen, sind im Rahmen des Ange-
+messenen vom Nettoeinkommen aus unselbständiger Arbeit abzuziehen.
+ - Pauschale/konkrete Aufwendungen: Bei Vorliegen entsprechender Anhaltspunkte kann eine Pauschale von 5 %
+des Nettoeinkommens monatlich angesetzt werden (im Einzelfall ggf. Abweichungen).
+ - Fahrtkosten: Für die notwendigen Kosten der berufsbedingten Nutzung eines Kraftfahrzeugs kann der nach den Sätzen des § 5 Abs. 2 Satz 1 Nr. 2 JVEG anzuwendende Betrag (derzeit 0,42 Euro) pro gefahrenen Kilometer angesetzt werden. Bei langen Fahrtstrecken (ab ca. 30 km einfach) kann nach unten abgewichen werden, in der Regel auf 2/3 des vorbezeichneten Betrages (derzeit 0,28 Euro).
+ - Ausbildungsaufwand: Die Ausbildungsvergütung eines in der Berufsausbildung stehenden Kindes, das im Haushalt der Eltern oder eines Elternteils wohnt, ist vor ihrer Anrechnung in der Regel, sofern für eine derartige Schätzung hinreichende Anhaltspunkte bestehen, um einen ausbildungsbedingten Mehrbedarf von 10 %, maximal 100 Euro zu kürzen.
+- Kinderbetreuungskosten: Kinderbetreuungskosten sind abzugsfähig, soweit die Kinderbetreuung durch Dritte infolge der Berufstätigkeit erforderlich ist. Ein Kinderbetreuungsbonus kann angesetzt werden.
+- Schulden: Berücksichtigungswürdige Schulden (Zins und Tilgung) sind im Rahmen eines vernünftigen Tilgungsplanes in angemessenen Raten abzuziehen.
+- Unterhaltsleistungen:
+  - Unterhaltsleistungen an vorrangig Berechtigte sind vorweg abzuziehen.
+  - Unterhaltsleistungen an nachrangige Berechtigte sind angemessen zu berücksichtigen.
+- Vermögensbildung: Vermögensbildende Aufwendungen sind im angemessenen Rahmen abzugsfähig.
 
 
 **Steuererstattungen**: Steuererstattungen werden über das Jahr hinweg aufgeteilt und damit nur monatlich mit 1/12 angesetzt.
