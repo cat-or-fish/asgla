@@ -66,8 +66,7 @@ Zu den Abzugsposten zählen insbesondere:
 - Berufsbedingte Aufwendungen: Berufsbedingte Aufwendungen, die sich von den privaten Lebenshaltungskosten
 nach objektiven Merkmalen eindeutig abgrenzen lassen, sind im Rahmen des Ange-
 messenen vom Nettoeinkommen aus unselbständiger Arbeit abzuziehen.
- - Pauschale/konkrete Aufwendungen: Bei Vorliegen entsprechender Anhaltspunkte kann eine Pauschale von 5 %
-des Nettoeinkommens monatlich angesetzt werden (im Einzelfall ggf. Abweichungen).
+ - Pauschale/konkrete Aufwendungen: Bei Vorliegen entsprechender Anhaltspunkte kann eine Pauschale von 5 % des Nettoeinkommens monatlich angesetzt werden (im Einzelfall ggf. Abweichungen).
  - Fahrtkosten: Für die notwendigen Kosten der berufsbedingten Nutzung eines Kraftfahrzeugs kann der nach den Sätzen des § 5 Abs. 2 Satz 1 Nr. 2 JVEG anzuwendende Betrag (derzeit 0,42 Euro) pro gefahrenen Kilometer angesetzt werden. Bei langen Fahrtstrecken (ab ca. 30 km einfach) kann nach unten abgewichen werden, in der Regel auf 2/3 des vorbezeichneten Betrages (derzeit 0,28 Euro).
  - Ausbildungsaufwand: Die Ausbildungsvergütung eines in der Berufsausbildung stehenden Kindes, das im Haushalt der Eltern oder eines Elternteils wohnt, ist vor ihrer Anrechnung in der Regel, sofern für eine derartige Schätzung hinreichende Anhaltspunkte bestehen, um einen ausbildungsbedingten Mehrbedarf von 10 %, maximal 100 Euro zu kürzen.
 - Kinderbetreuungskosten: Kinderbetreuungskosten sind abzugsfähig, soweit die Kinderbetreuung durch Dritte infolge der Berufstätigkeit erforderlich ist. Ein Kinderbetreuungsbonus kann angesetzt werden.
@@ -76,9 +75,6 @@ des Nettoeinkommens monatlich angesetzt werden (im Einzelfall ggf. Abweichungen)
   - Unterhaltsleistungen an vorrangig Berechtigte sind vorweg abzuziehen.
   - Unterhaltsleistungen an nachrangige Berechtigte sind angemessen zu berücksichtigen.
 - Vermögensbildung: Vermögensbildende Aufwendungen sind im angemessenen Rahmen abzugsfähig.
-
-
-**Steuererstattungen**: Steuererstattungen werden über das Jahr hinweg aufgeteilt und damit nur monatlich mit 1/12 angesetzt.
   
 **Fiktives Einkommen**: Zur Bemessung der finanziellen Leistungsfähigkeit kann ein fiktives Einkommen in die Berechnung mit einbezogen werden, wenn ein Elternteil weniger arbeitet, als ihm zuzumuten ist.  
 Die Zurechnung fiktiver Einkünfte setzt zum Einen subjektiv voraus, dass Erwerbsbemühungen des Unterhaltsschuldners fehlen. Zum anderen müssen die zur Erfüllung der Unterhaltspflichten erforderlichen Einkünfte für den Verpflichteten objektiv erzielbar sein, was von seinen persönlichen Voraussetzungen wie beispielsweise Alter, beruflicher Qualifikation, Erwerbsbiographie und Gesundheitszustand und dem Vorhandensein entsprechender Arbeitsstellen abhängt . Die Darlegungs- und Beweislast für die Leistungsunfähigkeit liegt beim Unterhaltsschuldner (BVerfG v. 09.11.2020 – 1 BvR 697/20, Rn. 14 f.; vgl. BGH v. 30. Juli 2008 - XII ZR 126/06, Rn. 22).
@@ -220,3 +216,10 @@ Kein Problem, dafür finden Sie unten beim "Berechnen"-Button auf der rechten Se
 
 ### Es gibt im betroffenen Wechselmodell aber noch weitere Kinder!
 Für diesen Fall nehmen Sie die Berechnungen bitte jeweils einzeln vor. Die Mangelfall-Prüfung kann durch den Rechner aktuell noch nicht durchgeführt werden, sondern muss im Anschluss durch Sie händisch erfolgen.
+
+### Ich habe eine Steuererstattung erhalten!
+Steuererstattungen zählen zu den weiteren Einkünften, werden über das Jahr hinweg aufgeteilt und damit nur monatlich mit 1/12 angesetzt.
+
+### Mein Einkommen ist unregelmäßig!
+Hier gelten Zufluss- und Abflussprinzip, d.h. dass das Einkommen dem Monat zugerechnet wird, in dem es tatsächlich geflossen ist. 
+WICHTIG: In Einzelfällen kann dies jedoch zu unverhältnismäßigen Ergebnissen führen (z.B. Autor erhält nach drei Jahren Schreiben, unverhältnismäßige Menge an Geld), sodass in diesen Fällen das Einkommen angemessen auf mehrere Monate verteilt wird.
