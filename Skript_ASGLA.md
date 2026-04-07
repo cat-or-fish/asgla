@@ -3,13 +3,16 @@
 # Skript ASGLA
 
 Dieses Skript erklärt die Berechnung des Ausgleichsanspruchs im symmetrischen Wechselmodell und benennt die maßgeblichen Urteile.
-
+Hinweis: Der Rechner ersetzt keine rechtliche Beratung und erhebt keinen Anspruch auf Vollständigkeit oder Richtigkeit im Einzelfall.
 
 ## Inhaltsverzeichnis
 
 - [Einleitung](#einleitung)
 - [Einkommen](#einkommen)
- - [bereinigtes Einkommen](#bereinigtes_einkommen)  
+    - [Haupttätigkeit](#haupttätigkeit)
+    - [Weitere Einkünfte](#weitere_einkünfte)
+    - [Abzugsposten](#abzugsposten)
+    - [Bereinigtes Einkommen](#bereinigtes_einkommen)  
 - [Haftungsanteile](#haftungsanteile)
  - [Sockelbetrag](#sockelbetrag)
 - [Gesamtbedarf des Kindes](#gesamtbedarf_des_kindes)
@@ -37,9 +40,13 @@ Wir orientieren uns für den Aufbau der App zur Berechnung des Ausgleichsanspruc
 
 Zunächst ist das relevante Einkommen der Eltern zu ermitteln. Dazu wird zunächst das Netto-Einkommen herangezogen. Dann werden Abzugsposten angesetzt. Das Ergebnis davon ist das sogenannte bereinigte Einkommen.
 
-**Haupttätigkeit**: Auszugehen ist vom Netto-Einkommen.
+<a name="haupttätigkeit"></a>
+### Haupttätigkeit
+Für den Unterhaltsrechner wird das Netto-Einkommen herangezogen.
 
-**Weitere Einkünfte**: Die weiteren Einkünfte werden zur Haupttätigkeit des jeweiligen Elternteils addiert. Der Nutzer trägt den Betrag im jeweiligen Feld ein und wählt über das DropDown-Menü den zugehörigen Posten aus. Über das Textfeld "Zusätzliche Informationen" (am Ende der Page) können die einzelnen Punkte erläutert werden. Alle getätigten Eintragungen finden sich nach der Berechnung auch in der PDF-Datei wieder. 
+<a name="weitere_einkünfte"></a>
+### Weitere Einkünfte
+Die weiteren Einkünfte werden zur Haupttätigkeit des jeweiligen Elternteils addiert. Der Nutzer trägt den Betrag im jeweiligen Feld ein und wählt über das DropDown-Menü den zugehörigen Posten aus. Über das Textfeld "Zusätzliche Informationen" (am Ende der Page) können die einzelnen Punkte erläutert werden. Alle getätigten Eintragungen finden sich nach der Berechnung auch in der PDF-Datei wieder. 
 Der Rechner differenziert zwischen:
 - Nebentätigkeiten: Netto-Betrag
 - Überstundenvergütungen: Netto-Betrag wird voll zugerechnet, soweit sie berufstypisch sind und das in diesem Beruf übliche Maß nicht überschreiten
@@ -61,7 +68,9 @@ Nicht zum Einkommen zählen:
 - Leistungen nach dem Unterhaltsvorschussgesetz
 - vom Unterhaltsberechtigten bezogene Sozialhilfe
 
-**Abzugsposten**: Der Nutzer hat die Möglichkeit (bis zu fünf) Abzugsposten hinzuzufügen. Diese werden vom Nettoeinkommen subtrahiert. Das Ergebnis ist das sogenannte bereinigte Einkommen. Im Falle von mehr als fünf Abzugsposten, sind diese zusammenzufassen. Der Nutzer trägt den jeweiligen Betrag in das Feld ein und kann eine zugehörige Bezeichnung vergeben.
+<a name="abzugsposten"></a>
+### Abzugsposten
+Der Nutzer hat die Möglichkeit (bis zu fünf) Abzugsposten hinzuzufügen. Diese werden vom Nettoeinkommen subtrahiert. Das Ergebnis ist das sogenannte bereinigte Einkommen. Im Falle von mehr als fünf Abzugsposten, sind diese zusammenzufassen. Der Nutzer trägt den jeweiligen Betrag in das Feld ein und kann eine zugehörige Bezeichnung vergeben.
 Zu den Abzugsposten zählen insbesondere:
 - Berufsbedingte Aufwendungen: Berufsbedingte Aufwendungen, die sich von den privaten Lebenshaltungskosten nach objektiven Merkmalen eindeutig abgrenzen lassen, sind im Rahmen des Angemessenen vom Nettoeinkommen aus unselbständiger Arbeit abzuziehen.
  - Pauschale/konkrete Aufwendungen: Bei Vorliegen entsprechender Anhaltspunkte kann eine Pauschale von 5 % des Nettoeinkommens monatlich angesetzt werden (im Einzelfall ggf. Abweichungen).
@@ -73,20 +82,15 @@ Zu den Abzugsposten zählen insbesondere:
   - Unterhaltsleistungen an vorrangig Berechtigte sind vorweg abzuziehen.
   - Unterhaltsleistungen an nachrangige Berechtigte sind angemessen zu berücksichtigen.
 - Vermögensbildung: Vermögensbildende Aufwendungen sind im angemessenen Rahmen abzugsfähig.
-  
-**Fiktives Einkommen**: Zur Bemessung der finanziellen Leistungsfähigkeit kann ein fiktives Einkommen in die Berechnung mit einbezogen werden, wenn ein Elternteil weniger arbeitet, als ihm zuzumuten ist.  
-Die Zurechnung fiktiver Einkünfte setzt zum Einen subjektiv voraus, dass Erwerbsbemühungen des Unterhaltsschuldners fehlen. Zum anderen müssen die zur Erfüllung der Unterhaltspflichten erforderlichen Einkünfte für den Verpflichteten objektiv erzielbar sein, was von seinen persönlichen Voraussetzungen wie beispielsweise Alter, beruflicher Qualifikation, Erwerbsbiographie und Gesundheitszustand und dem Vorhandensein entsprechender Arbeitsstellen abhängt . Die Darlegungs- und Beweislast für die Leistungsunfähigkeit liegt beim Unterhaltsschuldner (BVerfG v. 09.11.2020 – 1 BvR 697/20, Rn. 14 f.; vgl. BGH v. 30. Juli 2008 - XII ZR 126/06, Rn. 22).
-Darauf kann sich der Unterhaltspflichtige aber nicht berufen, wenn und soweit das Kind damit auf einen nicht realisierbaren Unterhaltsanspruch verwiesen wird und somit Gefahr läuft, nicht den vollen ihm zustehenden Unterhalt zu erhalten. Dessen bedarf es indessen nicht, wenn der teils aus fiktivem Einkommen haftende Elternteil tatsächlich Naturalunterhalt gewährt und jedenfalls einen Unterhalt in Höhe seines Haftungsanteils an das Kind erbringt (BFH v. 11.01.2017 – XII ZB 565/15 Rn. 28. Dort konkret am Beispiel erläutert).
 
 <a name="bereinigtes_einkommen"></a>
-### bereinigtes Einkommen
-
-Abzug von berufsbedingten Aufwendungen regelmäßig pauschal mit 5% anzusetzen.
+### Bereinigtes Einkommen
+Aus der Differenz der Einkünfte und Abzugsposten ergeben sich die ebreinigten Einkommen der Eltern.
 
 <a name="haftungsanteile"></a>
 ## Haftungsanteile
 
-Das Einkommen der Eltern ist miteinander in Verhältnis zu setzen.  
+Das bereinigte Einkommen der Eltern ist miteinander in Verhältnis zu setzen.  
 
 <a name="sockelbetrag"></a>
 ### Sockelbetrag
@@ -220,4 +224,12 @@ Steuererstattungen zählen zu den weiteren Einkünften, werden über das Jahr hi
 
 ### Mein Einkommen ist unregelmäßig!
 Hier gelten Zufluss- und Abflussprinzip, d.h. dass das Einkommen dem Monat zugerechnet wird, in dem es tatsächlich geflossen ist. 
-WICHTIG: In Einzelfällen kann dies jedoch zu unverhältnismäßigen Ergebnissen führen (z.B. Autor erhält nach drei Jahren Schreiben, unverhältnismäßige Menge an Geld), sodass in diesen Fällen das Einkommen angemessen auf mehrere Monate verteilt wird. In diesen Fällen wird eine Einzelfallbetrachtung vorgenommen.
+WICHTIG: In Einzelfällen kann dies jedoch zu unverhältnismäßigen Ergebnissen führen (z.B. Autor erhält nach drei Jahren Schreiben, unverhältnismäßige Menge an Geld), sodass in diesen Fällen das Einkommen angemessen auf mehrere Monate verteilt wird.
+
+### Aber mein Partner hätte doch mehr verdienen können!
+Zur Bemessung der finanziellen Leistungsfähigkeit kann ein sogenanntes fiktives Einkommen in die Berechnung mit einbezogen werden, wenn ein Elternteil weniger arbeitet, als ihm zuzumuten ist.  
+Die Zurechnung fiktiver Einkünfte setzt zum Einen subjektiv voraus, dass Erwerbsbemühungen des Unterhaltsschuldners fehlen. Zum anderen müssen die zur Erfüllung der Unterhaltspflichten erforderlichen Einkünfte für den Verpflichteten objektiv erzielbar sein, was von seinen persönlichen Voraussetzungen wie beispielsweise Alter, beruflicher Qualifikation, Erwerbsbiographie und Gesundheitszustand und dem Vorhandensein entsprechender Arbeitsstellen abhängt . Die Darlegungs- und Beweislast für die Leistungsunfähigkeit liegt beim Unterhaltsschuldner (BVerfG v. 09.11.2020 – 1 BvR 697/20, Rn. 14 f.; vgl. BGH v. 30. Juli 2008 - XII ZR 126/06, Rn. 22).
+Darauf kann sich der Unterhaltspflichtige aber nicht berufen, wenn und soweit das Kind damit auf einen nicht realisierbaren Unterhaltsanspruch verwiesen wird und somit Gefahr läuft, nicht den vollen ihm zustehenden Unterhalt zu erhalten. Dessen bedarf es indessen nicht, wenn der teils aus fiktivem Einkommen haftende Elternteil tatsächlich Naturalunterhalt gewährt und jedenfalls einen Unterhalt in Höhe seines Haftungsanteils an das Kind erbringt (BFH v. 11.01.2017 – XII ZB 565/15 Rn. 28. Dort konkret am Beispiel erläutert).
+Im Rechner kann das fiktive Einkommen im Rahmen der weiteren Einkünfte berücksichtigt werden.
+
+
