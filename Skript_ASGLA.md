@@ -72,9 +72,7 @@ Nicht zum Einkommen zählen:
 ### Abzugsposten
 Der Nutzer hat die Möglichkeit (bis zu fünf) Abzugsposten hinzuzufügen. Diese werden vom Nettoeinkommen subtrahiert. Das Ergebnis ist das sogenannte bereinigte Einkommen. Im Falle von mehr als fünf Abzugsposten, sind diese zusammenzufassen. Der Nutzer trägt den jeweiligen Betrag in das Feld ein und kann eine zugehörige Bezeichnung vergeben.
 Zu den Abzugsposten zählen insbesondere:
-- Berufsbedingte Aufwendungen: Berufsbedingte Aufwendungen, die sich von den privaten Lebenshaltungskosten
-nach objektiven Merkmalen eindeutig abgrenzen lassen, sind im Rahmen des Ange-
-messenen vom Nettoeinkommen aus unselbständiger Arbeit abzuziehen.
+- Berufsbedingte Aufwendungen: Berufsbedingte Aufwendungen, die sich von den privaten Lebenshaltungskosten nach objektiven Merkmalen eindeutig abgrenzen lassen, sind im Rahmen des Angemessenen vom Nettoeinkommen aus unselbständiger Arbeit abzuziehen.
  - Pauschale/konkrete Aufwendungen: Bei Vorliegen entsprechender Anhaltspunkte kann eine Pauschale von 5 % des Nettoeinkommens monatlich angesetzt werden (im Einzelfall ggf. Abweichungen).
  - Fahrtkosten: Für die notwendigen Kosten der berufsbedingten Nutzung eines Kraftfahrzeugs kann der nach den Sätzen des § 5 Abs. 2 Satz 1 Nr. 2 JVEG anzuwendende Betrag (derzeit 0,42 Euro) pro gefahrenen Kilometer angesetzt werden. Bei langen Fahrtstrecken (ab ca. 30 km einfach) kann nach unten abgewichen werden, in der Regel auf 2/3 des vorbezeichneten Betrages (derzeit 0,28 Euro).
  - Ausbildungsaufwand: Die Ausbildungsvergütung eines in der Berufsausbildung stehenden Kindes, das im Haushalt der Eltern oder eines Elternteils wohnt, ist vor ihrer Anrechnung in der Regel, sofern für eine derartige Schätzung hinreichende Anhaltspunkte bestehen, um einen ausbildungsbedingten Mehrbedarf von 10 %, maximal 100 Euro zu kürzen.
@@ -233,3 +231,5 @@ Zur Bemessung der finanziellen Leistungsfähigkeit kann ein sogenanntes fiktives
 Die Zurechnung fiktiver Einkünfte setzt zum Einen subjektiv voraus, dass Erwerbsbemühungen des Unterhaltsschuldners fehlen. Zum anderen müssen die zur Erfüllung der Unterhaltspflichten erforderlichen Einkünfte für den Verpflichteten objektiv erzielbar sein, was von seinen persönlichen Voraussetzungen wie beispielsweise Alter, beruflicher Qualifikation, Erwerbsbiographie und Gesundheitszustand und dem Vorhandensein entsprechender Arbeitsstellen abhängt . Die Darlegungs- und Beweislast für die Leistungsunfähigkeit liegt beim Unterhaltsschuldner (BVerfG v. 09.11.2020 – 1 BvR 697/20, Rn. 14 f.; vgl. BGH v. 30. Juli 2008 - XII ZR 126/06, Rn. 22).
 Darauf kann sich der Unterhaltspflichtige aber nicht berufen, wenn und soweit das Kind damit auf einen nicht realisierbaren Unterhaltsanspruch verwiesen wird und somit Gefahr läuft, nicht den vollen ihm zustehenden Unterhalt zu erhalten. Dessen bedarf es indessen nicht, wenn der teils aus fiktivem Einkommen haftende Elternteil tatsächlich Naturalunterhalt gewährt und jedenfalls einen Unterhalt in Höhe seines Haftungsanteils an das Kind erbringt (BFH v. 11.01.2017 – XII ZB 565/15 Rn. 28. Dort konkret am Beispiel erläutert).
 Im Rechner kann das fiktive Einkommen im Rahmen der weiteren Einkünfte berücksichtigt werden.
+
+
