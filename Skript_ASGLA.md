@@ -63,9 +63,7 @@ Nicht zum Einkommen zählen:
 
 **Abzugsposten**: Der Nutzer hat die Möglichkeit (bis zu fünf) Abzugsposten hinzuzufügen. Diese werden vom Nettoeinkommen subtrahiert. Das Ergebnis ist das sogenannte bereinigte Einkommen. Im Falle von mehr als fünf Abzugsposten, sind diese zusammenzufassen. Der Nutzer trägt den jeweiligen Betrag in das Feld ein und kann eine zugehörige Bezeichnung vergeben.
 Zu den Abzugsposten zählen insbesondere:
-- Berufsbedingte Aufwendungen: Berufsbedingte Aufwendungen, die sich von den privaten Lebenshaltungskosten
-nach objektiven Merkmalen eindeutig abgrenzen lassen, sind im Rahmen des Ange-
-messenen vom Nettoeinkommen aus unselbständiger Arbeit abzuziehen.
+- Berufsbedingte Aufwendungen: Berufsbedingte Aufwendungen, die sich von den privaten Lebenshaltungskosten nach objektiven Merkmalen eindeutig abgrenzen lassen, sind im Rahmen des Angemessenen vom Nettoeinkommen aus unselbständiger Arbeit abzuziehen.
  - Pauschale/konkrete Aufwendungen: Bei Vorliegen entsprechender Anhaltspunkte kann eine Pauschale von 5 % des Nettoeinkommens monatlich angesetzt werden (im Einzelfall ggf. Abweichungen).
  - Fahrtkosten: Für die notwendigen Kosten der berufsbedingten Nutzung eines Kraftfahrzeugs kann der nach den Sätzen des § 5 Abs. 2 Satz 1 Nr. 2 JVEG anzuwendende Betrag (derzeit 0,42 Euro) pro gefahrenen Kilometer angesetzt werden. Bei langen Fahrtstrecken (ab ca. 30 km einfach) kann nach unten abgewichen werden, in der Regel auf 2/3 des vorbezeichneten Betrages (derzeit 0,28 Euro).
  - Ausbildungsaufwand: Die Ausbildungsvergütung eines in der Berufsausbildung stehenden Kindes, das im Haushalt der Eltern oder eines Elternteils wohnt, ist vor ihrer Anrechnung in der Regel, sofern für eine derartige Schätzung hinreichende Anhaltspunkte bestehen, um einen ausbildungsbedingten Mehrbedarf von 10 %, maximal 100 Euro zu kürzen.
@@ -222,4 +220,4 @@ Steuererstattungen zählen zu den weiteren Einkünften, werden über das Jahr hi
 
 ### Mein Einkommen ist unregelmäßig!
 Hier gelten Zufluss- und Abflussprinzip, d.h. dass das Einkommen dem Monat zugerechnet wird, in dem es tatsächlich geflossen ist. 
-WICHTIG: In Einzelfällen kann dies jedoch zu unverhältnismäßigen Ergebnissen führen (z.B. Autor erhält nach drei Jahren Schreiben, unverhältnismäßige Menge an Geld), sodass in diesen Fällen das Einkommen angemessen auf mehrere Monate verteilt wird.
+WICHTIG: In Einzelfällen kann dies jedoch zu unverhältnismäßigen Ergebnissen führen (z.B. Autor erhält nach drei Jahren Schreiben, unverhältnismäßige Menge an Geld), sodass in diesen Fällen das Einkommen angemessen auf mehrere Monate verteilt wird. In diesen Fällen wird eine Einzelfallbetrachtung vorgenommen.
