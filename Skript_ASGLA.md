@@ -85,7 +85,7 @@ Zu den Abzugsposten zählen insbesondere:
 
 <a name="bereinigtes_einkommen"></a>
 ### Bereinigtes Einkommen
-Aus der Differenz der Einkünfte und Abzugsposten ergeben sich die breinigten Einkommen der Eltern.
+Aus der Differenz der Einkünfte und Abzugsposten ergeben sich die bereinigten Einkommen der Eltern.
 
 <a name="haftungsanteile"></a>
 ## Haftungsanteile
