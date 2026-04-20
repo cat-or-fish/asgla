@@ -85,7 +85,7 @@ Zu den Abzugsposten zählen insbesondere:
 
 <a name="bereinigtes_einkommen"></a>
 ### Bereinigtes Einkommen
-Aus der Differenz der Einkünfte und Abzugsposten ergeben sich die ebreinigten Einkommen der Eltern.
+Aus der Differenz der Einkünfte und Abzugsposten ergeben sich die breinigten Einkommen der Eltern.
 
 <a name="haftungsanteile"></a>
 ## Haftungsanteile
@@ -94,7 +94,17 @@ Das bereinigte Einkommen der Eltern ist miteinander in Verhältnis zu setzen.
 
 <a name="sockelbetrag"></a>
 ### Sockelbetrag
-  
+
+Der Sockelbetrag ist der Betrag, den jedes Elternteil im Wechselmodell "behalten" darf. Nur das Einkommen, das über diesem Sockelbetrag liegt, ist das sogenannte "verteilungsfähige Einkommen", aus dem die Haftungsquoten gebildet werden.
+
+Gemäß § 1603 I BGB muss niemand seinen angemessenen Unterhalt gefährden, um Unterhalt zu zahlen. Dieser angemessene Selbstbehalt ist grundsätzlich im Wechselmodell anzuwenden. [^2] Nur im Mangelfall (also wenn der Unterhalt nicht mit den normalen Mitteln gedeckt ist) und bei gesteigerter Unterhaltspflicht wird der notwendige Selbstbehalt nach § 1603 II angewandt. [^1] Die Höhe der jeweiligen Selbstbehalte werden durch die Unterhaltsleitlinien der zuständigen Oberlandesgerichte festgesetzt.
+
+Der ASGLA-Rechner ermöglicht es dem Nutzer zudem einen individuellen Betrag in Einzelfällen festzusetzen.^
+
+[1] BGH, Beschl. v. 11.01.2017 - XII ZB 565/15, FamRZ 2017, 437 Rn. 41 f.
+[2] BGH, Urteil v. 12.1.2011 – XII ZR 83/08 Rn. 34 ff.
+
+
 Siehe zur Bestimmung des Sockelbetrags (also welcher Selbstbehalt anzusetzen ist BGH v. 12.1.2011 – XII ZR 83/08 Rz. 34 ff.
 
 Bei der Quotierung ist zu beachten, dass der Selbstbehalt abzuziehen ist. Hierbei ist zu beachten, dass nach der Rspr. nicht der sog. notwendige Selbstbehalt (§ 1603 II BGB) beim Wechselmodell abzuziehen ist, sondern der sog. angemessene Selbstbehalt nach § 1603 I BGB! (siehe BGH v. 11.01.2017 – XII ZB 565/15 Rz. 42 f.)
@@ -232,4 +242,10 @@ Die Zurechnung fiktiver Einkünfte setzt zum Einen subjektiv voraus, dass Erwerb
 Darauf kann sich der Unterhaltspflichtige aber nicht berufen, wenn und soweit das Kind damit auf einen nicht realisierbaren Unterhaltsanspruch verwiesen wird und somit Gefahr läuft, nicht den vollen ihm zustehenden Unterhalt zu erhalten. Dessen bedarf es indessen nicht, wenn der teils aus fiktivem Einkommen haftende Elternteil tatsächlich Naturalunterhalt gewährt und jedenfalls einen Unterhalt in Höhe seines Haftungsanteils an das Kind erbringt (BFH v. 11.01.2017 – XII ZB 565/15 Rn. 28. Dort konkret am Beispiel erläutert).
 Im Rechner kann das fiktive Einkommen im Rahmen der weiteren Einkünfte berücksichtigt werden.
 
+### Und was passiert, wenn ich nicht genug Geld habe?
+Jedem Elternteil steht im Wechselmodell ein sogenannter Selbstbehalt zu, sodass die eigene Lebensgrundlage in einem Mindestmaß gewährleistet ist (siehe oben unter "Sockelbetrag").
 
+### Aber das andere Elternteil verdient viel mehr als ich!
+Hat ein Elternteil nach Abzug des Sockelbetrags ein deutlich höheres Einkommen als der andere, kann sich aus der Quotenberechnung ergeben, dass er den Kindesunterhalt nahezu allein zu tragen hat. [^6]
+
+[6] BGH Beschluss vom 10.07.2013 - XII ZB 297/12, Rn. 29.
