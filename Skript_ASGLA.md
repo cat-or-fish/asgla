@@ -99,10 +99,10 @@ Der Sockelbetrag ist der Betrag, den jedes Elternteil im Wechselmodell "behalten
 
 Gemäß § 1603 I BGB muss niemand seinen angemessenen Unterhalt gefährden, um Unterhalt zu zahlen. Dieser angemessene Selbstbehalt ist grundsätzlich im Wechselmodell anzuwenden. [^14] Nur im Mangelfall (also wenn der Unterhalt nicht mit den normalen Mitteln gedeckt ist) und bei gesteigerter Unterhaltspflicht wird der notwendige Selbstbehalt nach § 1603 II angewandt. [^15] Die Höhe der jeweiligen Selbstbehalte werden durch die Unterhaltsleitlinien der zuständigen Oberlandesgerichte festgesetzt.
 
-Der ASGLA-Rechner ermöglicht es dem Nutzer zudem einen individuellen Betrag in Einzelfällen festzusetzen.^
+Der ASGLA-Rechner ermöglicht es dem Nutzer zudem einen individuellen Betrag in Einzelfällen festzusetzen.
 
-[^14] BGH, Urteil v. 12.1.2011 – XII ZR 83/08 Rn. 34 ff.
-[^15] BGH, Beschl. v. 11.01.2017 - XII ZB 565/15, FamRZ 2017, 437 Rn. 41 f.
+[^14]: BGH, Urteil v. 12.1.2011 – XII ZR 83/08 Rn. 34 ff.
+[^15]: BGH, Beschl. v. 11.01.2017 - XII ZB 565/15, FamRZ 2017, 437 Rn. 41 f.
 
 
 
