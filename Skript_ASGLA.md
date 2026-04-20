@@ -97,12 +97,13 @@ Das bereinigte Einkommen der Eltern ist miteinander in Verhältnis zu setzen.
 
 Der Sockelbetrag ist der Betrag, den jedes Elternteil im Wechselmodell "behalten" darf. Nur das Einkommen, das über diesem Sockelbetrag liegt, ist das sogenannte "verteilungsfähige Einkommen", aus dem die Haftungsquoten gebildet werden.
 
-Gemäß § 1603 I BGB muss niemand seinen angemessenen Unterhalt gefährden, um Unterhalt zu zahlen. Dieser angemessene Selbstbehalt ist grundsätzlich im Wechselmodell anzuwenden. [^2] Nur im Mangelfall (also wenn der Unterhalt nicht mit den normalen Mitteln gedeckt ist) und bei gesteigerter Unterhaltspflicht wird der notwendige Selbstbehalt nach § 1603 II angewandt. [^1] Die Höhe der jeweiligen Selbstbehalte werden durch die Unterhaltsleitlinien der zuständigen Oberlandesgerichte festgesetzt.
+Gemäß § 1603 I BGB muss niemand seinen angemessenen Unterhalt gefährden, um Unterhalt zu zahlen. Dieser angemessene Selbstbehalt ist grundsätzlich im Wechselmodell anzuwenden. [^14] Nur im Mangelfall (also wenn der Unterhalt nicht mit den normalen Mitteln gedeckt ist) und bei gesteigerter Unterhaltspflicht wird der notwendige Selbstbehalt nach § 1603 II angewandt. [^15] Die Höhe der jeweiligen Selbstbehalte werden durch die Unterhaltsleitlinien der zuständigen Oberlandesgerichte festgesetzt.
 
 Der ASGLA-Rechner ermöglicht es dem Nutzer zudem einen individuellen Betrag in Einzelfällen festzusetzen.^
 
-[1] BGH, Beschl. v. 11.01.2017 - XII ZB 565/15, FamRZ 2017, 437 Rn. 41 f.
-[2] BGH, Urteil v. 12.1.2011 – XII ZR 83/08 Rn. 34 ff.
+[14] BGH, Urteil v. 12.1.2011 – XII ZR 83/08 Rn. 34 ff.
+[15] BGH, Beschl. v. 11.01.2017 - XII ZB 565/15, FamRZ 2017, 437 Rn. 41 f.
+
 
 
 Siehe zur Bestimmung des Sockelbetrags (also welcher Selbstbehalt anzusetzen ist BGH v. 12.1.2011 – XII ZR 83/08 Rz. 34 ff.
