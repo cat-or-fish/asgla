@@ -3,7 +3,9 @@
 # Skript ASGLA
 
 Dieses Skript erklärt die Berechnung des Ausgleichsanspruchs im symmetrischen Wechselmodell und benennt die maßgeblichen Urteile.
-Hinweis: Der Rechner ersetzt keine rechtliche Beratung und erhebt keinen Anspruch auf Vollständigkeit oder Richtigkeit im Einzelfall.
+Zudem finden Sie unten auch technische Hinweise zur Benutzung des Rechners.
+
+**HINWEIS:** Der Rechner ersetzt keine rechtliche Beratung und erhebt keinen Anspruch auf Vollständigkeit oder Richtigkeit im Einzelfall.
 
 ## Inhaltsverzeichnis
 
@@ -24,6 +26,7 @@ Hinweis: Der Rechner ersetzt keine rechtliche Beratung und erhebt keinen Anspruc
 - [Endberechnung ASGLA](#endberechnung_asgla)
 
 - [FAQ](#faq)
+- [Technisches FAQ](#techfaq)
 
 <div id="einleitung"></div>
 
@@ -125,6 +128,8 @@ Das Maß des Unterhalts richtet sich nach **§ 1610 BGB**:
 (1) Das Maß des zu gewährenden Unterhalts bestimmt sich nach der Lebensstellung des Bedürftigen (angemessener Unterhalt).  
 (2) Der Unterhalt umfasst den gesamten Lebensbedarf einschließlich der Kosten einer angemessenen Vorbildung zu einem Beruf, bei einer der Erziehung bedürftigen Person auch die Kosten der Erziehung.
 
+Der Barbedarf wird gem. **§ 1612b Abs. 1 BGB** um die Hälfte des Kindergeldes gemindert. Diese Anrechnung des hälftiges Kindergeldes gilt auch im Wechselmodell (BGH v. 11.01.2017 – XII ZB 565/15, Rz. 47).
+
 <a name="regelbedarf"></a>
 ### Regelbedarf (/Grundbedarf)
 Aus der Düsseldorfer Tabelle entnehmen. Maßgeblich für die Einkommensgruppe ist die Gesamtsumme der bereinigten Einkommen beider Eltern.  
@@ -144,6 +149,7 @@ Welche Posten von den Bedarfsbeträgen der Düsseldorfer Tabelle bereits entha
 | 10  | Bildung                                   |
 | 11  | Beherbergungs- und Gaststättenleistungen  |
 | 12  | Andere Waren und Dienstleistungen         |
+
 Ob noch Regelbedarf oder Sonderbedarf vorliegt, kann im Abgleich mit § 34 SGB XII (Bildung und Teilhabe, kurz: BuT) ermittelt werden (vgl. BFH v. 11.01.2017 – XII ZB 565/15 Rz. 39).
 
 
@@ -202,10 +208,28 @@ Die in einer Kindereinrichtung anfallenden **Verpflegungskosten** sind hingegen 
 
 Selbiges gilt für **Horteinrichtungen**, soweit die Betreuung nach einem pädagogischen Konzept erfolgt, welches erzieherische Zwecke verfolgt und erreicht. Das pädagogisch-erzieherische Angebot muss dabei vergleichbare Ziele verfolgen, die den Bedürfnissen älterer Kinder angepasst sind.
 
+#### Eigenes Einkommen des Kindes
+
+Soweit das Kind eigene Einkünfte erzielt, sind diese vom Bedarf abzuziehen. Einkünfte aus einer Erwerbstätigkeit sind nur zu berücksichtigen, soweit diese dem Kind zumutbar ist. Lediglich taschengeld-erhöhende Schülerjobs sind daher nicht abzugsfähig. (vgl. [https://www.scheidung-online.de/unterhalt/kindesunterhalt/eigenes-einkommen-des-kindes/](https://www.scheidung-online.de/unterhalt/kindesunterhalt/eigenes-einkommen-des-kindes/))
+
 <a name="kindergeldverrechnung"></a>
 ## Kindergeldverrechnung
-Betreungsanteil 50/50  
+Das Kindergeld wird zur Verrechnung zunächst in zwei gleiche Hälften geteilt. 50 % stellen den sog. Betreuungsanteil dar und 50 % den sog. Baranteil.
+Aufgrund der paritätischen Betreuung ist der Betreuungsanteil zwischen Mutter und Vater gleichmäßig aufzuteilen (also jeweils 1/4 des Kindergeldes).
 Der jeweilige Baranteil richtet sich nach der [Haftungsquote](#haftungsanteile).
+
+**Beispiel:**  
+Das Kindergeld beträgt 250 EUR und wird an die Mutter ausgezahlt. Die Haftungsquoten betragen 70% Anteil Mutter und 30% Anteil Vater.
+
+|      Position            |       Betrag        |
+|--------------------------|---------------------|
+| Betreungsanteil Mutter   | 65,50 EUR           |
+| Betreuungsanteil Vater   | 65,50 EUR           |
+| Baranteil Mutter (70%)   | 87,50 EUR           |
+| Baranteil Vater (30%)    | 37,50 EUR           |
+
+Die Mutter hat also insgesamt 103 EUR vom Kindergeld an den Vater auszukehren.  
+Dieser Kindergeld-Ausgleich ist mit dem Wechselmodell-Ausgleichsanspruch zu verrechnen.
 
 <a name="endberechnung_asgla"></a>
 ## Endberechnung ASGLA
@@ -214,31 +238,29 @@ Der Unterhaltsbetrag ist stets auf volle Euro aufzurunden (OLG Naumburg Leitlini
 <a name="faq"></a>
 # FAQ
 ### Trifft der Rechner auf unser Umgangsmodell zu?
-Der Ausgleichsanspruch im Wechselmodell trifft nur auf symmetrische Wechselmodelle zu. Die Betreuungszeitanteile der Eltern betragen dabei jeweils 50 %. Dabei gewähren die Oberlandesgerichte einen leichten Spielraum, im Regelfall wird aber spätestens ab einem Betreungsverhältnis von 55% zu 45% nicht mehr von einem echten Wechselmodell ausgegangen, sondern von sog. erweitertem Umgang. (vgl. [https://www.kanzlei-mueller-guestrow.de/aktuelle-rechtsprechung/](https://www.kanzlei-mueller-guestrow.de/aktuelle-rechtsprechung/)
+Der Ausgleichsanspruch im Wechselmodell trifft nur auf symmetrische Wechselmodelle zu. Die Betreuungszeitanteile der Eltern betragen dabei jeweils 50 %. Dabei gewähren die Oberlandesgerichte einen leichten Spielraum, im Regelfall wird aber spätestens ab einem Betreungsverhältnis von 55% zu 45% nicht mehr von einem echten Wechselmodell ausgegangen, sondern von sog. erweitertem Umgang. (vgl. [https://www.kanzlei-mueller-guestrow.de/aktuelle-rechtsprechung/](https://www.kanzlei-mueller-guestrow.de/aktuelle-rechtsprechung/))
 
 ### Das Gesamteinkommen der Eltern liegt außerhalb der Einkommensstufen der Düsseldorfer Tabelle!
 In diesen Fällen kommt es zu einer Fortschreibung des Tabellenunterhalts.  
 Kinder sollen in einer ihrem Alter entsprechenden Weise an einer Lebensführung teilhaben, die der besonders günstigen wirtschaftlichen Situation ihrer Eltern entspricht. Dabei kommt es jedoch weiterhin auf die Bedarfsdeckung an und zielt weder auf eine Teilhabe am Luxus noch auf eine Möglichkeit zur Vermögensbildung des unterhaltsberechtigten Kindes ab (BGH, Urteil v. 16.09.2020, Az.: XII ZB 499/19 Rz. 19 ff.).  
 Für diese Fälle haben wir unter dem REITER "BEDARF KIND" eine CHECKBOX eingefügt. Wenn Sie diese CHECKBOX aktivieren können Sie einen individuellen Regelbedarf für das Kind eintragen.
+
 ### Was ist mit dem Monat, in dem das Kind Geburtstag hat?
 Das ergibt sich aus **§ 1612a Abs. 3 BGB**: "Der Unterhalt einer höheren Altersstufe ist ab dem Beginn des Monats maßgebend, in dem das Kind das betreffende Lebensjahr vollendet."
 Bei Wechsel der Altersstufe gilt also das Alter vom Ende des Monats für den gesamten Monat.
 
-### Aber ich möchte mehrere Monate berechnen und nicht nur einen!
-Kein Problem, dafür finden Sie unten beim "Berechnen"-Button auf der rechten Seite einen zusätzlichen Button mit "Weiteren Monat hinzufügen".
-
 ### Es gibt im betroffenen Wechselmodell aber noch weitere Kinder!
-Für diesen Fall nehmen Sie die Berechnungen bitte jeweils einzeln vor. Die Mangelfall-Prüfung kann durch den Rechner aktuell noch nicht durchgeführt werden, sondern muss im Anschluss durch Sie händisch erfolgen.
+Für diesen Fall nehmen Sie die Berechnungen bitte jeweils einzeln vor. Die Mangelfall-Prüfung kann durch den Rechner aktuell noch nicht durchgeführt werden, sondern muss im Anschluss händisch durch Sie erfolgen.
 
 ### Ich habe eine Steuererstattung erhalten!
 Steuererstattungen zählen zu den weiteren Einkünften, werden über das Jahr hinweg aufgeteilt und damit nur monatlich mit 1/12 angesetzt.
 
 ### Mein Einkommen ist unregelmäßig!
 Hier gelten Zufluss- und Abflussprinzip, d.h. dass das Einkommen dem Monat zugerechnet wird, in dem es tatsächlich geflossen ist. 
-WICHTIG: In Einzelfällen kann dies jedoch zu unverhältnismäßigen Ergebnissen führen (z.B. Autor erhält nach drei Jahren Schreiben, unverhältnismäßige Menge an Geld), sodass in diesen Fällen das Einkommen angemessen auf mehrere Monate verteilt wird.
+WICHTIG: In Einzelfällen kann dies jedoch zu unverhältnismäßigen Ergebnissen führen (z.B. wenn ein Autor nach drei Jahren des Schreibens an seinem Buch eine hohe einmalige Geldzahlung für seine Arbeit erhält), sodass in diesen Fällen das Einkommen angemessen auf mehrere Monate verteilt wird.
 
 ### Aber mein Partner hätte doch mehr verdienen können!
-Zur Bemessung der finanziellen Leistungsfähigkeit kann ein sogenanntes fiktives Einkommen in die Berechnung mit einbezogen werden, wenn ein Elternteil weniger arbeitet, als ihm zuzumuten ist.  
+Zur Bemessung der finanziellen Leistungsfähigkeit kann ein sog. fiktives Einkommen in die Berechnung mit einbezogen werden, wenn ein Elternteil weniger arbeitet, als ihm zuzumuten ist.  
 Die Zurechnung fiktiver Einkünfte setzt zum Einen subjektiv voraus, dass Erwerbsbemühungen des Unterhaltsschuldners fehlen. Zum anderen müssen die zur Erfüllung der Unterhaltspflichten erforderlichen Einkünfte für den Verpflichteten objektiv erzielbar sein, was von seinen persönlichen Voraussetzungen wie beispielsweise Alter, beruflicher Qualifikation, Erwerbsbiographie und Gesundheitszustand und dem Vorhandensein entsprechender Arbeitsstellen abhängt . Die Darlegungs- und Beweislast für die Leistungsunfähigkeit liegt beim Unterhaltsschuldner (BVerfG v. 09.11.2020 – 1 BvR 697/20, Rn. 14 f.; vgl. BGH v. 30. Juli 2008 - XII ZR 126/06, Rn. 22).
 Darauf kann sich der Unterhaltspflichtige aber nicht berufen, wenn und soweit das Kind damit auf einen nicht realisierbaren Unterhaltsanspruch verwiesen wird und somit Gefahr läuft, nicht den vollen ihm zustehenden Unterhalt zu erhalten. Dessen bedarf es indessen nicht, wenn der teils aus fiktivem Einkommen haftende Elternteil tatsächlich Naturalunterhalt gewährt und jedenfalls einen Unterhalt in Höhe seines Haftungsanteils an das Kind erbringt (BFH v. 11.01.2017 – XII ZB 565/15 Rn. 28. Dort konkret am Beispiel erläutert).
 Im Rechner kann das fiktive Einkommen im Rahmen der weiteren Einkünfte berücksichtigt werden.
@@ -249,4 +271,19 @@ Jedem Elternteil steht im Wechselmodell ein sogenannter Selbstbehalt zu, sodass 
 ### Aber das andere Elternteil verdient viel mehr als ich!
 Hat ein Elternteil nach Abzug des Sockelbetrags ein deutlich höheres Einkommen als der andere, kann sich aus der Quotenberechnung ergeben, dass er den Kindesunterhalt nahezu allein zu tragen hat. [^6]
 
-[6] BGH Beschluss vom 10.07.2013 - XII ZB 297/12, Rn. 29.
+[^6]: BGH Beschluss vom 10.07.2013 - XII ZB 297/12, Rn. 29.
+
+### Eigentlich wollen wir nur einen Ausgleich vom Kindergeld, denn wir sind und einig, dass wir im Übrigen keine Unterhaltsberechnung machen wollen.
+Dann kann ein sog. isolierter Kindergeldausgleich vorgenommen werden, siehe dazu BGH v. 20.04.2016 – XII ZB 45/15.
+
+
+<a name="techfaq"></a>
+# Technisches FAQ
+
+HINWEIS: Da sich der ASGLA-Rechner noch in Bearbeitung befindet und wir Neuerungen stetig ergänzen, empfehlen wir zu Beginn einen sog. Hard Refresh durchzuführen, damit Sie sichergehen können, dass die Website in ihrer aktuellen Form geladen wird. Dies gilt für alle Anwender*innen, die in der Vergangeneheit bereits den Rechner einmal besucht haben.
+
+**Windows:** Strg + Umschalt + R
+**Mac:** Cmd + Umschalt + R
+
+### Ich kann den QR-Code nicht über den Scan-Button mit meinem Handy lesen...
+Einige Handys haben dieses Problem. Als Work-Around bietet sich an: Scannen Sie den QR-Code mit dem handy-eigenen QR-Code-Scanner und kopieren Sie den JSON-Code, der Ihnen daraufhin angezeigt wird. Nutzen Sie dann das weiße Eintragungs-Feld "JSON-String hier einfügen" im oberen Teil der Website.
