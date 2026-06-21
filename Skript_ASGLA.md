@@ -2,7 +2,7 @@
 
 # Skript ASGLA
 
-*(Stand: 14.06.2026)*
+*(Stand: 21.06.2026)*
 
 Dieses Skript erklärt die Berechnung des Ausgleichsanspruchs im symmetrischen Wechselmodell und benennt die maßgeblichen Urteile.
 Zudem finden Sie unten auch technische Hinweise zur Benutzung des Rechners.
@@ -17,13 +17,16 @@ Zudem finden Sie unten auch technische Hinweise zur Benutzung des Rechners.
     - [Weitere Einkünfte](#weitere_einkünfte)
     - [Abzugsposten](#abzugsposten)
     - [Bereinigtes Einkommen](#bereinigtes_einkommen)  
-- [Haftungsanteile](#haftungsanteile)
- - [Sockelbetrag](#sockelbetrag)
+- [Sockelbetrag](#sockelbetrag)
+
 - [Gesamtbedarf des Kindes](#gesamtbedarf_des_kindes)
- - [Regelbedarf](#regelbedarf)
- - [Zusatzbedarf](#zusatzbedarf)  
+ 	- [Regelbedarf](#regelbedarf)
+ 	- [Zusatzbedarf](#zusatzbedarf)  
         [Mehrbedarf](#mehrbedarf)  
-        [Sonderbedarf](#sonderbedarf)
+        [Sonderbedarf](#sonderbedarf)  
+        [Kindergarten- und Hortkosten](#kigakosten)  
+        [Eigenes Einkommen des Kindes](#einkommenkind)
+- [Haftungsanteile](#haftungsanteile)
 - [Kindergeldverrechnung](#kindergeldverrechnung)
 - [Endberechnung ASGLA](#endberechnung_asgla)
 
@@ -92,36 +95,26 @@ Zu den Abzugsposten zählen insbesondere:
 ### Bereinigtes Einkommen
 Aus der Differenz der Einkünfte und Abzugsposten ergeben sich die bereinigten Einkommen der Eltern.
 
-<a name="haftungsanteile"></a>
-## Haftungsanteile
-
-Das bereinigte Einkommen der Eltern ist miteinander in Verhältnis zu setzen.  
-
 <a name="sockelbetrag"></a>
-### Sockelbetrag
+## Sockelbetrag
 
 Der Sockelbetrag ist der Betrag, den jedes Elternteil im Wechselmodell "behalten" darf. Nur das Einkommen, das über diesem Sockelbetrag liegt, ist das sogenannte "verteilungsfähige Einkommen", aus dem die Haftungsquoten gebildet werden.
 
-Gemäß § 1603 I BGB muss niemand seinen angemessenen Unterhalt gefährden, um Unterhalt zu zahlen. Dieser angemessene Selbstbehalt ist grundsätzlich im Wechselmodell anzuwenden. [^14] Nur im Mangelfall (also wenn der Unterhalt nicht mit den normalen Mitteln gedeckt ist) und bei gesteigerter Unterhaltspflicht wird der notwendige Selbstbehalt nach § 1603 II angewandt. [^15] Die Höhe der jeweiligen Selbstbehalte werden durch die Unterhaltsleitlinien der zuständigen Oberlandesgerichte festgesetzt.
+Gemäß § 1603 I BGB muss niemand seinen angemessenen Unterhalt gefährden, um Unterhalt zu zahlen. Dieser angemessene Selbstbehalt ist grundsätzlich im Wechselmodell anzuwenden (BGH, Urteil v. 12.1.2011 – XII ZR 83/08 Rn. 34 ff.). Nur im Mangelfall (also wenn der Unterhalt nicht mit den normalen Mitteln gedeckt ist) und bei gesteigerter Unterhaltspflicht wird der notwendige Selbstbehalt nach § 1603 II angewandt (BGH, Beschl. v. 11.01.2017 - XII ZB 565/15, FamRZ 2017, 437 Rn. 41 f.). Die Höhe der jeweiligen Selbstbehalte werden durch die Unterhaltsleitlinien der zuständigen Oberlandesgerichte festgesetzt.
 
 Der ASGLA-Rechner ermöglicht es dem Nutzer zudem einen individuellen Betrag in Einzelfällen festzusetzen.
 
-[^14]: BGH, Urteil v. 12.1.2011 – XII ZR 83/08 Rn. 34 ff.
-[^15]: BGH, Beschl. v. 11.01.2017 - XII ZB 565/15, FamRZ 2017, 437 Rn. 41 f.
+Siehe zur Bestimmung des Sockelbetrags (also welcher Selbstbehalt anzusetzen ist: BGH v. 12.1.2011 – XII ZR 83/08 Rn. 34 ff.
+
+Bei der Quotierung ist zu beachten, dass der Selbstbehalt abzuziehen ist. Hierbei ist zu beachten, dass nach der Rspr. nicht der sog. notwendige Selbstbehalt (§ 1603 II BGB) beim Wechselmodell abzuziehen ist, sondern der sog. angemessene Selbstbehalt nach § 1603 I BGB! (siehe BGH v. 11.01.2017 – XII ZB 565/15 Rn. 42 f.)
+
+Wenn Einer ein Einkommen hat, dass 3x so hoch ist wie das des anderen, muss der selbst alles zahlen.(+++Quelle BGH ergänzen+++)
 
 
+Zu beachten ist, dass dieser Sockelbetrag nur bei den Grundbedarfen eine Rolle spielt. Sodass B z.B. notwendigen Selbstbehalt beim Regelbedarf hat, bei den Zusatzbedarfen hingegen der angemessene Selbstbehalt anzusetzen ist, so dass A ggfl. Zusatzbedarfe allein zu tragen hat.(+++QUELLE???+++)
 
-Siehe zur Bestimmung des Sockelbetrags (also welcher Selbstbehalt anzusetzen ist BGH v. 12.1.2011 – XII ZR 83/08 Rz. 34 ff.
+Das bereinigte Einkommen abzüglich des Sockelbetrags ergibt das sog. verteilbare Einkommen.
 
-Bei der Quotierung ist zu beachten, dass der Selbstbehalt abzuziehen ist. Hierbei ist zu beachten, dass nach der Rspr. nicht der sog. notwendige Selbstbehalt (§ 1603 II BGB) beim Wechselmodell abzuziehen ist, sondern der sog. angemessene Selbstbehalt nach § 1603 I BGB! (siehe BGH v. 11.01.2017 – XII ZB 565/15 Rz. 42 f.)
-
-Wenn Einer ein Einkommen hat, dass 3x so hoch ist wie das des anderen, muss der selbst alles zahlen.[^1] 
-
-Das Programm sollte aufgrund der Komplexität hier eine kontrollierte Auswahl ermöglichen.
-
-Zu beachten ist, dass dieser Sockelbetrag nur bei den Grundbedarfen eine Rolle spielt. Sodass B z.B. notwendigen Selbstbehalt beim Regelbedarf hat, bei den Zusatzbedarfen hingegen der angemessene Selbstbehalt anzusetzen ist, so dass A ggfl Zusatzbedarfe allein zu tragen hat.
-
-[^1]: Quelle BGH
 
 <a name="gesamtbedarf_des_kindes"></a>
 ## Gesamtbedarf des Kindes
@@ -130,7 +123,7 @@ Das Maß des Unterhalts richtet sich nach **§ 1610 BGB**:
 (1) Das Maß des zu gewährenden Unterhalts bestimmt sich nach der Lebensstellung des Bedürftigen (angemessener Unterhalt).  
 (2) Der Unterhalt umfasst den gesamten Lebensbedarf einschließlich der Kosten einer angemessenen Vorbildung zu einem Beruf, bei einer der Erziehung bedürftigen Person auch die Kosten der Erziehung.
 
-Der Barbedarf wird gem. **§ 1612b Abs. 1 BGB** um die Hälfte des Kindergeldes gemindert. Diese Anrechnung des hälftiges Kindergeldes gilt auch im Wechselmodell (BGH v. 11.01.2017 – XII ZB 565/15, Rz. 47).
+Der Barbedarf wird gem. **§ 1612b Abs. 1 BGB** um die Hälfte des Kindergeldes gemindert. Diese Anrechnung des hälftiges Kindergeldes gilt auch im Wechselmodell (BGH v. 11.01.2017 – XII ZB 565/15, Rn. 47).
 
 <a name="regelbedarf"></a>
 ### Regelbedarf (/Grundbedarf)
@@ -152,37 +145,34 @@ Welche Posten von den Bedarfsbeträgen der Düsseldorfer Tabelle bereits entha
 | 11  | Beherbergungs- und Gaststättenleistungen  |
 | 12  | Andere Waren und Dienstleistungen         |
 
-Ob noch Regelbedarf oder Sonderbedarf vorliegt, kann im Abgleich mit § 34 SGB XII (Bildung und Teilhabe, kurz: BuT) ermittelt werden (vgl. BFH v. 11.01.2017 – XII ZB 565/15 Rz. 39).
+Ob noch ein Regelbedarf oder bereits ein Zusatzbedarf vorliegt, kann im Abgleich mit § 34 SGB XII (Bildung und Teilhabe, kurz: BuT) ermittelt werden (vgl. BGH v. 11.01.2017 – XII ZB 565/15 Rn. 39).
 
 
 <a name="zusatzbedarf"></a>
 ### Zusatzbedarf
 Der Zusatzbedarf ist zu unterscheiden in Mehrbedarf und Sonderbedarf.  
 
-"Von besonderer Bedeutung ist die Unterscheidung von Mehrbedarf und Sonderbedarf, wenn ein Elternteil **rückwirkend** Kindesunterhalt verlangt. Dies ist nämlich nur beim Sonderbedarf als unvorhergesehenem Ereignis problemlos möglich. Beim Mehrbedarf hingegen können in der Vergangenheit getätigte Aufwendungen nur ab dem Zeitpunkt geltend gemacht werden, ab dem sich der Unterhaltspflichtige in Verzug befindet oder zur Erbringung eines Einkommensnachweises aufgefordert wurde.")[^2]
+Diese Unterscheidung von Mehrbedarf und Sonderbedarf ist insbesondere auch 
+wenn ein Elternteil **rückwirkend** Kindesunterhalt verlangt. Dies ist nämlich nur beim Sonderbedarf als unvorhergesehenem Ereignis problemlos möglich. Beim Mehrbedarf hingegen können in der Vergangenheit getätigte Aufwendungen nur ab dem Zeitpunkt geltend gemacht werden, ab dem sich der Unterhaltspflichtige in Verzug befindet oder zur Erbringung eines Einkommensnachweises aufgefordert wurde.") (https://www.kanzlei-hasselbach.de/blog/mehrbedarf-sonderbedarf-kindesunterhalt/#definition)
 
-[^2]: https://www.kanzlei-hasselbach.de/blog/mehrbedarf-sonderbedarf-kindesunterhalt/#definition
+"Von besonderer Bedeutung ist die Unterscheidung von Mehrbedarf und Sonderbedarf, wenn ein Elternteil **rückwirkend** Kindesunterhalt verlangt. Dies ist nämlich nur beim Sonderbedarf als unvorhergesehenem Ereignis problemlos möglich. Beim Mehrbedarf hingegen können in der Vergangenheit getätigte Aufwendungen nur ab dem Zeitpunkt geltend gemacht werden, ab dem sich der Unterhaltspflichtige in Verzug befindet oder zur Erbringung eines Einkommensnachweises aufgefordert wurde.") (https://www.kanzlei-hasselbach.de/blog/mehrbedarf-sonderbedarf-kindesunterhalt/#definition)
 
-Es besteht die **allgemeine Verpflichtung** des Unterhaltsberechtigten, die Belastung für den unterhaltsverpflichteten Elternteil **so gering wie möglich** zu halten. Der Unterhaltsberechtigte muss daher ihm mögliche und zumutbare Maßnahmen ergreifen, um Mehrbedarf gar nicht erst entstehen zu lassen oder wenigstens dessen Kosten zu minimieren.[^3]  
+Es besteht die **allgemeine Verpflichtung** des Unterhaltsberechtigten, die Belastung für den unterhaltsverpflichteten Elternteil **so gering wie möglich** zu halten. Der Unterhaltsberechtigte muss daher ihm mögliche und zumutbare Maßnahmen ergreifen, um Mehrbedarf gar nicht erst entstehen zu lassen oder wenigstens dessen Kosten zu minimieren (https://www.kanzlei-hasselbach.de/blog/mehrbedarf-sonderbedarf-kindesunterhalt/#definition)(+++ANDERE QUELLE SUCHEN+++). 
 
 **Bereits gezahlter Zusatzbedarf**: Wurde von einem Elternteil ein Zusatzbedarf bereits getragen (zB Klassenfahrt), verrechnet der Rechner die Hälfte der geleisten Zahlung beim anderen Elternteil.
 Dem liegt folgende Überlegung zugrunde: Durch den Ausgleichsanspruch wurden beide Elternteile so gestellt, dass sie beide die gleiche Finanzkraft haben um den Bedarf 50/50 zu stillen. Die geleistete Zahlung ist also so zu behandeln, als hätte der Vater den (nach dem Ausgleich nur noch) hälftigen Anteil am Sonderbedarf mitgetragen.
 
 Anders nur, wenn aus sonstigen Gründen der Besserverdiener Sonderbedarfe selber tragen muss.
 
-Mehrbedarf kann nicht rückwirkend verlangt werden, Sonderbedarf schon.[^4]
+Mehrbedarf kann nicht rückwirkend verlangt werden, Sonderbedarf schon (https://www.kanzlei-hasselbach.de/blog/mehrbedarf-sonderbedarf-kindesunterhalt/#sonderfall) (+++ANDERE QUELLE SUCHEN+++).
 
-Bei Sonderbedarfen kommt es insb. darauf an, ob die "angespart" werden konnten. Also zB ob eine Klassenfahrt schon lange vorher bekannt war und aus dem geleisteten Unterhalt immer ein bisschen hätte zurückgelegt werden können, um die Summe zu bezahlen.[^5]
-
-[^3]: https://www.kanzlei-hasselbach.de/blog/mehrbedarf-sonderbedarf-kindesunterhalt/#definition  
-[^4]: https://www.kanzlei-hasselbach.de/blog/mehrbedarf-sonderbedarf-kindesunterhalt/#sonderfall
-[^5]: https://www.youtube.com/watch?v=32UlfhFcP5Y&t=276s (Kanzlei Hasselbach)
+Bei Sonderbedarfen kommt es insb. darauf an, ob die "angespart" werden konnten. Also z.B. ob eine Klassenfahrt schon lange vorher bekannt war und aus dem geleisteten Unterhalt immer ein bisschen hätte zurückgelegt werden können, um die Summe zu bezahlen (https://www.youtube.com/watch?v=32UlfhFcP5Y&t=276s (Kanzlei Hasselbach))(+++ANDERE QUELLE SUCHEN+++).
 
 
 <a name="mehrbedarf"></a>
 #### Mehrbedarf
 Ein sogenannter Mehrbedarf liegt vor bei regelmäßig anfallenden Kosten, die die üblichen Kosten zum Lebensbedarf übersteigen und deshalb nicht von den Regelsätzen der Düsseldorfer Tabelle erfasst sind. Es handelt sich demnach um **andauernde** Mehrausgaben, die zum Lebensbedarf des Kindes gehören.  
-Wohnmehrkosten, Fahrtkosten, doppelter Erwerb persönlicher Gegenstände
+Dazu zählen u.a. Wohnmehrkosten, Fahrtkosten, doppelter Erwerb persönlicher Gegenstände, etc.
 
 <a name="sonderbedarf"></a>
 #### Sonderbedarf
@@ -190,13 +180,12 @@ Wohnmehrkosten, Fahrtkosten, doppelter Erwerb persönlicher Gegenstände
 Ein Sonderbedarf hingegen ist ein **unregelmäßiger**, außerordentlich hoher Bedarf, der überraschend und der Höhe nach nicht vorhersehbar war. Ein Sonderbedarf tritt daher plötzlich auf, sodass er nicht aus laufenden Unterhaltsleistungen bezahlt und auch nicht angespart werden kann.  
 Klassenfahrten, nicht übernommene Arztkosten. Auch diese sind im Hinblick auf die Haftungsanteile zu verrechnen. Da einer der Elternteile die Zahlung übernimmt, ist der verbleibende Haftungsanteil ähnlich dem Kindergeld zu verrechnen.
 
-Sonderbedarf des Kindes ist wohl nur vom *angemessenen Selbstbehalt* zu tragen. Wenn ein Elternteil insoweit nicht leistungsfähig ist, muss der andere Elternteil den Mehrbedarf/Sonderbedarf alleine tragen.[^5]
+Sonderbedarf des Kindes ist wohl nur vom *angemessenen Selbstbehalt* zu tragen. Wenn ein Elternteil insoweit nicht leistungsfähig ist, muss der andere Elternteil den Mehrbedarf/Sonderbedarf alleine tragen.(RA Jakob Berechnung v. 13.12.2023 (+++ANDERE QUELLE SUCHEN+++)
 
-[^5]: RA Jakob Berechnung v. 13.12.2023
-
+<a name="kigakosten"></a>
 #### Kindergarten- und Hortkosten
 
-Kinderbetreuungskosten sind im symmetrischen Wechselmodell grundsätzlich nicht abzugsfähig. Eine Aufteilung der durch Kindergarten, Hort, o.ä. verursachten Kosten kommt im Wechselmodell nur ganz ausnahmsweise in Betracht. (Grüneberg/*von Pückler*, 82A2023, § 1610 BGB Rz. 11)
+Kinderbetreuungskosten sind im symmetrischen Wechselmodell grundsätzlich nicht abzugsfähig. Eine Aufteilung der durch Kindergarten, Hort, o.ä. verursachten Kosten kommt im Wechselmodell nur ganz ausnahmsweise in Betracht. (Grüneberg/*von Pückler*, 82A2023, § 1610 BGB Rn. 11)
 
 Der Unterhaltsbedarf enthält gem. § 1610 Abs. 2 BGB auch die Kosten der Erziehung.  
 Dementsprechend erhöhen Aufwendungen, die in erster Linie erzieherischen Zwecken dienten, den Bedarf des Kindes.  
@@ -206,13 +195,33 @@ Ein Mehrbedarf liegt nur vor, wenn aus pädagogischen Gründen über den Umfang 
 Kindergartenbeiträge stellen daher Mehrbedarf des Kindes dar, die in den Tabellenbeträgen nicht enthalten sind.
 Die in einer Kindereinrichtung anfallenden **Verpflegungskosten** sind hingegen mit dem Tabellenunterhalt abgegolten und müssen herausgerechnet werden.
 
-(BGH v. 26.11.2008 - XII ZR 65/07 Rz. 14) 
+(BGH v. 26.11.2008 - XII ZR 65/07 Rn. 14) 
 
 Selbiges gilt für **Horteinrichtungen**, soweit die Betreuung nach einem pädagogischen Konzept erfolgt, welches erzieherische Zwecke verfolgt und erreicht. Das pädagogisch-erzieherische Angebot muss dabei vergleichbare Ziele verfolgen, die den Bedürfnissen älterer Kinder angepasst sind.
 
+<a name="einkommenkind"></a>
 #### Eigenes Einkommen des Kindes
 
 Soweit das Kind eigene Einkünfte erzielt, sind diese vom Bedarf abzuziehen. Einkünfte aus einer Erwerbstätigkeit sind nur zu berücksichtigen, soweit diese dem Kind zumutbar ist. Lediglich taschengeld-erhöhende Schülerjobs sind daher nicht abzugsfähig. (vgl. [https://www.scheidung-online.de/unterhalt/kindesunterhalt/eigenes-einkommen-des-kindes/](https://www.scheidung-online.de/unterhalt/kindesunterhalt/eigenes-einkommen-des-kindes/))
+
+<a name="haftungsanteile"></a>
+## Haftungsanteile
+
+Das verteilbare Einkommen der Elternteile ist miteinander in Verhältnis zu setzen. Die anteilige Haftung der Elternteile folgt aus § 1606 Abs. 3 BGB.  
+Dadurch ergeben sich die jeweiligen Haftungsquoten (z.B. 60 % und 40 %). Anhand der jeweiligen Haftungsquoten ergibt sich der jeweilige Haftungsanteil der Elternteile.
+
+> **vereinfachtes Beispiel:**  
+> 
+Haftungsquote Vater: 60 %           Haftungsquote Mutter: 40%  
+                               Bedarf Kind: 1000 EUR  
+Haftungsanteil Vater: 600 EUR     Haftungsanteil Mutter: 400 EUR
+
+**Kontrollbetrag**: Ist der andere Elternteil nicht leistungsfähig (Haftungsquote 0 %), bemisst sich die Höhe der Unterhaltspflicht des Mehrverdienenden allein anhand seines Einkommens und nicht nach der Höhe beider Elternteile. Der Haftungsanteil ist auf den Betrag gedeckelt, der bei alleiniger Unterhaltspflicht im Residenzmodell zu leisten wäre. Denn der Unterhaltspflichtige soll im Wechselmodell nicht mehr zu zahlen als im Residenzmodell (BGH v. 11.01.2017 – XII ZB 565/15 Rn. 24; OLG Karlsruhe v. 30.04.2025 – 5 UF 49/23).
+
+Weiterhin darf der Unterhaltspflichtige durch die Gewährung von Unterhalt nicht selbst sozialhilfebedürftig werden (BGH v. 23.02.2005 – XII ZR 56/02; OLG Karlsruhe v. 30.04.2025 – 5 UF 49/23).
+
+Von den Haftungsanteilen sind jeweilig erbrachte Leistungen abzuziehen.  
+Im Wechselmodell versorgen die Eltern das Kind auch durch Zuwendung der Güter zum Bedarf. Durch diesen von beiden Eltern geleisteten Naturalunterhalt wird zwar der Undesunterhalt nicht bereits in vollem Umfang gedeckt, der geleistete Naturalunterhalt ist jedoch als (teilweise) Erfüllung des Unterhaltsansüruchs zu berücksichtigen und vom Barbedarfsanteil des jeweiligen elternteils abzuziehen. Der Darunterhaltsansürcuh richtet sich daher nur auf den Ausgleich der nach Abzug von den Eltern erbrachter Naturalunterhaltsleistungen verbleibenden Unterhaltsspitze (BGH v. 11.01.2017 – XII ZB 565/15 Rn. 44; OLG Karlsruhe v. 30.04.2025 – 5 UF 49/23).
 
 <a name="kindergeldverrechnung"></a>
 ## Kindergeldverrechnung
@@ -235,17 +244,25 @@ Dieser Kindergeld-Ausgleich ist mit dem Wechselmodell-Ausgleichsanspruch zu verr
 
 <a name="endberechnung_asgla"></a>
 ## Endberechnung ASGLA
-Der Unterhaltsbetrag ist stets auf volle Euro aufzurunden (OLG Naumburg Leitlinien, Rz. 24)
+Der Unterhaltsbetrag ist stets auf volle Euro aufzurunden (OLG Naumburg Leitlinien, Rn. 24)
 
 <a name="faq"></a>
 # FAQ
 ### Trifft der Rechner auf unser Umgangsmodell zu?
 Der Ausgleichsanspruch im Wechselmodell trifft nur auf symmetrische Wechselmodelle zu. Die Betreuungszeitanteile der Eltern betragen dabei jeweils 50 %. Dabei gewähren die Oberlandesgerichte einen leichten Spielraum, im Regelfall wird aber spätestens ab einem Betreungsverhältnis von 55% zu 45% nicht mehr von einem echten Wechselmodell ausgegangen, sondern von sog. erweitertem Umgang. (vgl. [https://www.kanzlei-mueller-guestrow.de/aktuelle-rechtsprechung/](https://www.kanzlei-mueller-guestrow.de/aktuelle-rechtsprechung/))
 
+### Sollen wir eine Monatsberechnung oder eine Durchschnittsberechnung für das Jahr durchführen?
+
+Jugendämter und Gerichte führen ihre Berechnungen anhand des durchschnittlichen Einkommens durch und weichen nur bei einzelnen Sonderfall-Monaten ggfl. vom berechneten durchschnittlichen Monatssatz ab.  
+Für Eltern, die den Rechner selbständig nutzen wollen, empfehlen wir aber durch Monatsberechnungen monatliche Abweichungen alltagstauglich zu berücksichtigen und ihrer Einigung zugrunde zu legen.
+
 ### Das Gesamteinkommen der Eltern liegt außerhalb der Einkommensstufen der Düsseldorfer Tabelle!
 In diesen Fällen kommt es zu einer Fortschreibung des Tabellenunterhalts.  
-Kinder sollen in einer ihrem Alter entsprechenden Weise an einer Lebensführung teilhaben, die der besonders günstigen wirtschaftlichen Situation ihrer Eltern entspricht. Dabei kommt es jedoch weiterhin auf die Bedarfsdeckung an und zielt weder auf eine Teilhabe am Luxus noch auf eine Möglichkeit zur Vermögensbildung des unterhaltsberechtigten Kindes ab (BGH, Urteil v. 16.09.2020, Az.: XII ZB 499/19 Rz. 19 ff.).  
+Kinder sollen in einer ihrem Alter entsprechenden Weise an einer Lebensführung teilhaben, die der besonders günstigen wirtschaftlichen Situation ihrer Eltern entspricht. Dabei kommt es jedoch weiterhin auf die Bedarfsdeckung an und zielt weder auf eine Teilhabe am Luxus noch auf eine Möglichkeit zur Vermögensbildung des unterhaltsberechtigten Kindes ab (BGH, Urteil v. 16.09.2020, Az.: XII ZB 499/19 Rn. 19 ff.).  
 Für diese Fälle haben wir unter dem REITER "BEDARF KIND" eine CHECKBOX eingefügt. Wenn Sie diese CHECKBOX aktivieren können Sie einen individuellen Regelbedarf für das Kind eintragen.
+
+### Laut der Düsseldorfer Tabelle muss in unserem Fall aber eine Einstufung in eine niedrigere/höhere Einkommensgruppe erfolgen?
+Derartige Fälle berücksichtigt der Rechner nicht automatisch. Hierfür müssen sie händisch einen individuellen Regelbedarf unter dem Reiter "Kind" eintragen. Es empfiehlt sich, diese Anpassung unter "Zusätzliche Informationen" zu begründen, damit Sie und andere den händisch eingetragenen Regelbedarf später nachvollziehen können.
 
 ### Was ist mit dem Monat, in dem das Kind Geburtstag hat?
 Das ergibt sich aus **§ 1612a Abs. 3 BGB**: "Der Unterhalt einer höheren Altersstufe ist ab dem Beginn des Monats maßgebend, in dem das Kind das betreffende Lebensjahr vollendet."
@@ -267,16 +284,25 @@ Die Zurechnung fiktiver Einkünfte setzt zum Einen subjektiv voraus, dass Erwerb
 Darauf kann sich der Unterhaltspflichtige aber nicht berufen, wenn und soweit das Kind damit auf einen nicht realisierbaren Unterhaltsanspruch verwiesen wird und somit Gefahr läuft, nicht den vollen ihm zustehenden Unterhalt zu erhalten. Dessen bedarf es indessen nicht, wenn der teils aus fiktivem Einkommen haftende Elternteil tatsächlich Naturalunterhalt gewährt und jedenfalls einen Unterhalt in Höhe seines Haftungsanteils an das Kind erbringt (BFH v. 11.01.2017 – XII ZB 565/15 Rn. 28. Dort konkret am Beispiel erläutert).
 Im Rechner kann das fiktive Einkommen im Rahmen der weiteren Einkünfte berücksichtigt werden.
 
+**Beachte:** Bis mindestens zum Abschluss des 3. Lebensjahres des Kindes besteht aufgrund des Grundgedankens des § 1615l Abs. 2, 4 BGB nur eine jeweils zu 50 %-ige Erwerbsobliegenheit. Die Erwerbstätigkeit, die darüber hinausgeht ist überobligatorisch und kann jederzeit aufgegeben werden (BGH v. 18.03.2026 – XII ZB 227/25 Rn. 12). Dies bedeutet aber nicht, dass tatsächlich erzielte Einkünfte aus einer insofern überobligatorischen Erwerbstätigkeit automatisch nicht zu berücksichtigen sind (BGH v. 18.03.2026 – XII ZB 227/25 Rn. 16).
+
 ### Und was passiert, wenn ich nicht genug Geld habe?
 Jedem Elternteil steht im Wechselmodell ein sogenannter Selbstbehalt zu, sodass die eigene Lebensgrundlage in einem Mindestmaß gewährleistet ist (siehe oben unter "Sockelbetrag").
 
 ### Aber das andere Elternteil verdient viel mehr als ich!
-Hat ein Elternteil nach Abzug des Sockelbetrags ein deutlich höheres Einkommen als der andere, kann sich aus der Quotenberechnung ergeben, dass er den Kindesunterhalt nahezu allein zu tragen hat. [^6]
-
-[^6]: BGH Beschluss vom 10.07.2013 - XII ZB 297/12, Rn. 29.
+Hat ein Elternteil nach Abzug des Sockelbetrags ein deutlich höheres Einkommen als der andere, kann sich aus der Quotenberechnung ergeben, dass er den Kindesunterhalt nahezu allein zu tragen hat (BGH v. 10.07.2013 - XII ZB 297/12, Rn. 29).
 
 ### Eigentlich wollen wir nur einen Ausgleich vom Kindergeld, denn wir sind und einig, dass wir im Übrigen keine Unterhaltsberechnung machen wollen.
 Dann kann ein sog. isolierter Kindergeldausgleich vorgenommen werden, siehe dazu BGH v. 20.04.2016 – XII ZB 45/15.
+
+###Wie setze ich meinen Anspruch auf Unterhalt im Wechselmodell nun durch?
+Grundsätzlich ist das Wechselmodell für Elternteile gedacht, die kooperativ miteinander ihre Kinder großziehen wollen. Der erste Ansatz wäre daher stets das vermittelnde Gespräch, bei dem der Rechner als Orientierung dienen kann.  
+
+Da es sich formell betrachtet im Rahmen eines paritätischen Wechselmodells um einen Anspruch des Kindes gegenüber beiden Elternteilen handelt, ist die Beistandschaft des Jugendamtes für die Durchsetzung von Unterhaltsansprüchen nicht zuständig.  
+Dennoch bietet es sich an, im Hinblick auf § 18 SGB VIII zumindest für die Berechnung das örtliche Jugendamt um Unterstützung zu bitten.  
+
+In verhärteten Konfliktfällen bleibt meist am Ende nur der Gerichtsweg. Hierbei ist zu beachten, dass vor den Familiengerichten in Unterhaltsangelegenheiten eine Anwaltspflicht herrscht.  
+Seit dem Beschluss des BGH v. 10.04.2024 (XII ZB 459/23) bedarf es aber inzwischen weder der Bestellung eines Ergänzungspflegers noch einer Übertragung der Alleinentscheidungsbefugnis nach § 1628 BGB, wenn die Eltern nicht (mehr) miteinander verheiratet sind. Soweit die Elternteile noch miteinander verheiratet sind, sind diese Schritte hingegen weiterhin notwendig (BGH v. 15.04.2026 – XII ZB 415/25).
 
 
 <a name="techfaq"></a>
@@ -289,3 +315,7 @@ HINWEIS: Da sich der ASGLA-Rechner noch in Bearbeitung befindet und wir Neuerung
 
 ### Ich kann den QR-Code nicht über den Scan-Button mit meinem Handy lesen...
 Einige Handys haben dieses Problem. Als Work-Around bietet sich an: Scannen Sie den QR-Code mit dem handy-eigenen QR-Code-Scanner und kopieren Sie den JSON-Code, der Ihnen daraufhin angezeigt wird. Nutzen Sie dann das weiße Eintragungs-Feld "JSON-String hier einfügen" im oberen Teil der Website.
+
+### Wie sieht es mit dem Datenschutz aus?
+Die Anwendung der Website an sich ist unproblematisch. Sämtliche Daten werden nur lokal auf Ihrem Gerät gespeichert, nicht auf dem Server. Das Programm führt lediglich die Berechnung durch, ohne die Daten selbst zu speichern. Auch werden personenbezogene Daten nicht erhoben.  
+Sollten Sie hinsichtlich des Einlesens der Daten im Wege des QR-Code-Verfahrens Bedenken haben, empfehlen wir den Re-Import den Daten über den JSON-String durchzuführen.
