@@ -55,7 +55,7 @@ Die weiteren Einkünfte werden zur Haupttätigkeit des jeweiligen Elternteils ad
 Der Rechner differenziert zwischen:
 - Nebentätigkeiten: Netto-Betrag
 - Überstundenvergütungen: Netto-Betrag wird voll zugerechnet, soweit sie berufstypisch sind und das in diesem Beruf übliche Maß nicht überschreiten
-- Sozialleistungen: Die Summe der 
+- Sozialleistungen: Die Summe von
   - Arbeitslosengeld (§ 136 SGB III) und sonstige Lohnersatzleistungen nach dem SGB III (Übergangs-, Ausbildungs-, Kurzarbeitergeld- und Insolvenzgeld) sowie Krankengeld sind Einkommen.
   - Elterngeld ist Einkommen, soweit es über den Sockelbetrag nach § 11 Sätze 1 – 3 BEEG hinausgeht. Der Sockelbetrag ist nur dann Einkommen, wenn ein Ausnahmefall nach § 11 BEEG vorliegt.
   - Wohngeld ist Einkommen, soweit es nicht erhöhte Wohnkosten abdeckt.
@@ -115,13 +115,13 @@ Siehe zur Bestimmung des Sockelbetrags (also welcher Selbstbehalt anzusetzen ist
 
 Bei der Quotierung ist zu beachten, dass der Selbstbehalt abzuziehen ist. Hierbei ist zu beachten, dass nach der Rspr. nicht der sog. notwendige Selbstbehalt (§ 1603 II BGB) beim Wechselmodell abzuziehen ist, sondern der sog. angemessene Selbstbehalt nach § 1603 I BGB! (siehe BGH v. 11.01.2017 – XII ZB 565/15 Rz. 42 f.)
 
-Wenn Einer ein Einkommen hat, dass 3x so hoch ist wie das des anderen, muss der selbst alles zahlen.[^1] 
+Übersteigt das bereinigte Einkommen eines Elternteils nach Abzug des angemessenen Selbstbehalts (Sockelbetrag) das des anderen erheblich oder verfügt der andere Elternteil über kein verteilungsfähiges Einkommen oberhalb des Sockelbetrags, kann sich rechnerisch eine Haftungsquote von bis zu 100% für den besserverdienenden Elternteil ergeben. [^1] 
 
 Das Programm sollte aufgrund der Komplexität hier eine kontrollierte Auswahl ermöglichen.
 
 Zu beachten ist, dass dieser Sockelbetrag nur bei den Grundbedarfen eine Rolle spielt. Sodass B z.B. notwendigen Selbstbehalt beim Regelbedarf hat, bei den Zusatzbedarfen hingegen der angemessene Selbstbehalt anzusetzen ist, so dass A ggfl Zusatzbedarfe allein zu tragen hat.
 
-[^1]: Quelle BGH
+[^1]: BGH, Urteil vom 11.01.2017 - XII ZB 565/15
 
 <a name="gesamtbedarf_des_kindes"></a>
 ## Gesamtbedarf des Kindes
