@@ -309,3 +309,7 @@ HINWEIS: Da sich der ASGLA-Rechner noch in Bearbeitung befindet und wir Neuerung
 
 ### Ich kann den QR-Code nicht über den Scan-Button mit meinem Handy lesen...
 Einige Handys haben dieses Problem. Als Work-Around bietet sich an: Scannen Sie den QR-Code mit dem handy-eigenen QR-Code-Scanner und kopieren Sie den JSON-Code, der Ihnen daraufhin angezeigt wird. Nutzen Sie dann das weiße Eintragungs-Feld "JSON-String hier einfügen" im oberen Teil der Website.
+
+### Wie sieht es mit dem Datenschutz aus?
+Die Anwendung der Website an sich ist unproblematisch. Sämtliche Daten werden nur lokal auf Ihrem Gerät gespeichert, nicht auf dem Server. Das Programm führt lediglich die Berechnung durch, ohne die Daten selbst zu speichern. Auch werden personenbezogene Daten nicht erhoben.  
+Sollten Sie hinsichtlich des Einlesens der Daten im Wege des QR-Code-Verfahrens Bedenken haben, empfehlen wir den Re-Import den Daten über den JSON-String durchzuführen.
