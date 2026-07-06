@@ -63,7 +63,7 @@ Der Rechner differenziert zwischen:
   - Elterngeld ist Einkommen, soweit es über den Sockelbetrag nach § 11 Sätze 1 – 3 BEEG hinausgeht. Der Sockelbetrag ist nur dann Einkommen, wenn ein Ausnahmefall nach § 11 BEEG vorliegt.
   - Wohngeld ist Einkommen, soweit es nicht erhöhte Wohnkosten abdeckt.
   - BAföG ist Einkommen (ausgenommen davon sind Vorausleistungen nach den §§ 36, 37 BAföG).
-  - Unfall- und Versorgungsrenten sowie Übergangsgelder aus der Unfall- und Rentenversicherung sind Einkommen (§§ 1610 a, 1578 a BGB sind zu beachten).
+  - Unfall- und Versorgungsrenten sowie Übergangsgelder aus der Unfall- und Rentenversicherung sind Einkommen (§§ 1610a, 1578a BGB sind zu beachten).
   - Leistungen aus der Pflegeversicherung, Blindengeld, Schwerbeschädigten- und Pflegezulagen, jeweils nach Abzug des Betrages für tatsächliche Mehraufwendungen, sind Einkommen (§§ 1610a, 1578a BGB sind zu beachten).
   - Der Anteil des Pflegegeldes bei der Pflegeperson, durch den ihre Bemühungen abgegolten werden, stellt im Allgemeinen Einkommen dar (Ausnahme: Bei Pflegegeld aus der Sozialen Pflegeversicherung (§ 1 Abs. 1 SGB XI) gilt dies nur nach Maßgabe von § 13 Abs. 6 SGB XI).
 - Selbstständige Tätigkeit:
