@@ -66,7 +66,7 @@ Der Rechner differenziert zwischen:
   - Unfall- und Versorgungsrenten sowie Übergangsgelder aus der Unfall- und Rentenversicherung sind Einkommen (§§ 1610a, 1578a BGB sind zu beachten).
   - Leistungen aus der Pflegeversicherung, Blindengeld, Schwerbeschädigten- und Pflegezulagen, jeweils nach Abzug des Betrages für tatsächliche Mehraufwendungen, sind Einkommen (§§ 1610a, 1578a BGB sind zu beachten).
   - Der Anteil des Pflegegeldes bei der Pflegeperson, durch den ihre Bemühungen abgegolten werden, stellt im Allgemeinen Einkommen dar (Ausnahme: Bei Pflegegeld aus der Sozialen Pflegeversicherung (§ 1 Abs. 1 SGB XI) gilt dies nur nach Maßgabe von § 13 Abs. 6 SGB XI).
-- Selbstständige Tätigkeit:
+- Selbständige Tätigkeit:
   - Bei Ermittlung des zukünftigen Einkommens eines Selbständigen ist der durchschnittliche Gewinn der letzten drei Jahre hinzuziehen
 - Sonstige Einkommen, insbesondere:
   - Steuererstattungen
