@@ -286,7 +286,7 @@ Grundsätzlich ist das Wechselmodell für Elternteile gedacht, die kooperativ mi
 Da es sich formell betrachtet im Rahmen eines paritätischen Wechselmodells um einen Anspruch des Kindes gegenüber beiden Elternteilen handelt, ist die Beistandschaft des Jugendamtes für die Durchsetzung von Unterhaltsansprüchen im Wechselmodell nicht zuständig.  
 Dennoch bietet es sich an, im Hinblick auf **§ 18 SGB VIII** zumindest für die Berechnung das örtliche Jugendamt um Unterstützung zu bitten.  
 
-In verhärteten Konfliktfällen bleibt meist am Ende nur der Gerichtsweg. Hierbei ist zu beachten, dass vor den Familiengerichten in Unterhaltsangelegenheiten eine **Anwaltspflicht** herrscht.  
+In verhärteten Konfliktfällen bleibt meist am Ende nur der Gerichtsweg. Hierbei ist zu beachten, dass vor den Familiengerichten in Unterhaltsangelegenheiten ein **Anwaltszwang** herrscht.  
 Seit dem Beschluss des BGH v. 10.04.2024 (XII ZB 459/23) bedarf es aber inzwischen weder der Bestellung eines Ergänzungspflegers noch einer Übertragung der Alleinentscheidungsbefugnis nach § 1628 BGB, wenn die Eltern nicht (mehr) miteinander verheiratet sind. Soweit die Elternteile noch miteinander verheiratet sind, sind diese Schritte hingegen weiterhin notwendig (BGH v. 15.04.2026 – XII ZB 415/25).
 
 <a name="techfaq"></a>
