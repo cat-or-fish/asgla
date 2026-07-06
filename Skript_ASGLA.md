@@ -102,7 +102,7 @@ Gemäß § 1603 I BGB muss niemand seinen angemessenen Unterhalt gefährden, um 
 
 Das Programm ermöglicht aufgrund der Komplexität hier eine kontrollierte Auswahl. Zudem bietet der ASGLA-Rechner die Option, in Einzelfällen einen individuellen Betrag festzusetzen.
 
-Zu beachten ist, dass dieser Sockelbetrag nur bei den Grundbedarfen eine Rolle spielt. Sodass B z.B. notwendigen Selbstbehalt beim Regelbedarf hat, bei den Zusatzbedarfen hingegen der angemessene Selbstbehalt anzusetzen ist, so dass A ggfl. Zusatzbedarfe allein zu tragen hat.(+++Quelle BGH ergänzen+++)
+Zu beachten ist, dass dieser Sockelbetrag nur bei den Grundbedarfen eine Rolle spielt. Sodass B z.B. notwendigen Selbstbehalt beim Regelbedarf hat, bei den Zusatzbedarfen hingegen der angemessene Selbstbehalt anzusetzen ist, so dass A ggfl. Zusatzbedarfe allein zu tragen hat.(+++Quelle BGH ergänzen+++)(+++Verweis Sonderbedarf+++)
 
 Das bereinigte Einkommen abzüglich des Sockelbetrags ergibt das **sog. verteilbare Einkommen**.
 
@@ -143,13 +143,13 @@ Ob noch ein Regelbedarf oder bereits ein Zusatzbedarf vorliegt, kann im Abgleich
 
 Der Zusatzbedarf ist zu unterscheiden in Mehrbedarf und Sonderbedarf.  
 
-Diese Unterscheidung von Mehrbedarf und Sonderbedarf ist insbesondere auch von Bedeutung, wenn ein Elternteil **rückwirkend** Kindesunterhalt verlangt. Die rückwirkende Geltendmachung ist nämlich nur beim Sonderbedarf (als unvorhergesehenes Ereignis) problemlos möglich. Mehrbedarf hingegen kann erst ab dem Zeitpunkt geltend gemacht werden, ab dem sich der Unterhaltspflichtige in Verzug befindet oder zur Erbringung eines Einkommensnachweises aufgefordert wurde. (https://www.kanzlei-hasselbach.de/blog/mehrbedarf-sonderbedarf-kindesunterhalt/#definition)
+Diese Unterscheidung von Mehrbedarf und Sonderbedarf ist insbesondere auch von Bedeutung, wenn ein Elternteil **rückwirkend** Kindesunterhalt verlangt. Die rückwirkende Geltendmachung ist nämlich nur beim Sonderbedarf (als unvorhergesehenes Ereignis) problemlos möglich. Mehrbedarf hingegen kann erst ab dem Zeitpunkt geltend gemacht werden, ab dem sich der Unterhaltspflichtige in Verzug befindet oder zur Erbringung eines Einkommensnachweises aufgefordert wurde. (https://www.kanzlei-hasselbach.de/blog/mehrbedarf-sonderbedarf-kindesunterhalt/#definition) (+++ANDERE QUELLE SUCHEN+++). 
 
-Es besteht die **allgemeine Verpflichtung** des Unterhaltsberechtigten, die Belastung für den unterhaltsverpflichteten Elternteil **so gering wie möglich** zu halten. Der Unterhaltsberechtigte muss daher ihm mögliche und zumutbare Maßnahmen ergreifen, um Mehrbedarf gar nicht erst entstehen zu lassen oder wenigstens dessen Kosten zu minimieren (https://www.kanzlei-hasselbach.de/blog/mehrbedarf-sonderbedarf-kindesunterhalt/#definition)(+++ANDERE QUELLE SUCHEN+++). 
+Es besteht die **allgemeine Verpflichtung** des Unterhaltsberechtigten, die Belastung für den unterhaltsverpflichteten Elternteil **so gering wie möglich** zu halten. Der Unterhaltsberechtigte muss daher ihm mögliche und zumutbare Maßnahmen ergreifen, um Mehrbedarf gar nicht erst entstehen zu lassen oder wenigstens dessen Kosten zu minimieren (https://www.kanzlei-hasselbach.de/blog/mehrbedarf-sonderbedarf-kindesunterhalt/#definition) (+++ANDERE QUELLE SUCHEN+++). 
 
 Unter bestimmten Umständen muss der besser verdienende Elternteil Sonderbedarfe selber tragen.
 
-Bei Sonderbedarfen kommt es insb. darauf an, ob die "angespart" werden konnten. Also z.B. ob eine Klassenfahrt schon lange vorher bekannt war und aus dem geleisteten Unterhalt immer ein bisschen hätte zurückgelegt werden können, um die Summe zu bezahlen (https://www.youtube.com/watch?v=32UlfhFcP5Y&t=276s (Kanzlei Hasselbach))(+++ANDERE QUELLE SUCHEN+++).
+Bei Sonderbedarfen kommt es insb. darauf an, ob diese "angespart" werden konnten. Also z.B. ob eine Klassenfahrt schon lange vorher bekannt war und aus dem geleisteten Unterhalt immer ein bisschen hätte zurückgelegt werden können, um die Summe zu bezahlen (https://www.youtube.com/watch?v=32UlfhFcP5Y&t=276s (Kanzlei Hasselbach))(+++ANDERE QUELLE SUCHEN+++).
 
 
 <a name="mehrbedarf"></a>
@@ -163,7 +163,7 @@ Dazu zählen u.a. Wohnmehrkosten, Fahrtkosten, doppelter Erwerb persönlicher G
 Ein Sonderbedarf hingegen ist ein **unregelmäßiger**, außerordentlich hoher Bedarf, der überraschend und der Höhe nach nicht vorhersehbar war. Ein Sonderbedarf tritt daher plötzlich auf, sodass er nicht aus laufenden Unterhaltsleistungen bezahlt und auch nicht angespart werden kann.  
 Klassenfahrten, nicht übernommene Arztkosten. Auch diese sind im Hinblick auf die Haftungsanteile zu verrechnen. Da einer der Elternteile die Zahlung übernimmt, ist der verbleibende Haftungsanteil ähnlich dem Kindergeld zu verrechnen.
 
-Sonderbedarf des Kindes ist wohl nur vom *angemessenen Selbstbehalt* zu tragen. Wenn ein Elternteil insoweit nicht leistungsfähig ist, muss der andere Elternteil den Mehrbedarf/Sonderbedarf alleine tragen.(RA Jakob Berechnung v. 13.12.2023 (+++ANDERE QUELLE SUCHEN+++)
+Sonderbedarf des Kindes ist nur vom *angemessenen Selbstbehalt* zu tragen. Wenn ein Elternteil insoweit nicht leistungsfähig ist, muss der andere Elternteil den Mehrbedarf/Sonderbedarf alleine tragen.(RA Jakob Berechnung v. 13.12.2023 (+++ANDERE QUELLE SUCHEN+++)(+++Verweis Sockelbetrag+++)
 
 <a name="kigakosten"></a>
 #### Kindergarten- und Hortkosten
@@ -173,32 +173,30 @@ Kinderbetreuungskosten sind im symmetrischen Wechselmodell grundsätzlich nicht 
 Der Unterhaltsbedarf enthält gem. § 1610 Abs. 2 BGB auch die Kosten der Erziehung.  
 Dementsprechend erhöhen Aufwendungen, die in erster Linie erzieherischen Zwecken dienten, den Bedarf des Kindes.  
 Hingegen gehören zum Kindesbedarf keine Aufwendungen, die dem betreuenden Elternteil dienen, indem dessen Betreuung ersetzt wird, um z.B. der Berufstätigkeit nachzugehen.
-Ein Mehrbedarf liegt nur vor, wenn aus pädagogischen Gründen über den Umfang der von dem betreuenden Elternteil ohnehin geschuldeten Betreuung hinausgegangen wird.
+Ein Mehrbedarf liegt nur vor, wenn aus pädagogischen Gründen über den Umfang der von dem betreuenden Elternteil ohnehin geschuldeten Betreuung hinausgegangen wird (BGH v. 26.11.2008 - XII ZR 65/07 Rn. 14).
 
 Kindergartenbeiträge stellen daher Mehrbedarf des Kindes dar, die in den Tabellenbeträgen nicht enthalten sind.
-Die in einer Kindereinrichtung anfallenden **Verpflegungskosten** sind hingegen mit dem Tabellenunterhalt abgegolten und müssen herausgerechnet werden.
-
-(BGH v. 26.11.2008 - XII ZR 65/07 Rn. 14) 
+Die in einer Kindereinrichtung anfallenden **Verpflegungskosten** sind hingegen mit dem Tabellenunterhalt abgegolten und müssen herausgerechnet werden (BGH v. 26.11.2008 - XII ZR 65/07 Rn. 28).
 
 Selbiges gilt für **Horteinrichtungen**, soweit die Betreuung nach einem pädagogischen Konzept erfolgt, welches erzieherische Zwecke verfolgt und erreicht. Das pädagogisch-erzieherische Angebot muss dabei vergleichbare Ziele verfolgen, die den Bedürfnissen älterer Kinder angepasst sind.
 
 <a name="einkommenkind"></a>
 #### Eigenes Einkommen des Kindes
 
-Soweit das Kind eigene Einkünfte erzielt, sind diese vom Bedarf abzuziehen. Einkünfte aus einer Erwerbstätigkeit sind nur zu berücksichtigen, soweit diese dem Kind zumutbar ist. Lediglich taschengeld-erhöhende Schülerjobs sind daher nicht abzugsfähig. (vgl. [https://www.scheidung-online.de/unterhalt/kindesunterhalt/eigenes-einkommen-des-kindes/](https://www.scheidung-online.de/unterhalt/kindesunterhalt/eigenes-einkommen-des-kindes/))
+Soweit das Kind eigene Einkünfte erzielt, sind diese vom Bedarf abzuziehen. Einkünfte aus einer Erwerbstätigkeit sind nur zu berücksichtigen, soweit diese dem Kind zumutbar ist. Lediglich taschengeld-erhöhende Schülerjobs sind daher nicht abzugsfähig. (vgl. [https://www.scheidung-online.de/unterhalt/kindesunterhalt/eigenes-einkommen-des-kindes/](https://www.scheidung-online.de/unterhalt/kindesunterhalt/eigenes-einkommen-des-kindes/)) (+++ANDERE QUELLE+++)
 Die Ausbildungsvergütung eines in der Berufsausbildung stehenden Kindes, das im Haushalt der Eltern oder eines Elternteils wohnt, ist vor ihrer Anrechnung in der Regel, sofern für eine derartige Schätzung hinreichende Anhaltspunkte bestehen, um einen ausbildungsbedingten Mehrbedarf von 10 %, maximal 100 Euro zu kürzen.
 
 <a name="haftungsanteile"></a>
 ## Haftungsanteile
 
-Das verteilbare Einkommen der Elternteile ist miteinander in Verhältnis zu setzen. Die anteilige Haftung der Elternteile folgt aus § 1606 Abs. 3 BGB.  
+Das verteilbare Einkommen der Elternteile ist miteinander in Verhältnis zu setzen. Die anteilige Haftung der Elternteile folgt aus § 1606 Abs. 3 BGB.  
 Dadurch ergeben sich die jeweiligen Haftungsquoten (z.B. 60 % und 40 %). Anhand der jeweiligen Haftungsquoten ergibt sich der jeweilige Haftungsanteil der Elternteile.
 
 > **vereinfachtes Beispiel:**  
 > 
-Haftungsquote Vater: 60 %           Haftungsquote Mutter: 40%  
-                               Bedarf Kind: 1000 EUR  
-Haftungsanteil Vater: 600 EUR     Haftungsanteil Mutter: 400 EUR
+> Haftungsquote Vater: 60 %           Haftungsquote Mutter: 40%  
+>                                Bedarf Kind: 1000 EUR  
+> Haftungsanteil Vater: 600 EUR     Haftungsanteil Mutter: 400 EUR
 
 **Kontrollbetrag**: Ist der andere Elternteil nicht leistungsfähig (Haftungsquote 0 %), bemisst sich die Höhe der Unterhaltspflicht des Mehrverdienenden allein anhand seines Einkommens und nicht nach der Höhe beider Elternteile. Der Haftungsanteil ist auf den Betrag gedeckelt, der bei alleiniger Unterhaltspflicht im Residenzmodell zu leisten wäre. Denn der Unterhaltspflichtige soll im Wechselmodell nicht mehr zu zahlen als im Residenzmodell (BGH v. 11.01.2017 – XII ZB 565/15 Rn. 24; OLG Karlsruhe v. 30.04.2025 – 5 UF 49/23).
 
