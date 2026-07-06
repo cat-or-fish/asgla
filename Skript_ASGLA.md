@@ -120,8 +120,7 @@ Der Barbedarf wird gem. **§ 1612b Abs. 1 BGB** um die Hälfte des Kindergeldes 
 Der Regelbedarf ist aus der Düsseldorfer Tabelle zu entnehmen, was durch den ASGLA-Rechner automatisch erfolgt. Maßgeblich für die Einkommensgruppe ist die Gesamtsumme der bereinigten Einkommen beider Eltern.  
   
 Welche Posten von den Bedarfsbeträgen der Düsseldorfer Tabelle bereits enthalten sind, ergibt sich grds. aus dem [Regelbedarfsermittlungsgesetz (RBEG)](https://www.gesetze-im-internet.de/rbeg_2021/BJNR285510020.html). Das RBEG sieht eine Zusammensetzung nach Abteilungen vor:  
-  
-  
+
 | Nr. | Abteilung                               |
 |-----|-------------------------------------------|
 | 1–2 | Nahrungsmittel und alkoholfreie Getränke  |
