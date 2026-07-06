@@ -54,7 +54,7 @@ Für den Unterhaltsrechner wird das Netto-Einkommen herangezogen.
 
 <a name="weitere_einkünfte"></a>
 ### Weitere Einkünfte
-Die weiteren Einkünfte werden zur Haupttätigkeit des jeweiligen Elternteils addiert. Der Nutzer trägt den Betrag im jeweiligen Feld ein und wählt über das DropDown-Menü den zugehörigen Posten aus. Über das Textfeld "Zusätzliche Informationen" (am Ende der Page) können die einzelnen Punkte erläutert werden. Alle getätigten Eintragungen finden sich nach der Berechnung auch in der PDF-Datei wieder. 
+Die weiteren Einkünfte werden zur Haupttätigkeit des jeweiligen Elternteils addiert. Der Nutzer trägt den Betrag im jeweiligen Feld ein und wählt über das DropDown-Menü den zugehörigen Posten aus. Über das Textfeld "Zusätzliche Informationen" (am Ende der Seite) können die einzelnen Punkte erläutert werden. Alle getätigten Eintragungen finden sich nach der Berechnung auch in der PDF-Datei wieder. 
 Der Rechner differenziert zwischen:
 - Nebentätigkeiten: Netto-Betrag
 - Überstundenvergütungen: Netto-Betrag wird voll zugerechnet, soweit sie berufstypisch sind und das in diesem Beruf übliche Maß nicht überschreiten
