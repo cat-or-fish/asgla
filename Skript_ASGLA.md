@@ -113,7 +113,7 @@ Das Maß des Unterhalts richtet sich nach **§ 1610 BGB**:
 (1) Das Maß des zu gewährenden Unterhalts bestimmt sich nach der Lebensstellung des Bedürftigen (angemessener Unterhalt).  
 (2) Der Unterhalt umfasst den gesamten Lebensbedarf einschließlich der Kosten einer angemessenen Vorbildung zu einem Beruf, bei einer der Erziehung bedürftigen Person auch die Kosten der Erziehung.
 
-Der Barbedarf wird gem. **§ 1612b Abs. 1 BGB** um die Hälfte des Kindergeldes gemindert. Diese Anrechnung des hälftiges Kindergeldes gilt auch im Wechselmodell (BGH v. 11.01.2017 – XII ZB 565/15, Rn. 47).
+Der Barbedarf wird gem. **§ 1612b Abs. 1 BGB** um die Hälfte des Kindergeldes gemindert. Diese Anrechnung des hälftigen Kindergeldes gilt auch im Wechselmodell (BGH v. 11.01.2017 – XII ZB 565/15, Rn. 47).
 
 <a name="regelbedarf"></a>
 ### Regelbedarf (/Grundbedarf)
