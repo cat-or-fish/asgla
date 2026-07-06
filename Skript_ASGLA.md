@@ -278,7 +278,9 @@ Jedem Elternteil steht im Wechselmodell ein sogenannter Selbstbehalt zu, sodass 
 Hat ein Elternteil nach Abzug des Sockelbetrags ein deutlich höheres Einkommen als der andere, kann sich aus der Quotenberechnung ergeben, dass er den Kindesunterhalt nahezu allein zu tragen hat (BGH v. 10.07.2013 - XII ZB 297/12, Rn. 29).
 
 ### Eigentlich wollen wir nur einen Ausgleich vom Kindergeld, denn wir sind und einig, dass wir im Übrigen keine Unterhaltsberechnung machen wollen.
-Dann kann ein sog. isolierter Kindergeldausgleich vorgenommen werden, siehe dazu BGH v. 20.04.2016 – XII ZB 45/15.
+Dann kann ein **sog. isolierter Kindergeldausgleich** vorgenommen werden, siehe dazu BGH v. 20.04.2016 – XII ZB 45/15.
+Die Auskehr von einem 1/4 des Kindergeldes kann ohne Weiteres verlangt werden, da dies der Höhe des *Betreuungsanteils* vom anderen Elternteil entspricht (BGH v. 20.04.2016 – XII ZB 45/15 Rz 31 ff.)
+Ein Teil des *Baranteils* kann hingegen nicht ohne Weiteres beansprucht werden. Verlangt der nicht kindergeldbeziehende Elternteil den Anteil des auf den Barunterhalt entfallenden Kindergeldanteils, ist es grundsätzlich seine Sache, die Haftungsanteile der Eltern am Barunterhalt darzulegen und zu beweisen (BGH v. 20.04.2016 – XII ZB 45/15 Rz. 29).
 
 ### Wie setze ich meinen Anspruch auf Unterhalt im Wechselmodell nun durch?
 Grundsätzlich ist das Wechselmodell für Elternteile gedacht, die kooperativ miteinander ihre Kinder großziehen wollen. Der erste Ansatz wäre daher stets das vermittelnde Gespräch, bei dem der Rechner als Orientierung dienen kann.  
