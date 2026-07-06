@@ -98,19 +98,13 @@ Aus der Differenz der Einkünfte und Abzugsposten ergeben sich die bereinigten E
 
 Der Sockelbetrag ist der Betrag, den jedes Elternteil im Wechselmodell "behalten" darf. Nur das Einkommen, das über diesem Sockelbetrag liegt, ist das sogenannte "verteilungsfähige Einkommen", aus dem die Haftungsquoten gebildet werden.
 
-Gemäß § 1603 I BGB muss niemand seinen angemessenen Unterhalt gefährden, um Unterhalt zu zahlen. Dieser angemessene Selbstbehalt ist grundsätzlich im Wechselmodell anzuwenden (BGH, Urteil v. 12.1.2011 – XII ZR 83/08 Rn. 34 ff.). Nur im Mangelfall (also wenn der Unterhalt nicht mit den normalen Mitteln gedeckt ist) und bei gesteigerter Unterhaltspflicht wird der notwendige Selbstbehalt nach § 1603 II angewandt (BGH, Beschl. v. 11.01.2017 - XII ZB 565/15, FamRZ 2017, 437 Rn. 41 f.). Die Höhe der jeweiligen Selbstbehalte werden durch die Unterhaltsleitlinien der zuständigen Oberlandesgerichte festgesetzt.
-
-Siehe zur Bestimmung des Sockelbetrags (also welcher Selbstbehalt anzusetzen ist BGH v. 12.1.2011 – XII ZR 83/08 Rn. 34 ff.
-
-Bei der Quotierung ist zu beachten, dass der Selbstbehalt abzuziehen ist. Hierbei ist zu beachten, dass nach der Rspr. nicht der sog. notwendige Selbstbehalt (§ 1603 II BGB) beim Wechselmodell abzuziehen ist, sondern der sog. angemessene Selbstbehalt nach § 1603 I BGB! (siehe BGH v. 11.01.2017 – XII ZB 565/15 Rn. 42 f.)
-
-Übersteigt das bereinigte Einkommen eines Elternteils nach Abzug des angemessenen Selbstbehalts (Sockelbetrag) das des anderen erheblich oder verfügt der andere Elternteil über kein verteilungsfähiges Einkommen oberhalb des Sockelbetrags, kann sich rechnerisch eine Haftungsquote von bis zu 100% für den besserverdienenden Elternteil ergeben (BGH, Urteil vom 11.01.2017 - XII ZB 565/15 +++Randnummer??? Richtiges BGH-Urteil???+++).
+Gemäß § 1603 I BGB muss niemand seinen angemessenen Unterhalt gefährden, um Unterhalt zu zahlen. Dieser angemessene Selbstbehalt ist grundsätzlich im Wechselmodell anzuwenden (BGH v. 11.01.2017 – XII ZB 565/15 Rn. 42 f.; BGH v. 12.1.2011 – XII ZR 83/08 Rn. 34 ff.). Nur im Mangelfall (also wenn der Unterhalt nicht mit den normalen Mitteln gedeckt ist) und bei gesteigerter Unterhaltspflicht wird der notwendige Selbstbehalt nach § 1603 II angewandt (BGH v. 11.01.2017 - XII ZB 565/15, FamRZ 2017, 437 Rn. 41 f.). Die Höhe der jeweiligen Selbstbehalte werden durch die Unterhaltsleitlinien der zuständigen Oberlandesgerichte festgesetzt.
 
 Das Programm ermöglicht aufgrund der Komplexität hier eine kontrollierte Auswahl. Zudem bietet der ASGLA-Rechner die Option, in Einzelfällen einen individuellen Betrag festzusetzen.
 
 Zu beachten ist, dass dieser Sockelbetrag nur bei den Grundbedarfen eine Rolle spielt. Sodass B z.B. notwendigen Selbstbehalt beim Regelbedarf hat, bei den Zusatzbedarfen hingegen der angemessene Selbstbehalt anzusetzen ist, so dass A ggfl. Zusatzbedarfe allein zu tragen hat.(+++Quelle BGH ergänzen+++)
 
-Das bereinigte Einkommen abzüglich des Sockelbetrags ergibt das sog. verteilbare Einkommen.
+Das bereinigte Einkommen abzüglich des Sockelbetrags ergibt das **sog. verteilbare Einkommen**.
 
 <a name="gesamtbedarf_des_kindes"></a>
 ## Gesamtbedarf des Kindes
