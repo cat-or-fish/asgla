@@ -203,7 +203,7 @@ Dadurch ergeben sich die jeweiligen Haftungsquoten (z.B. 60 % und 40 %). Anhand 
 Weiterhin darf der Unterhaltspflichtige durch die Gewährung von Unterhalt nicht selbst sozialhilfebedürftig werden (BGH v. 23.02.2005 – XII ZR 56/02; OLG Karlsruhe v. 30.04.2025 – 5 UF 49/23).
 
 Von den Haftungsanteilen sind jeweilig **erbrachte Leistungen** abzuziehen (z.B. Kleidung und Essensgeld vom Regelbedarf).  
-Im Wechselmodell versorgen die Eltern das Kind auch durch Zuwendung der Güter zum Bedarf. Durch diesen von beiden Eltern geleisteten Naturalunterhalt wird zwar der Kindesunterhalt nicht bereits in vollem Umfang gedeckt, der geleistete Naturalunterhalt ist jedoch als (teilweise) Erfüllung (§ 362 BGB) des Unterhaltsanspruchs zu berücksichtigen und vom Barbedarfsanteil des jeweiligen Elternteils abzuziehen. Der Unterhaltsanspruch richtet sich daher nur auf den Ausgleich der nach Abzug von den Eltern erbrachter Naturalunterhaltsleistungen verbleibenden *Unterhaltsspitze* (BGH v. 11.01.2017 – XII ZB 565/15 Rn. 44; OLG Karlsruhe v. 30.04.2025 – 5 UF 49/23).
+Im Wechselmodell versorgen die Eltern das Kind auch durch Zuwendung der Güter zum Bedarf. Durch diesen von beiden Eltern geleisteten Naturalunterhalt wird zwar der Kindesunterhalt nicht bereits in vollem Umfang gedeckt, der geleistete Naturalunterhalt ist jedoch als (teilweise) Erfüllung (**§ 362 BGB**) des Unterhaltsanspruchs zu berücksichtigen und vom Barbedarfsanteil des jeweiligen Elternteils abzuziehen. Der Unterhaltsanspruch richtet sich daher nur auf den Ausgleich der – nach Abzug von den Eltern erbrachter Naturalunterhaltsleistungen – verbleibenden *Unterhaltsspitze* (BGH v. 11.01.2017 – XII ZB 565/15 Rn. 44; OLG Karlsruhe v. 30.04.2025 – 5 UF 49/23).
 Soweit der weniger verdienende Elternteil mehr geleistet hat, als von ihm geschuldet wird, handelt es sich um freiwillige Leistungen, die den anderen Elternteil nicht entlasten sollen (Dose, Das Unterhaltsrecht in der familienrechtlichen Praxis, 11. Aufl. 2026, § 2 Rn. 450).
 
 <a name="kindergeldverrechnung"></a>
@@ -264,12 +264,12 @@ Hier gelten Zufluss- und Abflussprinzip, d.h. dass das Einkommen dem Monat zuger
 WICHTIG: In Einzelfällen kann dies jedoch zu unverhältnismäßigen Ergebnissen führen (z.B. wenn ein Autor nach drei Jahren des Schreibens an seinem Buch eine hohe einmalige Geldzahlung für seine Arbeit erhält), sodass in diesen Fällen das Einkommen angemessen auf mehrere Monate verteilt wird.
 
 ### Aber mein Partner hätte doch mehr verdienen können!
-Zur Bemessung der finanziellen Leistungsfähigkeit kann ein sog. fiktives Einkommen in die Berechnung mit einbezogen werden, wenn ein Elternteil weniger arbeitet, als ihm zuzumuten ist.  
+Zur Bemessung der finanziellen Leistungsfähigkeit kann ein **sog. fiktives Einkommen** in die Berechnung mit einbezogen werden, wenn ein Elternteil weniger arbeitet, als ihm zuzumuten ist.  
 Die Zurechnung fiktiver Einkünfte setzt zum Einen subjektiv voraus, dass Erwerbsbemühungen des Unterhaltsschuldners fehlen. Zum anderen müssen die zur Erfüllung der Unterhaltspflichten erforderlichen Einkünfte für den Verpflichteten objektiv erzielbar sein, was von seinen persönlichen Voraussetzungen wie beispielsweise Alter, beruflicher Qualifikation, Erwerbsbiographie und Gesundheitszustand und dem Vorhandensein entsprechender Arbeitsstellen abhängt . Die Darlegungs- und Beweislast für die Leistungsunfähigkeit liegt beim Unterhaltsschuldner (BVerfG v. 09.11.2020 – 1 BvR 697/20, Rn. 14 f.; vgl. BGH v. 30. Juli 2008 - XII ZR 126/06, Rn. 22).
 Darauf kann sich der Unterhaltspflichtige aber nicht berufen, wenn und soweit das Kind damit auf einen nicht realisierbaren Unterhaltsanspruch verwiesen wird und somit Gefahr läuft, nicht den vollen ihm zustehenden Unterhalt zu erhalten. Dessen bedarf es indessen nicht, wenn der teils aus fiktivem Einkommen haftende Elternteil tatsächlich Naturalunterhalt gewährt und jedenfalls einen Unterhalt in Höhe seines Haftungsanteils an das Kind erbringt (BFH v. 11.01.2017 – XII ZB 565/15 Rn. 28. Dort konkret am Beispiel erläutert).
 Im Rechner kann das fiktive Einkommen im Rahmen der weiteren Einkünfte berücksichtigt werden.
 
-**Beachte:** Bis mindestens zum Abschluss des 3. Lebensjahres des Kindes besteht aufgrund des Grundgedankens des § 1615l Abs. 2, 4 BGB nur eine jeweils zu 50 %-ige Erwerbsobliegenheit. Die Erwerbstätigkeit, die darüber hinausgeht ist überobligatorisch und kann jederzeit aufgegeben werden (BGH v. 18.03.2026 – XII ZB 227/25 Rn. 12). Dies bedeutet aber nicht, dass tatsächlich erzielte Einkünfte aus einer insofern überobligatorischen Erwerbstätigkeit automatisch nicht zu berücksichtigen sind (BGH v. 18.03.2026 – XII ZB 227/25 Rn. 16).
+**Beachte:** Bis mindestens zum Abschluss des 3. Lebensjahres des Kindes besteht aufgrund des Grundgedankens des **§ 1615l Abs. 2, 4 BGB** nur eine jeweils zu 50 %-ige Erwerbsobliegenheit. Die Erwerbstätigkeit, die darüber hinausgeht ist überobligatorisch und kann jederzeit aufgegeben werden (BGH v. 18.03.2026 – XII ZB 227/25 Rn. 12). Dies bedeutet aber nicht, dass tatsächlich erzielte Einkünfte aus einer insofern überobligatorischen Erwerbstätigkeit automatisch nicht zu berücksichtigen sind (BGH v. 18.03.2026 – XII ZB 227/25 Rn. 16).
 
 ### Und was passiert, wenn ich nicht genug Geld habe?
 Jedem Elternteil steht im Wechselmodell ein sogenannter Selbstbehalt zu, sodass die eigene Lebensgrundlage in einem Mindestmaß gewährleistet ist (siehe oben unter "Sockelbetrag").
@@ -283,16 +283,16 @@ Dann kann ein sog. isolierter Kindergeldausgleich vorgenommen werden, siehe dazu
 ### Wie setze ich meinen Anspruch auf Unterhalt im Wechselmodell nun durch?
 Grundsätzlich ist das Wechselmodell für Elternteile gedacht, die kooperativ miteinander ihre Kinder großziehen wollen. Der erste Ansatz wäre daher stets das vermittelnde Gespräch, bei dem der Rechner als Orientierung dienen kann.  
 
-Da es sich formell betrachtet im Rahmen eines paritätischen Wechselmodells um einen Anspruch des Kindes gegenüber beiden Elternteilen handelt, ist die Beistandschaft des Jugendamtes für die Durchsetzung von Unterhaltsansprüchen nicht zuständig.  
-Dennoch bietet es sich an, im Hinblick auf § 18 SGB VIII zumindest für die Berechnung das örtliche Jugendamt um Unterstützung zu bitten.  
+Da es sich formell betrachtet im Rahmen eines paritätischen Wechselmodells um einen Anspruch des Kindes gegenüber beiden Elternteilen handelt, ist die Beistandschaft des Jugendamtes für die Durchsetzung von Unterhaltsansprüchen im Wechselmodell nicht zuständig.  
+Dennoch bietet es sich an, im Hinblick auf **§ 18 SGB VIII** zumindest für die Berechnung das örtliche Jugendamt um Unterstützung zu bitten.  
 
-In verhärteten Konfliktfällen bleibt meist am Ende nur der Gerichtsweg. Hierbei ist zu beachten, dass vor den Familiengerichten in Unterhaltsangelegenheiten eine Anwaltspflicht herrscht.  
+In verhärteten Konfliktfällen bleibt meist am Ende nur der Gerichtsweg. Hierbei ist zu beachten, dass vor den Familiengerichten in Unterhaltsangelegenheiten eine **Anwaltspflicht** herrscht.  
 Seit dem Beschluss des BGH v. 10.04.2024 (XII ZB 459/23) bedarf es aber inzwischen weder der Bestellung eines Ergänzungspflegers noch einer Übertragung der Alleinentscheidungsbefugnis nach § 1628 BGB, wenn die Eltern nicht (mehr) miteinander verheiratet sind. Soweit die Elternteile noch miteinander verheiratet sind, sind diese Schritte hingegen weiterhin notwendig (BGH v. 15.04.2026 – XII ZB 415/25).
 
 <a name="techfaq"></a>
 # Technisches FAQ
 
-HINWEIS: Da sich der ASGLA-Rechner noch in Bearbeitung befindet und wir Neuerungen stetig ergänzen, empfehlen wir zu Beginn einen sog. Hard Refresh durchzuführen, damit Sie sichergehen können, dass die Website in ihrer aktuellen Form geladen wird. Dies gilt für alle Anwender*innen, die in der Vergangeneheit bereits den Rechner einmal besucht haben.
+HINWEIS: Da sich der ASGLA-Rechner noch in Bearbeitung befindet und wir Neuerungen stetig ergänzen, empfehlen wir zu Beginn einen sog. Hard Refresh durchzuführen, damit Sie sichergehen können, dass die Website in ihrer aktuellen Form geladen wird. Dies gilt für alle Anwender*innen, die in der Vergangenheit bereits den Rechner einmal besucht haben.
 
 **Windows:** Strg + Umschalt + R
 **Mac:** Cmd + Umschalt + R
