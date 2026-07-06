@@ -223,7 +223,7 @@ Das Kindergeld beträgt 250 EUR und wird an die Mutter ausgezahlt. Die Haftungsq
 | Baranteil Vater (30%)    | 37,50 EUR           |
 
 Die Mutter hat also insgesamt 103 EUR vom Kindergeld an den Vater auszukehren.  
-Dieser Kindergeld-Ausgleich ist mit dem Wechselmodell-Ausgleichsanspruch zu verrechnen. Dies geschieht indem durch den Abzug des hälftigen Kindergeldes vom Bedarf der Baranteil bereits abgegolten wurde. Verbleibend ist allein die Verrechnung des Betreuungsanteils. Diese erfolgt durch die Hinzurechnung des hälftigen Kindergeldes beim Kindergeldempfänger und die sich anschließende Auskehr des dem anderen gebührenden Betreuungsanteils.  
+Dieser Kindergeld-Ausgleich ist mit dem Wechselmodell-Ausgleichsanspruch zu verrechnen. Dies geschieht, indem durch den Abzug des hälftigen Kindergeldes vom Bedarf der Baranteil bereits abgegolten wurde. Verbleibend ist allein die Verrechnung des Betreuungsanteils. Diese erfolgt durch die Hinzurechnung des hälftigen Kindergeldes beim Kindergeldempfänger und die sich anschließende Auskehr des dem anderen gebührenden Betreuungsanteils.  
 
 (Der WINFAM-Rechner (bzw. Gutdeutsch-Rechner) von beck-online verwendet hierfür eine eigene Formel, die dem hiesigen Ergebnis letztlich gleicht.)
 
