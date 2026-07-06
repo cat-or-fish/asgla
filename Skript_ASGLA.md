@@ -2,7 +2,7 @@
 
 # Skript ASGLA
 
-*(Stand: 29.06.2026)*
+*(Stand: 06.07.2026)*
 
 Dieses Skript erklärt die Berechnung des Ausgleichsanspruchs im symmetrischen Wechselmodell und benennt die maßgeblichen Urteile.
 Zudem finden Sie unten auch technische Hinweise zur Benutzung des Rechners.
@@ -155,11 +155,7 @@ Diese Unterscheidung von Mehrbedarf und Sonderbedarf ist insbesondere auch von B
 
 Es besteht die **allgemeine Verpflichtung** des Unterhaltsberechtigten, die Belastung für den unterhaltsverpflichteten Elternteil **so gering wie möglich** zu halten. Der Unterhaltsberechtigte muss daher ihm mögliche und zumutbare Maßnahmen ergreifen, um Mehrbedarf gar nicht erst entstehen zu lassen oder wenigstens dessen Kosten zu minimieren (https://www.kanzlei-hasselbach.de/blog/mehrbedarf-sonderbedarf-kindesunterhalt/#definition)(+++ANDERE QUELLE SUCHEN+++). 
 
-(+++ACHTUNG DER FOLGENDE ABSATZ IST FALSCH! DIE LEISTUNGEN GELTEN ALS ERFÜLLUNG GEM. § 362 BGB UND SIND DAHER ABSOLUT BEIM JEWEILIGEN ELTERNTEIL ABZUZIEHEN+++)
-**Bereits gezahlter Zusatzbedarf**: Wurde von einem Elternteil ein Zusatzbedarf bereits getragen (z.B. Klassenfahrt), verrechnet der Rechner die Hälfte der geleisten Zahlung beim anderen Elternteil.
-Dem liegt folgende Überlegung zugrunde: Durch den Ausgleichsanspruch wurden beide Elternteile so gestellt, dass sie beide die gleiche Finanzkraft haben um den Bedarf 50/50 zu stillen. Die geleistete Zahlung ist also so zu behandeln, als hätte der Vater den (nach dem Ausgleich nur noch) hälftigen Anteil am Sonderbedarf mitgetragen.
-
-Anders nur, wenn aus sonstigen Gründen der Besserverdiener Sonderbedarfe selber tragen muss.
+Unter bestimmten Umständen muss der besser verdienende Elternteil Sonderbedarfe selber tragen.
 
 Bei Sonderbedarfen kommt es insb. darauf an, ob die "angespart" werden konnten. Also z.B. ob eine Klassenfahrt schon lange vorher bekannt war und aus dem geleisteten Unterhalt immer ein bisschen hätte zurückgelegt werden können, um die Summe zu bezahlen (https://www.youtube.com/watch?v=32UlfhFcP5Y&t=276s (Kanzlei Hasselbach))(+++ANDERE QUELLE SUCHEN+++).
 
@@ -215,8 +211,9 @@ Haftungsanteil Vater: 600 EUR     Haftungsanteil Mutter: 400 EUR
 
 Weiterhin darf der Unterhaltspflichtige durch die Gewährung von Unterhalt nicht selbst sozialhilfebedürftig werden (BGH v. 23.02.2005 – XII ZR 56/02; OLG Karlsruhe v. 30.04.2025 – 5 UF 49/23).
 
-Von den Haftungsanteilen sind jeweilig erbrachte Leistungen abzuziehen.  
-Im Wechselmodell versorgen die Eltern das Kind auch durch Zuwendung der Güter zum Bedarf. Durch diesen von beiden Eltern geleisteten Naturalunterhalt wird zwar der Undesunterhalt nicht bereits in vollem Umfang gedeckt, der geleistete Naturalunterhalt ist jedoch als (teilweise) Erfüllung des Unterhaltsansüruchs zu berücksichtigen und vom Barbedarfsanteil des jeweiligen elternteils abzuziehen. Der Darunterhaltsansürcuh richtet sich daher nur auf den Ausgleich der nach Abzug von den Eltern erbrachter Naturalunterhaltsleistungen verbleibenden Unterhaltsspitze (BGH v. 11.01.2017 – XII ZB 565/15 Rn. 44; OLG Karlsruhe v. 30.04.2025 – 5 UF 49/23).
+Von den Haftungsanteilen sind jeweilig **erbrachte Leistungen** abzuziehen (z.B. Kleidung und Essensgeld vom Regelbedarf).  
+Im Wechselmodell versorgen die Eltern das Kind auch durch Zuwendung der Güter zum Bedarf. Durch diesen von beiden Eltern geleisteten Naturalunterhalt wird zwar der Kindesunterhalt nicht bereits in vollem Umfang gedeckt, der geleistete Naturalunterhalt ist jedoch als (teilweise) Erfüllung (§ 362 BGB) des Unterhaltsanspruchs zu berücksichtigen und vom Barbedarfsanteil des jeweiligen Elternteils abzuziehen. Der Unterhaltsanspruch richtet sich daher nur auf den Ausgleich der nach Abzug von den Eltern erbrachter Naturalunterhaltsleistungen verbleibenden *Unterhaltsspitze* (BGH v. 11.01.2017 – XII ZB 565/15 Rn. 44; OLG Karlsruhe v. 30.04.2025 – 5 UF 49/23).
+Soweit der weniger verdienende Elternteil mehr geleistet hat, als von ihm geschuldet wird, handelt es sich um freiwillige Leistungen, die den anderen Elternteil nicht entlasten sollen (Dose, Das Unterhaltsrecht in der familienrechtlichen Praxis, 11. Aufl. 2026, § 2 Rn. 450).
 
 <a name="kindergeldverrechnung"></a>
 ## Kindergeldverrechnung
@@ -235,7 +232,9 @@ Das Kindergeld beträgt 250 EUR und wird an die Mutter ausgezahlt. Die Haftungsq
 | Baranteil Vater (30%)    | 37,50 EUR           |
 
 Die Mutter hat also insgesamt 103 EUR vom Kindergeld an den Vater auszukehren.  
-Dieser Kindergeld-Ausgleich ist mit dem Wechselmodell-Ausgleichsanspruch zu verrechnen.
+Dieser Kindergeld-Ausgleich ist mit dem Wechselmodell-Ausgleichsanspruch zu verrechnen. Dies geschieht indem durch den Abzug des hälftigen Kindergeldes vom Bedarf der Baranteil bereits abgegolten wurde. Verbleibend ist allein die Verrechnung des Betreuungsanteils. Diese erfolgt durch die Hinzurechnung des hälftigen Kindergeldes beim Kindergeldempfänger und die sich anschließende Auskehr des dem anderen gebührenden Betreuungsanteils.  
+
+(Der WINFAM-Rechner (bzw. Gutdeutsch-Rechner) von beck-online verwendet hierfür eine eigene Formel, die dem hiesigen Ergebnis letztlich gleicht.)
 
 <a name="endberechnung_asgla"></a>
 ## Endberechnung ASGLA
