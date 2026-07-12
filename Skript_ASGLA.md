@@ -147,8 +147,6 @@ Diese Unterscheidung von Mehrbedarf und Sonderbedarf ist insbesondere auch von B
 
 Es besteht die **allgemeine Verpflichtung** des Unterhaltsberechtigten, die Belastung für den unterhaltsverpflichteten Elternteil **so gering wie möglich** zu halten. Der Unterhaltsberechtigte muss daher ihm mögliche und zumutbare Maßnahmen ergreifen, um Mehrbedarf gar nicht erst entstehen zu lassen oder wenigstens dessen Kosten zu minimieren (https://www.kanzlei-hasselbach.de/blog/mehrbedarf-sonderbedarf-kindesunterhalt/#definition) (+++ANDERE QUELLE SUCHEN+++). 
 
-Unter bestimmten Umständen muss der besser verdienende Elternteil Sonderbedarfe selber tragen.
-
 Bei Sonderbedarfen kommt es insb. darauf an, ob diese "angespart" werden konnten. Also z.B. ob eine Klassenfahrt schon lange vorher bekannt war und aus dem geleisteten Unterhalt immer ein bisschen hätte zurückgelegt werden können, um die Summe zu bezahlen (https://www.youtube.com/watch?v=32UlfhFcP5Y&t=276s (Kanzlei Hasselbach))(+++ANDERE QUELLE SUCHEN+++).
 
 
