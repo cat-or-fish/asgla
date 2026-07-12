@@ -184,7 +184,7 @@ Selbiges gilt für **Horteinrichtungen**, soweit die Betreuung nach einem pädag
 Soweit das Kind eigene Einkünfte erzielt, sind diese vom Bedarf abzuziehen. Einkünfte aus einer Erwerbstätigkeit sind nur zu berücksichtigen, soweit diese dem Kind zumutbar ist. Lediglich taschengeld-erhöhende Schülerjobs sind daher in entsprechender Anwendung von **§ 1577 Abs. 2 BGB** nicht abzugsfähig (vgl. BGH v. 25.01.1995 – XII ZR 240/93). 
 Die Ausbildungsvergütung eines in der Berufsausbildung stehenden Kindes, das im Haushalt der Eltern oder eines Elternteils wohnt, ist vor ihrer Anrechnung in der Regel, sofern für eine derartige Schätzung hinreichende Anhaltspunkte bestehen, um einen ausbildungsbedingten Mehrbedarf von 10 %, maximal 100 Euro zu kürzen.
 
-Das Einkommen des Kindes ist bei beiden Eltern hälftig anzurechnen ((OLG Naumburg Leitlinien, Rn. 12.2).
+Das Einkommen eines *minderjährigen Kindes* wird bei beiden Eltern hälftig angerechnet. (OLG Naumburg Leitlinien, Rn. 12.2) D. h. bei einem Einkommen von 300 EUR sind davon 150 EUR vom Bedarf des Kindes abzuziehen.
 
 
 <a name="haftungsanteile"></a>
