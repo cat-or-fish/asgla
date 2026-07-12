@@ -147,9 +147,6 @@ Diese Unterscheidung von Mehrbedarf und Sonderbedarf ist insbesondere auch von B
 
 Eine allgemeine strenge Kostenminderungspflicht der Eltern im Hinblick auf Mehr- und Sonderbedarfe besteht nicht. Ob ein angemessener Zusatzbedarf vorliegt oder entstandene Kosten nicht zum angemessenen Unterhaltsbedarf des Kindes gehören, ist nach den Umständen des Einzelfalls zu beurteilen. Mitunter ist entscheidend, ob es sich bei der betreffenden (kostenauslösenden) Maßnahme um eine solche mit erheblicher Bedeutung für das Kind handelt oder um eine Angelegenheit des täglichen Lebens. Im Hinblick auf ein gemeinsames Sorgerecht hängt die Beurteilung bei Maßnahmen von erheblicher Bedeutung mitunter von der (zumindest konkludenten) Zustimmung des jeweils anderen Elternteils ab (vgl. BGH v. 20.09.2023 – XII ZB 177/22, Rn. 23, 44 f.).  
 
-Bei Sonderbedarfen kommt es insb. darauf an, ob diese "angespart" werden konnten. Also z.B. ob eine Klassenfahrt schon lange vorher bekannt war und aus dem geleisteten Unterhalt immer ein bisschen hätte zurückgelegt werden können, um die Summe zu bezahlen (https://www.youtube.com/watch?v=32UlfhFcP5Y&t=276s (Kanzlei Hasselbach))(+++ANDERE QUELLE SUCHEN+++).
-
-
 <a name="mehrbedarf"></a>
 #### Mehrbedarf
 Ein sogenannter Mehrbedarf liegt vor bei regelmäßig anfallenden Kosten, die die üblichen Kosten zum Lebensbedarf übersteigen und deshalb nicht von den Regelsätzen der Düsseldorfer Tabelle erfasst sind. Es handelt sich demnach um **andauernde** Mehrausgaben, die zum Lebensbedarf des Kindes gehören.  
@@ -158,8 +155,8 @@ Dazu zählen u.a. Wohnmehrkosten, Fahrtkosten, doppelter Erwerb persönlicher G
 <a name="sonderbedarf"></a>
 #### Sonderbedarf
 
-Ein Sonderbedarf hingegen ist ein **unregelmäßiger**, außerordentlich hoher Bedarf, der überraschend und der Höhe nach nicht vorhersehbar war. Ein Sonderbedarf tritt daher plötzlich auf, sodass er nicht aus laufenden Unterhaltsleistungen bezahlt und auch nicht angespart werden kann.  
-Klassenfahrten, nicht übernommene Arztkosten. Auch diese sind im Hinblick auf die Haftungsanteile zu verrechnen. Da einer der Elternteile die Zahlung übernimmt, ist der verbleibende Haftungsanteil ähnlich dem Kindergeld zu verrechnen.
+Ein Sonderbedarf hingegen ist ein **unregelmäßiger**, außerordentlich hoher Bedarf, der überraschend und der Höhe nach nicht vorhersehbar bzw. für die laufende Unterhaltsrente kalkulierbar war. Ein Sonderbedarf tritt daher plötzlich auf, sodass er nicht aus laufenden Unterhaltsleistungen bezahlt und auch nicht angespart werden konnte (siehe dazu BGH v. 15.2.2006 – XII ZR 4/04 Rn. 10, 17).  
+Dazu können z.B. Klassenfahrten oder nicht übernommene Arztkosten gehören. 
 
 Sonderbedarf des Kindes ist nur vom *angemessenen Selbstbehalt* zu tragen. Wenn ein Elternteil insoweit nicht leistungsfähig ist, muss der andere Elternteil den Mehrbedarf/Sonderbedarf alleine tragen.(RA Jakob Berechnung v. 13.12.2023 (+++ANDERE QUELLE SUCHEN+++)(+++Verweis Sockelbetrag+++)
 
