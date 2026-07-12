@@ -102,7 +102,7 @@ Gemäß § 1603 I BGB muss niemand seinen angemessenen Unterhalt gefährden, um 
 
 Das Programm ermöglicht aufgrund der Komplexität hier eine kontrollierte Auswahl. Zudem bietet der ASGLA-Rechner die Option, in Einzelfällen einen individuellen Betrag festzusetzen.
 
-Teilweise wird vertreten, dass Mehr- und Sonderbedarf nur aus dem Einkommen oberhalb des angemessenen Selbstbehalts zu tragen sind, da die gesteigerte Unterhaltspflicht nach § 1603 Abs. 2 BGB in erster Linie der Sicherung des laufenden Mindestunterhalts dient. Nach dieser Auffassung gilt die gesteigerte Unterhaltspflicht lediglich für den Regelbedarf, sodass insoweit der notwendige Selbstbehalt maßgeblich ist. Für den Zusatzbedarf wäre hingegen nur der angemessene Selbstbehalt anzusetzen. Der ASGLA-Rechner gibt für diese Fälle lediglich einen Hinweis aus, stellt aber keine integrierte Berechnung für diese Ansicht bereit.
+Teilweise wird vertreten, dass Mehr- und Sonderbedarf nur aus dem Einkommen oberhalb des *angemessenen* Selbstbehalts zu tragen sind, da die gesteigerte Unterhaltspflicht nach § 1603 Abs. 2 BGB in erster Linie der Sicherung des laufenden Mindestunterhalts dient. Nach dieser Auffassung gilt die gesteigerte Unterhaltspflicht lediglich für den Regelbedarf, sodass insoweit der notwendige Selbstbehalt maßgeblich ist. Für den Zusatzbedarf wäre hingegen nur der angemessene Selbstbehalt anzusetzen. Der ASGLA-Rechner gibt für diese Fälle lediglich einen Hinweis aus, stellt aber keine integrierte Berechnung für diese Ansicht bereit.
 
 Das bereinigte Einkommen abzüglich des Sockelbetrags ergibt das **sog. verteilbare Einkommen**.
 
@@ -158,7 +158,7 @@ Dazu zählen u.a. Wohnmehrkosten, Fahrtkosten, doppelter Erwerb persönlicher G
 Ein Sonderbedarf hingegen ist ein **unregelmäßiger**, außerordentlich hoher Bedarf, der überraschend und der Höhe nach nicht vorhersehbar bzw. für die laufende Unterhaltsrente kalkulierbar war. Ein Sonderbedarf tritt daher plötzlich auf, sodass er nicht aus laufenden Unterhaltsleistungen bezahlt und auch nicht angespart werden konnte (siehe dazu BGH v. 15.2.2006 – XII ZR 4/04 Rn. 10, 17).  
 Dazu können z.B. Klassenfahrten oder nicht übernommene Arztkosten gehören. 
 
-Sonderbedarf des Kindes ist nur vom *angemessenen Selbstbehalt* zu tragen. Wenn ein Elternteil insoweit nicht leistungsfähig ist, muss der andere Elternteil den Mehrbedarf/Sonderbedarf alleine tragen.(RA Jakob Berechnung v. 13.12.2023 (+++ANDERE QUELLE SUCHEN+++)(+++Verweis Sockelbetrag+++)
+Mitunter wird vertreten, der Sonderbedarf des Kindes sei nur vom *angemessenen* Selbstbehalt zu tragen. Wenn ein Elternteil insoweit nicht leistungsfähig wäre, müsste der andere Elternteil den Mehrbedarf/Sonderbedarf alleine tragen (siehe dazu auch oben unter "Sockelbetrag").
 
 <a name="kigakosten"></a>
 #### Kindergarten- und Hortkosten
