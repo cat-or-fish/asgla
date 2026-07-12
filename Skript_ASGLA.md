@@ -102,7 +102,7 @@ Gemäß § 1603 I BGB muss niemand seinen angemessenen Unterhalt gefährden, um 
 
 Das Programm ermöglicht aufgrund der Komplexität hier eine kontrollierte Auswahl. Zudem bietet der ASGLA-Rechner die Option, in Einzelfällen einen individuellen Betrag festzusetzen.
 
-Zu beachten ist, dass dieser Sockelbetrag nur bei den Grundbedarfen eine Rolle spielt. Sodass B z.B. notwendigen Selbstbehalt beim Regelbedarf hat, bei den Zusatzbedarfen hingegen der angemessene Selbstbehalt anzusetzen ist, so dass A ggfl. Zusatzbedarfe allein zu tragen hat.(+++Quelle BGH ergänzen+++)(+++Verweis Sonderbedarf+++)
+Teilweise wird vertreten, dass Mehr- und Sonderbedarf nur aus dem Einkommen oberhalb des angemessenen Selbstbehalts zu tragen sind, da die gesteigerte Unterhaltspflicht nach § 1603 Abs. 2 BGB in erster Linie der Sicherung des laufenden Mindestunterhalts dient. Nach dieser Auffassung gilt die gesteigerte Unterhaltspflicht lediglich für den Regelbedarf, sodass insoweit der notwendige Selbstbehalt maßgeblich ist. Für den Zusatzbedarf wäre hingegen nur der angemessene Selbstbehalt anzusetzen. Der ASGLA-Rechner gibt für diese Fälle lediglich einen Hinweis aus, stellt aber keine integrierte Berechnung für diese Ansicht bereit.
 
 Das bereinigte Einkommen abzüglich des Sockelbetrags ergibt das **sog. verteilbare Einkommen**.
 
