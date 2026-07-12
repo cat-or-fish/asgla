@@ -2,7 +2,7 @@
 
 # Skript ASGLA
 
-*(Stand: 06.07.2026)*
+*(Stand: 12.07.2026)*
 
 Dieses Skript erklärt die Berechnung des Ausgleichsanspruchs im symmetrischen Wechselmodell und benennt die maßgeblichen Urteile.
 Zudem finden Sie unten auch technische Hinweise zur Benutzung des Rechners.
