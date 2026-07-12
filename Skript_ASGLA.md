@@ -143,7 +143,7 @@ Ob noch ein Regelbedarf oder bereits ein Zusatzbedarf vorliegt, kann im Abgleich
 
 Der Zusatzbedarf ist zu unterscheiden in Mehrbedarf und Sonderbedarf.  
 
-Diese Unterscheidung von Mehrbedarf und Sonderbedarf ist insbesondere auch von Bedeutung, wenn ein Elternteil **rückwirkend** Kindesunterhalt verlangt. Die rückwirkende Geltendmachung ist nämlich nur beim Sonderbedarf (als unvorhergesehenes Ereignis) problemlos möglich. Mehrbedarf hingegen kann erst ab dem Zeitpunkt geltend gemacht werden, ab dem sich der Unterhaltspflichtige in Verzug befindet oder zur Erbringung eines Einkommensnachweises aufgefordert wurde. (https://www.kanzlei-hasselbach.de/blog/mehrbedarf-sonderbedarf-kindesunterhalt/#definition) (+++ANDERE QUELLE SUCHEN+++). 
+Diese Unterscheidung von Mehrbedarf und Sonderbedarf ist insbesondere auch von Bedeutung, wenn ein Elternteil **rückwirkend** Kindesunterhalt verlangt. Die rückwirkende Geltendmachung ist gem. **§ 1613 Abs. 2 Nr. 1 BGB** nämlich nur beim Sonderbedarf (als unvorhergesehenes Ereignis) problemlos möglich. Mehrbedarf hingegen kann grds. erst ab dem Zeitpunkt geltend gemacht werden, ab dem sich der Unterhaltspflichtige in Verzug befindet oder zur Erbringung eines Einkommensnachweises aufgefordert wurde, vgl. **§ 1613 Abs. 1 BGB**.  
 
 Es besteht die **allgemeine Verpflichtung** des Unterhaltsberechtigten, die Belastung für den unterhaltsverpflichteten Elternteil **so gering wie möglich** zu halten. Der Unterhaltsberechtigte muss daher ihm mögliche und zumutbare Maßnahmen ergreifen, um Mehrbedarf gar nicht erst entstehen zu lassen oder wenigstens dessen Kosten zu minimieren (https://www.kanzlei-hasselbach.de/blog/mehrbedarf-sonderbedarf-kindesunterhalt/#definition) (+++ANDERE QUELLE SUCHEN+++). 
 
