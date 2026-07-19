@@ -211,7 +211,7 @@ Aufgrund der paritätischen Betreuung ist der Betreuungsanteil zwischen Mutter u
 Der jeweilige Baranteil richtet sich nach der [Haftungsquote](#haftungsanteile).
 
 **Beispiel:**  
-Das Kindergeld beträgt 250 EUR und wird an die Mutter ausgezahlt. Die Haftungsquoten betragen 70% Anteil Mutter und 30% Anteil Vater.
+Das Kindergeld beträgt 250 EUR und wird an die Mutter ausgezahlt. Die Haftungsquoten betragen 70 % Anteil Mutter und 30 % Anteil Vater.
 
 |      Position            |       Betrag        |
 |--------------------------|---------------------|
