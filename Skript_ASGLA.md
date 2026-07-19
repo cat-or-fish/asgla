@@ -245,7 +245,7 @@ Kinder sollen in einer ihrem Alter entsprechenden Weise an einer Lebensführung 
 Für diese Fälle haben wir unter dem REITER "BEDARF KIND" eine CHECKBOX eingefügt. Wenn Sie diese CHECKBOX aktivieren können Sie einen individuellen Regelbedarf für das Kind eintragen.
 
 ### Laut der Düsseldorfer Tabelle muss in unserem Fall aber eine Einstufung in eine niedrigere/höhere Einkommensgruppe erfolgen?
-Derartige Fälle berücksichtigt der Rechner nicht automatisch. Hierfür müssen sie händisch einen individuellen Regelbedarf unter dem Reiter "Kind" eintragen. Es empfiehlt sich, diese Anpassung unter "Zusätzliche Informationen" zu begründen, damit Sie und andere den händisch eingetragenen Regelbedarf später nachvollziehen können.
+Derartige Fälle (insb. auch Bedarfskontrollbetrag) berücksichtigt der Rechner nicht automatisch. Hierfür müssen sie händisch einen individuellen Regelbedarf unter dem Reiter "Kind" eintragen. Es empfiehlt sich, diese Anpassung unter "Zusätzliche Informationen" zu begründen, damit Sie und andere den händisch eingetragenen Regelbedarf später nachvollziehen können.
 
 ### Was ist mit dem Monat, in dem das Kind Geburtstag hat?
 Das ergibt sich aus **§ 1612a Abs. 3 BGB**: "Der Unterhalt einer höheren Altersstufe ist ab dem Beginn des Monats maßgebend, in dem das Kind das betreffende Lebensjahr vollendet."
