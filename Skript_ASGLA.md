@@ -206,7 +206,7 @@ Soweit der weniger verdienende Elternteil mehr geleistet hat, als von ihm geschu
 
 <a name="kindergeldverrechnung"></a>
 ## Kindergeldverrechnung
-Das Kindergeld wird zur Verrechnung zunächst in zwei gleiche Hälften geteilt. 50 % stellen den sog. Betreuungsanteil dar und 50 % den sog. Baranteil.
+Das Kindergeld wird zur Verrechnung zunächst in zwei gleiche Hälften geteilt. 50 % stellen den sog. Betreuungsanteil dar und 50 % den sog. Baranteil.
 Aufgrund der paritätischen Betreuung ist der Betreuungsanteil zwischen Mutter und Vater gleichmäßig aufzuteilen (also jeweils 1/4 des Kindergeldes).
 Der jeweilige Baranteil richtet sich nach der [Haftungsquote](#haftungsanteile).
 
