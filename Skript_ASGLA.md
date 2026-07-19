@@ -2,7 +2,7 @@
 
 # Skript ASGLA
 
-*(Stand: 12.07.2026)*
+*(Stand: 19.07.2026)*
 
 Dieses Skript erklärt die Berechnung des Ausgleichsanspruchs im symmetrischen Wechselmodell und benennt die maßgeblichen Urteile.
 Zudem finden Sie unten auch technische Hinweise zur Benutzung des Rechners.
@@ -117,7 +117,7 @@ Der Barbedarf wird gem. **§ 1612b Abs. 1 BGB** um die Hälfte des Kindergeldes 
 
 <a name="regelbedarf"></a>
 ### Regelbedarf (/Grundbedarf)
-Der Regelbedarf ist aus der Düsseldorfer Tabelle zu entnehmen, was durch den ASGLA-Rechner automatisch erfolgt. Maßgeblich für die Einkommensgruppe ist die Gesamtsumme der bereinigten Einkommen beider Eltern.  
+Der Regelbedarf ist aus der Düsseldorfer Tabelle zu entnehmen, was durch den ASGLA-Rechner automatisch erfolgt. Maßgeblich für die Einkommensgruppe ist die Gesamtsumme der bereinigten Einkommen beider Eltern. Liegt der Haftungsanteil von einem der Elternteile bei 0 % (unter Ansatz des notwendigen Selbstbehalts) ist hingegen nur das Einkommen des anderen Elternteils für die Höhe des Regelbedarfs maßgeblich (OLG Karlsruhe v. 30.04.2025 – 5 UF 49/23, Rz. 30).  
   
 Welche Posten von den Bedarfsbeträgen der Düsseldorfer Tabelle bereits enthalten sind, ergibt sich grds. aus dem [Regelbedarfsermittlungsgesetz (RBEG)](https://www.gesetze-im-internet.de/rbeg_2021/BJNR285510020.html). Das RBEG sieht eine Zusammensetzung nach Abteilungen vor:  
 
