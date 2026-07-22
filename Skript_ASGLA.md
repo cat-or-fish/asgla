@@ -2,7 +2,7 @@
 
 # Skript ASGLA
 
-*(Stand: 19.07.2026)*
+*(Stand: 22.07.2026)*
 
 Dieses Skript erklärt die Berechnung des Ausgleichsanspruchs im symmetrischen Wechselmodell und benennt die maßgeblichen Urteile.
 Zudem finden Sie unten auch technische Hinweise zur Benutzung des Rechners.
@@ -224,6 +224,8 @@ Die Mutter hat also insgesamt 103 EUR vom Kindergeld an den Vater auszukehren.
 Dieser Kindergeld-Ausgleich ist mit dem Wechselmodell-Ausgleichsanspruch zu verrechnen. Dies geschieht, indem durch den Abzug des hälftigen Kindergeldes vom Bedarf der Baranteil bereits abgegolten wurde. Verbleibend ist allein die Verrechnung des Betreuungsanteils. Diese erfolgt durch die Hinzurechnung des hälftigen Kindergeldes beim Kindergeldempfänger und die sich anschließende Auskehr des dem anderen gebührenden Betreuungsanteils.  
 
 (Der WINFAM-Rechner (bzw. Gutdeutsch-Rechner) von beck-online verwendet hierfür eine eigene Formel, die dem hiesigen Ergebnis letztlich gleicht.)
+
+(siehe dazu BGH v. 11.01.2017 – XII ZB 565/15, Rn. 47 ff.; Dose, Das Unterhaltsrecht in der familienrechtlichen Praxis, 11. Aufl. 2026, § 2 Rn. 450)
 
 <a name="endberechnung_asgla"></a>
 ## Endberechnung ASGLA
