@@ -2,7 +2,7 @@
 
 # Skript ASGLA
 
-*(Stand: 22.07.2026)*
+*(Stand: 11.08.2026)*
 
 Dieses Skript erklärt die Berechnung des Ausgleichsanspruchs im symmetrischen Wechselmodell und benennt die maßgeblichen Urteile.
 Zudem finden Sie unten auch technische Hinweise zur Benutzung des Rechners.
@@ -134,6 +134,14 @@ Welche Posten von den Bedarfsbeträgen der Düsseldorfer Tabelle bereits entha
 | 10  | Bildung                                   |
 | 11  | Beherbergungs- und Gaststättenleistungen  |
 | 12  | Andere Waren und Dienstleistungen         |
+
+In **§ 6 RBEG** sind die jeweiligen Verbrauchsausgaben je Posten ausgewiesen. Diese sind auf den sozialrechtlichen Regelbedarf zugeschnitten für 3 verschiedene Altersklassen: 0-6 Jahre, 7-12 Jahre und 15-18 Jahre. Die sich aus den Beträgen von § 6 RBEG ausgewiesene Quotierung kann auf den Bedarf für den Kindesunterhalt übertragen werden, um die jeweilige Höhe zu ermitteln.  
+Zu beachten ist allerdings, dass der **Bedarf für Unterkunft und Heizung** im Regelbedarf nicht enthalten ist (vgl. § 27a Abs. 2 i.V.m. §§ 35f. SGB XII). Dieser kann mit **20 %** des Tabellenunterhalts geschätzt werden (OLG Hamm v. 11.7.2012 – II-12 UF 319/11, Rz. 11 m.w.N.).
+
+>**Beispiel:**  
+>Kind 6 Jahre alt mit 670 EUR Bedarf.  
+>Davon 20 % als Wohnkostenanteil sind 134 EUR.  
+>Die restlichen Verbrauchsposten haben eine Gesamthöhe von 534 EUR. Diese sind anhand der sich aus § 6 RBEG ergebenden Quotelung zu >verteilen.  
 
 Ob noch ein Regelbedarf oder bereits ein Zusatzbedarf vorliegt, kann im Abgleich mit § 34 SGB XII (Bildung und Teilhabe, kurz: BuT) ermittelt werden (vgl. BGH v. 11.01.2017 – XII ZB 565/15 Rn. 39).
 
