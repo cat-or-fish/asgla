@@ -2,7 +2,7 @@
 
 # Skript ASGLA
 
-*(Stand: 11.08.2026)*
+*(Stand: 13.08.2026)*
 
 Dieses Skript erklärt die Berechnung des Ausgleichsanspruchs im symmetrischen Wechselmodell und benennt die maßgeblichen Urteile.
 Zudem finden Sie unten auch technische Hinweise zur Benutzung des Rechners.
@@ -102,7 +102,8 @@ Gemäß § 1603 I BGB muss niemand seinen angemessenen Unterhalt gefährden, um 
 
 Das Programm ermöglicht aufgrund der Komplexität hier eine kontrollierte Auswahl. Zudem bietet der ASGLA-Rechner die Option, in Einzelfällen einen individuellen Betrag festzusetzen.
 
-Teilweise wird vertreten, dass Mehr- und Sonderbedarf nur aus dem Einkommen oberhalb des *angemessenen* Selbstbehalts zu tragen sind, da die gesteigerte Unterhaltspflicht nach § 1603 Abs. 2 BGB in erster Linie der Sicherung des laufenden Mindestunterhalts dient. Nach dieser Auffassung gilt die gesteigerte Unterhaltspflicht lediglich für den Regelbedarf, sodass insoweit der notwendige Selbstbehalt maßgeblich ist. Für den Zusatzbedarf wäre hingegen nur der angemessene Selbstbehalt anzusetzen. Der ASGLA-Rechner gibt für diese Fälle lediglich einen Hinweis aus, stellt aber keine integrierte Berechnung für diese Ansicht bereit.
+Die Übernahme von Zusatzbedarfen durch die Unterhaltspflichtigen kommt nur in Betracht, wenn sie für diese wirtschaftlich zumutbar sind (vgl. BGH v. 26.02.1992 - XII ZR 97/91 Rn. 8; OLG Hamm v. 19.07.2013 - 6 UF 46/13 Rn. 29 f.). Mitunter wird daher vertreten, dass Mehr- und Sonderbedarf nur aus dem Einkommen oberhalb des *angemessenen* Selbstbehalts zu tragen sei (Grüneberg/*von Pückler*, 82A2023, § 1603 BGB Rn. 19, § 1610 BGB Rn. 13). Daneben wird als Begründung für diese Rechtsfolge angeführt, dass die gesteigerte Unterhaltspflicht nach § 1603 Abs. 2 BGB in erster Linie der Sicherung des laufenden Mindestunterhalts diene. Nach dieser Auffassung gilt die gesteigerte Unterhaltspflicht lediglich für den Regelbedarf, sodass insoweit der notwendige Selbstbehalt maßgeblich sei. Für den Zusatzbedarf sei hingegen nur der angemessene Selbstbehalt anzusetzen.  
+Der ASGLA-Rechner gibt für diese Fälle lediglich einen Hinweis aus, stellt aber keine integrierte Berechnung für diese Ansicht bereit. Unsere Empfehlung für die Umsetzung dieser Rechtsansicht wäre, in diesen Fällen den eingetragenen Zusatzbedarf (teilweise) in der Eingabemaske zu löschen, soweit diese  wirtschaftlich nicht zumutbar sind. Im Textfeld "Zusätzliche Informationen" ist dann zu vermerken, welche (Teil-)Zusatzbedarfe unberücksichtigt geblieben sind.
 
 Das bereinigte Einkommen abzüglich des Sockelbetrags ergibt das **sog. verteilbare Einkommen**.
 
@@ -136,7 +137,7 @@ Welche Posten von den Bedarfsbeträgen der Düsseldorfer Tabelle bereits entha
 | 12  | Andere Waren und Dienstleistungen         |
 
 In **§ 6 RBEG** sind die jeweiligen Verbrauchsausgaben je Posten ausgewiesen. Diese sind auf den sozialrechtlichen Regelbedarf zugeschnitten für 3 verschiedene Altersklassen: 0-6 Jahre, 7-12 Jahre und 15-18 Jahre. Die sich aus den Beträgen von § 6 RBEG ausgewiesene Quotierung kann auf den Bedarf für den Kindesunterhalt übertragen werden, um die jeweilige Höhe zu ermitteln (vgl. BGH v. 11.01.2017 – XII ZB 565/15 Rn. 39).  
-Zu beachten ist allerdings, dass der **Bedarf für Unterkunft und Heizung** im Regelbedarf nicht enthalten ist (vgl. § 27a Abs. 2 i.V.m. §§ 35f. SGB XII). Dieser kann mit **20 %** des Tabellenunterhalts geschätzt werden (OLG Hamm v. 11.7.2012 – II-12 UF 319/11, Rz. 11 m.w.N.).
+Zu beachten ist allerdings, dass der **Bedarf für Unterkunft und Heizung** im Regelbedarf nicht enthalten ist (vgl. § 27a Abs. 2 i.V.m. §§ 35f. SGB XII). Dieser kann mit **20 %** des Tabellenunterhalts geschätzt werden (OLG Hamm v. 11.7.2012 – II-12 UF 319/11 Rn. 11 m.w.N.).
 
 >**Beispiel:**  
 >Kind 6 Jahre alt mit 670 EUR Bedarf.  
@@ -153,7 +154,7 @@ Der Zusatzbedarf ist zu unterscheiden in Mehrbedarf und Sonderbedarf.
 
 Diese Unterscheidung von Mehrbedarf und Sonderbedarf ist insbesondere auch von Bedeutung, wenn ein Elternteil **rückwirkend** Kindesunterhalt verlangt. Die rückwirkende Geltendmachung ist gem. **§ 1613 Abs. 2 Nr. 1 BGB** nämlich nur beim Sonderbedarf (als unvorhergesehenes Ereignis) problemlos möglich. Mehrbedarf hingegen kann grds. erst ab dem Zeitpunkt geltend gemacht werden, ab dem sich der Unterhaltspflichtige in Verzug befindet oder zur Erbringung eines Einkommensnachweises aufgefordert wurde, vgl. **§ 1613 Abs. 1 BGB**.  
 
-Eine allgemeine strenge Kostenminderungspflicht der Eltern im Hinblick auf Mehr- und Sonderbedarfe besteht nicht. Ob ein angemessener Zusatzbedarf vorliegt oder entstandene Kosten nicht zum angemessenen Unterhaltsbedarf des Kindes gehören, ist nach den Umständen des Einzelfalls zu beurteilen. Mitunter ist entscheidend, ob es sich bei der betreffenden (kostenauslösenden) Maßnahme um eine solche mit erheblicher Bedeutung für das Kind handelt oder um eine Angelegenheit des täglichen Lebens. Im Hinblick auf ein gemeinsames Sorgerecht hängt die Beurteilung bei Maßnahmen von erheblicher Bedeutung mitunter von der (zumindest konkludenten) Zustimmung des jeweils anderen Elternteils ab (vgl. BGH v. 20.09.2023 – XII ZB 177/22, Rn. 23, 44 f.).  
+Eine allgemeine strenge Kostenminderungspflicht der Eltern im Hinblick auf Mehr- und Sonderbedarfe besteht nicht. Ob ein angemessener Zusatzbedarf vorliegt oder entstandene Kosten nicht zum angemessenen Unterhaltsbedarf des Kindes gehören, ist nach den Umständen des Einzelfalls zu beurteilen. Mitunter ist entscheidend, ob es sich bei der betreffenden (kostenauslösenden) Maßnahme um eine solche mit erheblicher Bedeutung für das Kind handelt oder um eine Angelegenheit des täglichen Lebens. Im Hinblick auf ein gemeinsames Sorgerecht hängt die Beurteilung bei Maßnahmen von erheblicher Bedeutung mitunter von der (zumindest konkludenten) Zustimmung des jeweils anderen Elternteils ab (vgl. BGH v. 20.09.2023 – XII ZB 177/22 Rn. 23, 44 f.).  
 
 <a name="mehrbedarf"></a>
 #### Mehrbedarf
