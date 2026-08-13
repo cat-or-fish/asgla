@@ -135,7 +135,7 @@ Welche Posten von den Bedarfsbeträgen der Düsseldorfer Tabelle bereits entha
 | 11  | Beherbergungs- und Gaststättenleistungen  |
 | 12  | Andere Waren und Dienstleistungen         |
 
-In **§ 6 RBEG** sind die jeweiligen Verbrauchsausgaben je Posten ausgewiesen. Diese sind auf den sozialrechtlichen Regelbedarf zugeschnitten für 3 verschiedene Altersklassen: 0-6 Jahre, 7-12 Jahre und 15-18 Jahre. Die sich aus den Beträgen von § 6 RBEG ausgewiesene Quotierung kann auf den Bedarf für den Kindesunterhalt übertragen werden, um die jeweilige Höhe zu ermitteln (vgl. BGH v. 11.01.2017 – XII ZB 565/15 Rz. 39).  
+In **§ 6 RBEG** sind die jeweiligen Verbrauchsausgaben je Posten ausgewiesen. Diese sind auf den sozialrechtlichen Regelbedarf zugeschnitten für 3 verschiedene Altersklassen: 0-6 Jahre, 7-12 Jahre und 15-18 Jahre. Die sich aus den Beträgen von § 6 RBEG ausgewiesene Quotierung kann auf den Bedarf für den Kindesunterhalt übertragen werden, um die jeweilige Höhe zu ermitteln (vgl. BGH v. 11.01.2017 – XII ZB 565/15 Rn. 39).  
 Zu beachten ist allerdings, dass der **Bedarf für Unterkunft und Heizung** im Regelbedarf nicht enthalten ist (vgl. § 27a Abs. 2 i.V.m. §§ 35f. SGB XII). Dieser kann mit **20 %** des Tabellenunterhalts geschätzt werden (OLG Hamm v. 11.7.2012 – II-12 UF 319/11, Rz. 11 m.w.N.).
 
 >**Beispiel:**  
