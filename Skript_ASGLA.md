@@ -2,7 +2,7 @@
 
 # Skript ASGLA
 
-*(Stand: 11.08.2026)*
+*(Stand: 15.08.2026)*
 
 Dieses Skript erklärt die Berechnung des Ausgleichsanspruchs im symmetrischen Wechselmodell und benennt die maßgeblichen Urteile.
 Zudem finden Sie unten auch technische Hinweise zur Benutzung des Rechners.
@@ -98,11 +98,11 @@ Aus der Differenz der Einkünfte und Abzugsposten ergeben sich die bereinigten E
 
 Der Sockelbetrag ist der Betrag, den jedes Elternteil im Wechselmodell "behalten" darf. Nur das Einkommen, das über diesem Sockelbetrag liegt, ist das sogenannte "verteilungsfähige Einkommen", aus dem die Haftungsquoten gebildet werden.
 
-Gemäß § 1603 I BGB muss niemand seinen angemessenen Unterhalt gefährden, um Unterhalt zu zahlen. Dieser angemessene Selbstbehalt ist grundsätzlich im Wechselmodell anzuwenden (BGH v. 11.01.2017 – XII ZB 565/15 Rn. 42 f.; BGH v. 12.1.2011 – XII ZR 83/08 Rn. 34 ff.). Nur im Mangelfall (also wenn der Unterhalt nicht mit den normalen Mitteln gedeckt ist) und bei gesteigerter Unterhaltspflicht wird der notwendige Selbstbehalt nach § 1603 II angewandt (BGH v. 11.01.2017 - XII ZB 565/15, FamRZ 2017, 437 Rn. 41 f.). Die Höhe der jeweiligen Selbstbehalte werden durch die Unterhaltsleitlinien der zuständigen Oberlandesgerichte festgesetzt.
+Gemäß § 1603 Abs. 1 BGB muss niemand seinen angemessenen Unterhalt gefährden, um Unterhalt zu zahlen. Dieser angemessene Selbstbehalt ist grundsätzlich im Wechselmodell anzuwenden (BGH v. 11.01.2017 – XII ZB 565/15 Rn. 42 f.; BGH v. 12.1.2011 – XII ZR 83/08 Rn. 34 ff.). Nur im Mangelfall (also wenn der Unterhalt nicht mit den normalen Mitteln gedeckt ist) und bei gesteigerter Unterhaltspflicht wird der notwendige Selbstbehalt nach § 1603 Abs. 2 BGB angewandt (BGH v. 11.01.2017 - XII ZB 565/15, FamRZ 2017, 437 Rn. 41 f.). Die Höhe der jeweiligen Selbstbehalte werden durch die Unterhaltsleitlinien der zuständigen Oberlandesgerichte festgesetzt.
 
 Das Programm ermöglicht aufgrund der Komplexität hier eine kontrollierte Auswahl. Zudem bietet der ASGLA-Rechner die Option, in Einzelfällen einen individuellen Betrag festzusetzen.
 
-Die Übernahme von Zusatzbedarfen durch die Unterhaltspflichtigen kommt nur in Betracht, wenn sie für diese wirtschaftlich zumutbar sind (vgl. BGH v. 26.02.1992 - XII ZR 97/91 Rn. 8; OLG Hamm v. 19.07.2013 - 6 UF 46/13 Rn. 29 f.). Mitunter wird daher vertreten, dass Mehr- und Sonderbedarf nur aus dem Einkommen oberhalb des angemessenen Selbstbehalts zu tragen sei (Grüneberg/von Pückler, 82A2023, § 1603 BGB Rn. 19, § 1610 BGB Rn. 13). Daneben wird als Begründung für diese Rechtsfolge angeführt, dass die gesteigerte Unterhaltspflicht nach § 1603 Abs. 2 BGB in erster Linie der Sicherung des laufenden Mindestunterhalts diene. Nach dieser Auffassung gilt die gesteigerte Unterhaltspflicht lediglich für den Regelbedarf, sodass insoweit der notwendige Selbstbehalt maßgeblich sei. Für den Zusatzbedarf sei hingegen nur der angemessene Selbstbehalt anzusetzen.  
+Die Übernahme von Zusatzbedarfen durch die Unterhaltspflichtigen kommt nur in Betracht, wenn sie für diese wirtschaftlich zumutbar sind (vgl. BGH v. 26.02.1992 - XII ZR 97/91 Rn. 8; OLG Hamm v. 19.07.2013 - 6 UF 46/13 Rn. 29 f.). Mitunter wird daher vertreten, dass Mehr- und Sonderbedarf nur aus dem Einkommen oberhalb des angemessenen Selbstbehalts zu tragen sei (Grüneberg/von Pückler, 82A2023, § 1603 BGB Rn. 19, § 1610 BGB Rn. 13). Daneben wird als Begründung für diese Rechtsfolge angeführt, dass die gesteigerte Unterhaltspflicht nach § 1603 Abs. 2 BGB in erster Linie der Sicherung des laufenden Mindestunterhalts diene. Nach dieser Auffassung gilt die gesteigerte Unterhaltspflicht lediglich für den Regelbedarf, sodass insoweit der notwendige Selbstbehalt maßgeblich sei. Für den Zusatzbedarf sei hingegen nur der angemessene Selbstbehalt anzusetzen.  
 Der ASGLA-Rechner gibt für diese Fälle lediglich einen Hinweis aus, stellt aber keine integrierte Berechnung für diese Ansicht bereit. Unsere Empfehlung für die Umsetzung dieser Rechtsansicht wäre, in diesen Fällen den eingetragenen Zusatzbedarf (teilweise) in der Eingabemaske zu löschen, soweit diese wirtschaftlich nicht zumutbar sind. Im Textfeld "Zusätzliche Informationen" ist dann zu vermerken, welche (Teil-)Zusatzbedarfe unberücksichtigt geblieben sind.
 
 Das bereinigte Einkommen abzüglich des Sockelbetrags ergibt das **sog. verteilbare Einkommen**.
