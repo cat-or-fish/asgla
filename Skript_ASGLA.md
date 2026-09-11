@@ -57,12 +57,12 @@ Für den Unterhaltsrechner wird das Netto-Einkommen herangezogen.
 Die weiteren Einkünfte werden zur Haupttätigkeit des jeweiligen Elternteils addiert. Der Nutzer trägt den Betrag im jeweiligen Feld ein und wählt über das DropDown-Menü den zugehörigen Posten aus. Über das Textfeld "Zusätzliche Informationen" (am Ende der Seite) können die einzelnen Punkte erläutert werden. Alle getätigten Eintragungen finden sich nach der Berechnung auch in der PDF-Datei wieder. 
 Der Rechner differenziert zwischen:
 - Nebentätigkeiten: Netto-Betrag
-- Überstundenvergütungen: Netto-Betrag wird voll zugerechnet, soweit sie berufstypisch sind und das in diesem Beruf übliche Maß nicht überschreiten
+- Überstundenvergütungen: Netto-Betrag wird voll zugerechnet, soweit sie berufstypisch sind und das in diesem Beruf übliche Maß nicht überschreiten. Es ist im Einzelfall zu prüfen, was im jeweiligen Beruf als üblich gilt. Die Darlegungs- und Beweislast dafür, dass Überstunden über das berufstypische Maß hinausgeht und deshalb nicht (voll) anzurechnen sind, trägt der Unterhaltspflichtige (BGH 25.06.2003 - XII ZR 63/00, NJW-RR 2004, 217, RZ. 17.).
 - Sozialleistungen: Die Summe von
   - Arbeitslosengeld (§ 136 SGB III) und sonstige Lohnersatzleistungen nach dem SGB III (Übergangs-, Ausbildungs-, Kurzarbeitergeld- und Insolvenzgeld) sowie Krankengeld sind Einkommen.
   - Elterngeld ist Einkommen, soweit es über den Sockelbetrag nach § 11 Sätze 1 – 3 BEEG hinausgeht. Der Sockelbetrag ist nur dann Einkommen, wenn ein Ausnahmefall nach § 11 BEEG vorliegt.
   - Wohngeld ist Einkommen, soweit es nicht erhöhte Wohnkosten abdeckt.
-  - BAföG ist Einkommen (ausgenommen davon sind Vorausleistungen nach den §§ 36, 37 BAföG).
+  - BAföG ist Einkommen. Ausgenommen davon sind Vorausleistungen nach den §§ 36, 37 BAföG, die gezahlt werden, wenn die Eltern ihrer Unterhaltsplicht nicht nachkommen oder ihr Einkommen nicht ermittelt werden kann.
   - Unfall- und Versorgungsrenten sowie Übergangsgelder aus der Unfall- und Rentenversicherung sind Einkommen (§§ 1610a, 1578a BGB sind zu beachten).
   - Leistungen aus der Pflegeversicherung, Blindengeld, Schwerbeschädigten- und Pflegezulagen, jeweils nach Abzug des Betrages für tatsächliche Mehraufwendungen, sind Einkommen (§§ 1610a, 1578a BGB sind zu beachten).
   - Der Anteil des Pflegegeldes bei der Pflegeperson, durch den ihre Bemühungen abgegolten werden, stellt im Allgemeinen Einkommen dar (Ausnahme: Bei Pflegegeld aus der Sozialen Pflegeversicherung (§ 1 Abs. 1 SGB XI) gilt dies nur nach Maßgabe von § 13 Abs. 6 SGB XI).
@@ -82,12 +82,12 @@ Der Nutzer hat die Möglichkeit (bis zu fünf) Abzugsposten hinzuzufügen. Diese
 Zu den Abzugsposten zählen insbesondere:
 - Berufsbedingte Aufwendungen: Berufsbedingte Aufwendungen, die sich von den privaten Lebenshaltungskosten nach objektiven Merkmalen eindeutig abgrenzen lassen, sind im Rahmen des Angemessenen vom Nettoeinkommen aus unselbständiger Arbeit abzuziehen. Im Allgemeinen kann eine **Pauschale** von **5 % des Nettoeinkommens** monatlich angesetzt werden (im Einzelfall ggf. Abweichungen).
     - Fahrtkosten: Für die notwendigen Kosten der berufsbedingten Nutzung eines Kraftfahrzeugs kann der nach den Sätzen des § 5 Abs. 2 Satz 1 Nr. 2 JVEG anzuwendende Betrag (derzeit 0,42 Euro) pro gefahrenen Kilometer angesetzt werden. Bei langen Fahrtstrecken (ab ca. 30 km einfach) kann nach unten abgewichen werden, in der Regel auf 2/3 des vorbezeichneten Betrages (derzeit 0,28 Euro).
-    - Kinderbetreuungskosten: Kinderbetreuungskosten sind als berufsbedingte Aufwendungen abzugsfähig, soweit die Kinderbetreuung durch Dritte infolge der Berufstätigkeit erforderlich ist. Ein Kinderbetreuungsbonus kann angesetzt werden.
+    - Kinderbetreuungskosten: Kinderbetreuungskosten sind als berufsbedingte Aufwendungen abzugsfähig, soweit die Kinderbetreuung durch Dritte infolge der Berufstätigkeit erforderlich ist. Ein Kinderbetreuungsbonus kann im Einzelfall angesetzt werden.
 - Schulden: Berücksichtigungswürdige Schulden (Zins und Tilgung) sind im Rahmen eines vernünftigen Tilgungsplanes in angemessenen Raten abzuziehen.
 - Unterhaltsleistungen:
   - Unterhaltsleistungen an vorrangig Berechtigte sind vorweg abzuziehen.
-  - Unterhaltsleistungen an nachrangige Berechtigte sind angemessen zu berücksichtigen.
-- Vermögensbildung: Vermögensbildende Aufwendungen sind im angemessenen Rahmen abzugsfähig.
+  - Unterhaltsleistungen an nachrangige Berechtigte (z.B. volljährige privilegierte Kinder oder Eltern) sind angemessen zu berücksichtigen.
+- Vermögensbildung: Vermögensbildende Aufwendungen (z.B. Beiträge zu privaten Rentenversicherungen, Lebensversicherungen, …) sind im angemessenen Rahmen abzugsfähig.
 
 <a name="bereinigtes_einkommen"></a>
 ### Bereinigtes Einkommen
@@ -174,7 +174,7 @@ Mitunter wird vertreten, der Sonderbedarf des Kindes sei nur vom *angemessenen* 
 <a name="kigakosten"></a>
 #### Kindergarten- und Hortkosten
 
-Kinderbetreuungskosten sind im symmetrischen Wechselmodell grundsätzlich nicht abzugsfähig. Eine Aufteilung der durch Kindergarten, Hort, o.ä. verursachten Kosten kommt im Wechselmodell nur ganz ausnahmsweise in Betracht. (Grüneberg/*von Pückler*, 82A2023, § 1610 BGB Rn. 11)
+Die Kosten für die Betreuung des Kindes durch die Eltern selbst können nicht als zusätzlicher Abzugsposten beim unterhaltsrelevanten Einkommen eines Elternteils anerkannt werden. Eine Aufteilung der durch Kindergarten, Hort, o.ä. verursachten Kosten kommt im Wechselmodell nur ganz ausnahmsweise in Betracht. (Grüneberg/*von Pückler*, 82A2023, § 1610 BGB Rn. 11)
 
 Der Unterhaltsbedarf enthält gem. § 1610 Abs. 2 BGB auch die Kosten der Erziehung.  
 Dementsprechend erhöhen Aufwendungen, die in erster Linie erzieherischen Zwecken dienten, den Bedarf des Kindes.  
@@ -226,8 +226,8 @@ Das Kindergeld beträgt 250 EUR und wird an die Mutter ausgezahlt. Die Haftungsq
 
 |      Position            |       Betrag        |
 |--------------------------|---------------------|
-| Betreungsanteil Mutter   | 65,50 EUR           |
-| Betreuungsanteil Vater   | 65,50 EUR           |
+| Betreuungsanteil Mutter  | 62,50 EUR           |
+| Betreuungsanteil Vater   | 62,50 EUR           |
 | Baranteil Mutter (70%)   | 87,50 EUR           |
 | Baranteil Vater (30%)    | 37,50 EUR           |
 
@@ -268,7 +268,7 @@ Bei Wechsel der Altersstufe gilt also das Alter vom Ende des Monats für den ges
 Für diesen Fall nehmen Sie die Berechnungen bitte jeweils einzeln vor. Die Mangelfall-Prüfung kann durch den Rechner aktuell noch nicht durchgeführt werden, sondern muss im Anschluss händisch durch Sie erfolgen.
 
 ### Ich habe eine Steuererstattung erhalten!
-Steuererstattungen zählen zu den weiteren Einkünften, werden über das Jahr hinweg aufgeteilt und damit nur monatlich mit 1/12 angesetzt.
+Steuererstattungen zählen zu den weiteren Einkünften, werden über das Jahr hinweg aufgeteilt und damit nur monatlich mit 1/12 angesetzt. Die Aufteilung gilt auch, wenn die Erstattung erst zu einem späteren Zeitpunkt ausgezahlt wird.
 
 ### Mein Einkommen ist unregelmäßig!
 Hier gelten Zufluss- und Abflussprinzip, d.h. dass das Einkommen dem Monat zugerechnet wird, in dem es tatsächlich geflossen ist. 
