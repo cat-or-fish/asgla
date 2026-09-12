@@ -57,7 +57,7 @@ Für den Unterhaltsrechner wird das Netto-Einkommen herangezogen.
 Die weiteren Einkünfte werden zur Haupttätigkeit des jeweiligen Elternteils addiert. Der Nutzer trägt den Betrag im jeweiligen Feld ein und wählt über das DropDown-Menü den zugehörigen Posten aus. Über das Textfeld "Zusätzliche Informationen" (am Ende der Seite) können die einzelnen Punkte erläutert werden. Alle getätigten Eintragungen finden sich nach der Berechnung auch in der PDF-Datei wieder. 
 Der Rechner differenziert zwischen:
 - Nebentätigkeiten: Netto-Betrag
-- Überstundenvergütungen: Netto-Betrag wird voll zugerechnet, soweit sie berufstypisch sind und das in diesem Beruf übliche Maß nicht überschreiten. Es ist im Einzelfall zu prüfen, was im jeweiligen Beruf als üblich gilt. Die Darlegungs- und Beweislast dafür, dass Überstunden über das berufstypische Maß hinausgeht und deshalb nicht (voll) anzurechnen sind, trägt der Unterhaltspflichtige (BGH 25.06.2003 - XII ZR 63/00, NJW-RR 2004, 217, RZ. 17.).
+- Überstundenvergütungen: Der Netto-Betrag wird voll zugerechnet, soweit die Überstundenvergütungen berufstypisch sind und das in diesem Beruf übliche Maß nicht überschreiten. Es ist im Einzelfall zu prüfen, was im jeweiligen Beruf als üblich gilt. Die Darlegungs- und Beweislast dafür, dass Überstunden über das berufstypische Maß hinausgehen und deshalb nicht (voll) anzurechnen sind, trägt der Unterhaltspflichtige (BGH 25.06.2003 - XII ZR 63/00, NJW-RR 2004, 217, Rn. 17.).
 - Sozialleistungen: Die Summe von
   - Arbeitslosengeld (§ 136 SGB III) und sonstige Lohnersatzleistungen nach dem SGB III (Übergangs-, Ausbildungs-, Kurzarbeitergeld- und Insolvenzgeld) sowie Krankengeld sind Einkommen.
   - Elterngeld ist Einkommen, soweit es über den Sockelbetrag nach § 11 Sätze 1 – 3 BEEG hinausgeht. Der Sockelbetrag ist nur dann Einkommen, wenn ein Ausnahmefall nach § 11 BEEG vorliegt.
@@ -118,7 +118,7 @@ Der Barbedarf wird gem. **§ 1612b Abs. 1 BGB** um die Hälfte des Kindergeldes 
 
 <a name="regelbedarf"></a>
 ### Regelbedarf (/Grundbedarf)
-Der Regelbedarf ist aus der Düsseldorfer Tabelle zu entnehmen, was durch den ASGLA-Rechner automatisch erfolgt. Maßgeblich für die Einkommensgruppe ist die Gesamtsumme der bereinigten Einkommen beider Eltern. Liegt der Haftungsanteil von einem der Elternteile bei 0 % (unter Ansatz des notwendigen Selbstbehalts) ist hingegen nur das Einkommen des anderen Elternteils für die Höhe des Regelbedarfs maßgeblich (OLG Karlsruhe v. 30.04.2025 – 5 UF 49/23, Rz. 30).  
+Der Regelbedarf ist aus der Düsseldorfer Tabelle zu entnehmen, was durch den ASGLA-Rechner automatisch erfolgt. Maßgeblich für die Einkommensgruppe ist die Gesamtsumme der bereinigten Einkommen beider Eltern. Liegt der Haftungsanteil von einem der Elternteile bei 0 % (unter Ansatz des notwendigen Selbstbehalts) ist hingegen nur das Einkommen des anderen Elternteils für die Höhe des Regelbedarfs maßgeblich (OLG Karlsruhe v. 30.04.2025 – 5 UF 49/23, Rn. 30).  
   
 Welche Posten von den Bedarfsbeträgen der Düsseldorfer Tabelle bereits enthalten sind, ergibt sich grds. aus dem [Regelbedarfsermittlungsgesetz (RBEG)](https://www.gesetze-im-internet.de/rbeg_2021/BJNR285510020.html). Das RBEG sieht eine Zusammensetzung nach Abteilungen vor:  
 
@@ -137,7 +137,7 @@ Welche Posten von den Bedarfsbeträgen der Düsseldorfer Tabelle bereits entha
 | 12  | Andere Waren und Dienstleistungen         |
 
 In **§ 6 RBEG** sind die jeweiligen Verbrauchsausgaben je Posten ausgewiesen. Diese sind auf den sozialrechtlichen Regelbedarf zugeschnitten für 3 verschiedene Altersklassen: 0-6 Jahre, 7-12 Jahre und 15-18 Jahre. Die sich aus den Beträgen von § 6 RBEG ausgewiesene Quotierung kann auf den Bedarf für den Kindesunterhalt übertragen werden, um die jeweilige Höhe zu ermitteln (vgl. BGH v. 11.01.2017 – XII ZB 565/15 Rn. 39).  
-Zu beachten ist allerdings, dass der **Bedarf für Unterkunft und Heizung** im Regelbedarf nicht enthalten ist (vgl. § 27a Abs. 2 i.V.m. §§ 35f. SGB XII). Dieser kann mit **20 %** des Tabellenunterhalts geschätzt werden (OLG Hamm v. 11.7.2012 – II-12 UF 319/11, Rz. 11 m.w.N.).
+Zu beachten ist allerdings, dass der **Bedarf für Unterkunft und Heizung** im Regelbedarf nicht enthalten ist (vgl. § 27a Abs. 2 i.V.m. §§ 35f. SGB XII). Dieser kann mit **20 %** des Tabellenunterhalts geschätzt werden (OLG Hamm v. 11.7.2012 – II-12 UF 319/11, Rn. 11 m.w.N.).
 
 >**Beispiel:**  
 >Kind 6 Jahre alt mit 670 EUR Bedarf.  
@@ -174,7 +174,7 @@ Mitunter wird vertreten, der Sonderbedarf des Kindes sei nur vom *angemessenen* 
 <a name="kigakosten"></a>
 #### Kindergarten- und Hortkosten
 
-Die Kosten für die Betreuung des Kindes durch die Eltern selbst können nicht als zusätzlicher Abzugsposten beim unterhaltsrelevanten Einkommen eines Elternteils anerkannt werden. Eine Aufteilung der durch Kindergarten, Hort, o.ä. verursachten Kosten kommt im Wechselmodell nur ganz ausnahmsweise in Betracht. (Grüneberg/*von Pückler*, 82A2023, § 1610 BGB Rn. 11)
+Kinderbetreuungskosten sind im symmetrischen Wechselmodell grundsätzlich nicht als Mehrbedarf abzugsfähig. Eine Aufteilung der durch Kindergarten, Hort, o.ä. verursachten Kosten kommt im Wechselmodell nur ganz ausnahmsweise in Betracht. (Grüneberg/*von Pückler*, 82A2023, § 1610 BGB Rn. 11)
 
 Der Unterhaltsbedarf enthält gem. § 1610 Abs. 2 BGB auch die Kosten der Erziehung.  
 Dementsprechend erhöhen Aufwendungen, die in erster Linie erzieherischen Zwecken dienten, den Bedarf des Kindes.  
@@ -290,8 +290,8 @@ Hat ein Elternteil nach Abzug des Sockelbetrags ein deutlich höheres Einkommen 
 
 ### Eigentlich wollen wir nur einen Ausgleich vom Kindergeld, denn wir sind und einig, dass wir im Übrigen keine Unterhaltsberechnung machen wollen.
 Dann kann ein **sog. isolierter Kindergeldausgleich** vorgenommen werden, siehe dazu BGH v. 20.04.2016 – XII ZB 45/15.  
-Die Auskehr von einem 1/4 des Kindergeldes kann ohne Weiteres verlangt werden, da dies der Höhe des *Betreuungsanteils* vom anderen Elternteil entspricht (BGH v. 20.04.2016 – XII ZB 45/15 Rz 31 ff.)
-Ein Teil des *Baranteils* kann hingegen nicht ohne Weiteres beansprucht werden. Verlangt der nicht kindergeldbeziehende Elternteil den Anteil des auf den Barunterhalt entfallenden Kindergeldanteils, ist es grundsätzlich seine Sache, die Haftungsanteile der Eltern am Barunterhalt darzulegen und zu beweisen (BGH v. 20.04.2016 – XII ZB 45/15 Rz. 29).
+Die Auskehr von einem 1/4 des Kindergeldes kann ohne Weiteres verlangt werden, da dies der Höhe des *Betreuungsanteils* vom anderen Elternteil entspricht (BGH v. 20.04.2016 – XII ZB 45/15 Rn. 31 ff.)
+Ein Teil des *Baranteils* kann hingegen nicht ohne Weiteres beansprucht werden. Verlangt der nicht kindergeldbeziehende Elternteil den Anteil des auf den Barunterhalt entfallenden Kindergeldanteils, ist es grundsätzlich seine Sache, die Haftungsanteile der Eltern am Barunterhalt darzulegen und zu beweisen (BGH v. 20.04.2016 – XII ZB 45/15 Rn. 29).
 
 ### Wie setze ich meinen Anspruch auf Unterhalt im Wechselmodell nun durch?
 Grundsätzlich ist das Wechselmodell für Elternteile gedacht, die kooperativ miteinander ihre Kinder großziehen wollen. Der erste Ansatz wäre daher stets das vermittelnde Gespräch, bei dem der Rechner als Orientierung dienen kann.  
