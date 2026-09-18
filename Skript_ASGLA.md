@@ -103,7 +103,7 @@ Gemäß § 1603 Abs. 1 BGB muss niemand seinen angemessenen Unterhalt gefährden
 Das Programm ermöglicht aufgrund der Komplexität hier eine kontrollierte Auswahl. Zudem bietet der ASGLA-Rechner die Option, in Einzelfällen einen individuellen Betrag festzusetzen.
 
 Die Übernahme von Zusatzbedarfen durch die Unterhaltspflichtigen kommt nur in Betracht, wenn sie für diese wirtschaftlich zumutbar sind (vgl. BGH v. 26.02.1992 - XII ZR 97/91 Rn. 8; OLG Hamm v. 19.07.2013 - 6 UF 46/13 Rn. 29 f.). Mitunter wird daher vertreten, dass Mehr- und Sonderbedarf nur aus dem Einkommen oberhalb des angemessenen Selbstbehalts zu tragen sei (Grüneberg/von Pückler, 82A2023, § 1603 BGB Rn. 19, § 1610 BGB Rn. 13). Daneben wird als Begründung für diese Rechtsfolge angeführt, dass die gesteigerte Unterhaltspflicht nach § 1603 Abs. 2 BGB in erster Linie der Sicherung des laufenden Mindestunterhalts diene. Nach dieser Auffassung gilt die gesteigerte Unterhaltspflicht lediglich für den Regelbedarf, sodass insoweit der notwendige Selbstbehalt maßgeblich sei. Für den Zusatzbedarf sei hingegen nur der angemessene Selbstbehalt anzusetzen.  
-Der ASGLA-Rechner gibt für diese Fälle lediglich einen Hinweis aus, stellt aber keine integrierte Berechnung für diese Ansicht bereit. Unsere Empfehlung für die Umsetzung dieser Rechtsansicht wäre, in diesen Fällen den eingetragenen Zusatzbedarf (teilweise) in der Eingabemaske zu löschen, soweit diese wirtschaftlich nicht zumutbar sind. Im Textfeld "Zusätzliche Informationen" ist dann zu vermerken, welche (Teil-)Zusatzbedarfe unberücksichtigt geblieben sind.
+Der ASGLA-Rechner gibt für diese Fälle lediglich einen Hinweis aus, stellt aber keine integrierte Berechnung für diese Ansicht bereit. Unsere Empfehlung für die Umsetzung dieser Rechtsansicht wäre, in diesen Fällen den eingetragenen Zusatzbedarf (teilweise) in der Eingabemaske zu löschen, soweit diese wirtschaftlich nicht zumutbar sind. Im Textfeld "Zusätzliche Informationen" ist dann zu vermerken, welche (Teil-)Zusatzbedarfe unberücksichtigt geblieben sind. Die ausgetragenen Zusatzbedarfe hat der andere Elternteil allein zu tragen bzw. – falls dort die Zumutbarkeit ebenso nicht gegeben ist – ist deren Deckung anderweitig sicherzustellen.
 
 Das bereinigte Einkommen abzüglich des Sockelbetrags ergibt das **sog. verteilbare Einkommen**.
 
@@ -284,6 +284,39 @@ Im Rechner kann das fiktive Einkommen im Rahmen der weiteren Einkünfte berücks
 
 ### Und was passiert, wenn ich nicht genug Geld habe?
 Jedem Elternteil steht im Wechselmodell ein sogenannter Selbstbehalt zu, sodass die eigene Lebensgrundlage in einem Mindestmaß gewährleistet ist (siehe oben unter "Sockelbetrag").
+
+
+### Wäre beim notwendigen Selbstbehalt nicht nur der Schärfungsbetrag zu quoteln?
+Dies ist höchstrichterlich noch nicht entschieden.  
+Aus unserer Sicht: Nein. Bei Heranziehung des notwendigen Selbstbehalts ist der gesamte, nach Abzug des notwendigen Selbstbehalts, verbleibende Betrag zu quoteln – und nicht lediglich der Schärfungsbetrag.
+
+In Fällen, in denen wegen einer Mangel-Konstellation der notwendige Selbstbehalt statt des angemessenen Selbstbehalts anzusetzen ist, wählt der **Gutdeutsch-/WinFam-Rechner** von **beck-online** hingegen einen anderen Rechenweg:
+Zunächst wird der Betrag, der jeweils über dem angemessenen Selbstbehalt liegt, dem jeweiligen Elternteil vollständig zugeordnet. Anschließend wird nur der Schärfungsbetrag (also der Teil des Einkommens, der zwischen dem notwendigen und dem angemessenen Selbstbehalt liegt) gequotelt.
+
+> **Beispiel**  
+> Vater: 2000 EUR bereinigtes Einkommen (verteilbarer Betrag: 250 EUR)  
+> Mutter: 1800 EUR bereinigtes Einkommen (verteilbarer Betrag: 50 EUR)  
+> Kind: 10 Jahre alt  
+> Das Kindergeld erhält der Vater  
+   
+> Gesamtbedarf 585,50 EUR (nach Abzug des hälftigen Kindergeldes)  
+> Gedeckt: 300 EUR  
+> Ungedeckt: 285,50 EUR  
+
+***WINFAM***  
+Zieht bei beiden Eltern jeweils einen Schärfungsbetrag von 300 EUR heran und quotelt nur diesen Betrag:  
+285,50 EUR * (300/600) = 142,75 EUR  
+Anschließend werden die Beträge, die bereits über dem angemessenen Selbstbehalt liegen, ohne weitere Quotierung addiert:  
+Vater = 250 EUR + 142,75 EUR  
+Mutter = 50 EUR + 142,75 EUR  
+Damit ergibt sich im Ergebnis eine Haftungsquote von etwa **67 % für den Vater** und **33 % für die Mutter**.  
+
+***ASGLA-Rechner***  
+Der ASGLA-Rechner schlägt Nutzer:innen hingegen in diesen Konstellationen vor, den notwendigen Selbstbehalt zu wählen.  
+Dadurch ändern sich die verteilbaren Beträge auf 550 EUR (Vater) und 350 EUR (Mutter). Diese werden zueinander in Verhältnis gesetzt, ohne zu unterscheiden, welcher Teil des Betrages über oder unter dem angemessenen Selbstbehalt liegt.  
+Die Haftungsquoten sind dadurch **61,11 % (Vater)** und **38,89% (Mutter)**.  
+  
+Aus unserer Sicht ist es vorzugswürdig, den notwendigen Selbstbehalt direkt abzuziehen und den Gesamtbetrag zu quoteln: Andernfalls würde der über dem angemessenen Selbstbehalt liegende Betrag des Wenigerverdienenden nicht in die Quotelung mit einbezogen. Aus dem Grundgedanken des § 1606 Abs. 3 BGB ergibt sich, dass die Eltern anteilig nach ihren Erwerbs- und Vermögensverhältnissen zum Unterhalt beizutragen haben. Würde der über dem angemessenen Selbstbehalt liegende Betrag des Wenigerverdienenden nicht in die Quotelung einbezogen, wäre er/sie daher entgegen § 1606 Abs. 3 BGB bevorteilt.
 
 ### Aber das andere Elternteil verdient viel mehr als ich!
 Hat ein Elternteil nach Abzug des Sockelbetrags ein deutlich höheres Einkommen als der andere, kann sich aus der Quotenberechnung ergeben, dass er den Kindesunterhalt nahezu allein zu tragen hat (BGH v. 10.07.2013 - XII ZB 297/12, Rn. 29).
